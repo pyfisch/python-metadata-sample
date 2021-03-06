@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: import-from-github-com
+Version: 0.1
+Summary: Python module finder/loader from github, like in golang
+Home-page: https://github.com/nvbn/import_from_github_com
+Author: Vladimir Iakovlev
+Author-email: nvbn.rm@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN

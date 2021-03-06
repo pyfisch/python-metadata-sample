@@ -1,0 +1,22 @@
+Metadata-Version: 1.1
+Name: backports.functools-partialmethod
+Version: 3.5.1.0
+Summary: Backport of functools.partialmethod from Python 3.5.1.
+Home-page: https://github.com/PythonBackports/backports.functools_partialmethod
+Author: Python Backports
+Author-email: pythonbackports@users.noreply.github.com
+License: Python Software Foundation License
+Description: backports.functools_partialmethod
+        =======================
+        
+        Backport of `functools.partialmethod` from Python 3.5.1.
+        
+        
+Keywords: python functools partialmethod backport
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: License :: OSI Approved :: Python Software Foundation License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3

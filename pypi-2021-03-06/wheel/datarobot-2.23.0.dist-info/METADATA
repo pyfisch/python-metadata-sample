@@ -1,0 +1,112 @@
+Metadata-Version: 2.1
+Name: datarobot
+Version: 2.23.0
+Summary: This client library is designed to support the DataRobot API.
+Home-page: http://datarobot.com
+Author: datarobot
+Author-email: support@datarobot.com
+Maintainer: datarobot
+Maintainer-email: info@datarobot.com
+License: Apache Software License
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: contextlib2 (>=0.5.5)
+Requires-Dist: pandas (>=0.15)
+Requires-Dist: pyyaml (>=3.11)
+Requires-Dist: requests (>=2.21)
+Requires-Dist: requests-toolbelt (>=0.6)
+Requires-Dist: trafaret (!=1.1.0,<2.0,>=0.7)
+Requires-Dist: urllib3 (>=1.23)
+Requires-Dist: attrs (<20.0,>=19.1.0)
+Provides-Extra: dev
+Requires-Dist: mock (==3.0.5) ; extra == 'dev'
+Requires-Dist: pytest (<5,>=4.6) ; extra == 'dev'
+Requires-Dist: pytest-cov ; extra == 'dev'
+Requires-Dist: responses (<0.10,>=0.9) ; extra == 'dev'
+Requires-Dist: flake8 (<3,>=2.5.2) ; extra == 'dev'
+Requires-Dist: Sphinx (==1.8.3) ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme (==0.1.9) ; extra == 'dev'
+Requires-Dist: nbsphinx (<1,>=0.2.9) ; extra == 'dev'
+Requires-Dist: nbconvert (==5.3.1) ; extra == 'dev'
+Requires-Dist: numpydoc (>=0.6.0) ; extra == 'dev'
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: jupyter-contrib-nbextensions ; extra == 'dev'
+Requires-Dist: tornado (<6.0) ; extra == 'dev'
+Requires-Dist: black (==19.10b0) ; (python_version >= "3.6") and extra == 'dev'
+Requires-Dist: isort (==5.4.2) ; (python_version >= "3.6") and extra == 'dev'
+Provides-Extra: examples
+Requires-Dist: jupyter (<=5.0) ; extra == 'examples'
+Requires-Dist: fredapi (==0.4.0) ; extra == 'examples'
+Requires-Dist: matplotlib (>=2.1.0) ; extra == 'examples'
+Requires-Dist: seaborn (<=0.8) ; extra == 'examples'
+Requires-Dist: sklearn (<=0.18.2) ; extra == 'examples'
+Requires-Dist: wordcloud (<=1.3.1) ; extra == 'examples'
+Requires-Dist: colour (<=0.1.4) ; extra == 'examples'
+Provides-Extra: release
+Requires-Dist: zest.releaser[recommended] (==6.22.0) ; extra == 'release'
+
+About datarobot
+=========================
+.. image:: https://img.shields.io/pypi/v/datarobot.svg
+   :target: https://pypi.python.org/pypi/datarobot/
+.. image:: https://img.shields.io/pypi/pyversions/datarobot.svg
+.. image:: https://img.shields.io/pypi/status/datarobot.svg
+
+DataRobot is a client library for working with the `DataRobot`_ platform API.
+
+Installation
+=========================
+Python 2.7 and >= 3.4 are supported.
+You must have a datarobot account.
+
+::
+
+   $ pip install datarobot
+
+Usage
+=========================
+The library will look for a config file `~/.config/datarobot/drconfig.yaml` by default.
+This is an example of what that config file should look like.
+
+::
+
+   token: your_token
+   endpoint: https://app.datarobot.com/api/v2
+
+Alternatively a global client can be set in the code.
+
+::
+
+   import datarobot as dr
+   dr.Client(token='your_token', endpoint='https://app.datarobot.com/api/v2')
+
+Alternatively environment variables can be used.
+
+::
+
+   export DATAROBOT_API_TOKEN='your_token'
+   export DATAROBOT_ENDPOINT='https://app.datarobot.com/api/v2'
+
+See `documentation`_ for example usage after configuring.
+
+Tests
+=========================
+::
+
+   $ py.test
+
+.. _datarobot: http://datarobot.com
+.. _documentation: https://datarobot-public-api-client.readthedocs-hosted.com
+
+

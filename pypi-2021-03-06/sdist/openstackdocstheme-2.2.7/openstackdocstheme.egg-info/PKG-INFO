@@ -1,0 +1,68 @@
+Metadata-Version: 1.2
+Name: openstackdocstheme
+Version: 2.2.7
+Summary: OpenStack Docs Theme
+Home-page: https://docs.openstack.org/openstackdocstheme/latest/
+Author: OpenStack
+Author-email: openstack-discuss@lists.openstack.org
+License: UNKNOWN
+Description: ========================
+        Team and repository tags
+        ========================
+        
+        .. image:: https://governance.openstack.org/tc/badges/openstackdocstheme.svg
+            :target: https://governance.openstack.org/tc/reference/tags/index.html
+        
+        .. Change things from this point on
+        
+        Open Infrastructure Projects Sphinx Themes
+        ==========================================
+        
+        Theme and extension support for Sphinx documentation that is published by
+        Open Infrastructure Foundation projects.
+        
+        OpenStack docs.openstack.org Sphinx Theme
+        -----------------------------------------
+        
+        Theme support for Sphinx documentation that is published to
+        docs.openstack.org and developer.openstack.org.
+        
+        Intended for use by OpenStack `projects governed by the Technical Committee`_.
+        
+        .. _`projects governed by the Technical Committee`: https://governance.openstack.org/tc/reference/projects/index.html
+        
+        StarlingX docs.starlingx.io Sphinx Theme
+        -----------------------------------------
+        
+        Theme support for Sphinx documentation that is published to
+        docs.starlingx.io.
+        
+        Intended for use by StarlingX `projects governed by the Technical Steering Committee`_.
+        
+        .. _`projects governed by the Technical Steering Committee`: https://docs.starlingx.io/governance/reference/projects/index.html
+        
+        References
+        ----------
+        
+        * Free software: Apache License, Version 2.0
+        * Documentation: https://docs.openstack.org/openstackdocstheme/latest/
+        * Release notes: https://docs.openstack.org/releasenotes/openstackdocstheme/
+        * Source: https://opendev.org/openstack/openstackdocstheme
+        * Bugs: https://launchpad.net/openstack-doc-tools
+        
+        
+Platform: UNKNOWN
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Documentation
+Requires-Python: >=3.6

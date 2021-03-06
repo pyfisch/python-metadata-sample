@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: tensorflow-cloud
+Version: 0.1.13
+Summary: The TensorFlow Cloud repository provides APIs that will allow to easily go from debugging and training your Keras and TensorFlow code in a local environment to distributed training in the cloud.
+Home-page: https://github.com/tensorflow/cloud
+Author: The tensorflow cloud authors
+Author-email: tensorflow-cloud@google.com
+License: Apache License 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: absl-py
+Requires-Dist: docker
+Requires-Dist: google-api-python-client
+Requires-Dist: google-auth
+Requires-Dist: google-cloud-storage
+Requires-Dist: keras-tuner
+Requires-Dist: tensorboard (>=2.3.0)
+Requires-Dist: tensorflow (<3.0,>=1.15.0)
+Requires-Dist: tensorflow-datasets (<3.1.0)
+Provides-Extra: tests
+Requires-Dist: absl-py ; extra == 'tests'
+Requires-Dist: flake8 ; extra == 'tests'
+Requires-Dist: mock ; extra == 'tests'
+Requires-Dist: numpy ; extra == 'tests'
+Requires-Dist: nbconvert ; extra == 'tests'
+
+UNKNOWN
+
+

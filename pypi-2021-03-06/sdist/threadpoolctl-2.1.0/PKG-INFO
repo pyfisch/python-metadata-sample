@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: threadpoolctl
+Version: 2.1.0
+Summary: threadpoolctl
+Home-page: https://github.com/joblib/threadpoolctl
+Author: Thomas Moreau
+Author-email: thomas.moreau.2010@gmail.com

@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: pyspark-dist-explore
+Version: 0.1.8
+Summary: Create histogram and density plots from PySpark Dataframes
+Home-page: UNKNOWN
+Author: Chris van den Berg
+Author-email: fake_email@gmail.com
+License: MIT License
+Platform: UNKNOWN
+Requires-Dist: pandas
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: matplotlib
+
+UNKNOWN
+
+

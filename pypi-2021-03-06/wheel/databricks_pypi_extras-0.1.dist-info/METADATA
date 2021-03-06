@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: databricks-pypi-extras
+Version: 0.1
+Summary: UNKNOWN
+Home-page: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: db2
+Provides-Extra: db1
+Provides-Extra: db1
+Requires-Dist: databricks-pypi1; extra == 'db1'
+Provides-Extra: db2
+Requires-Dist: databricks-pypi2; extra == 'db2'
+
+UNKNOWN
+
+

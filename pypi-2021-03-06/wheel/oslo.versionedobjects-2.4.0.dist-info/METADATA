@@ -1,0 +1,69 @@
+Metadata-Version: 2.1
+Name: oslo.versionedobjects
+Version: 2.4.0
+Summary: Oslo Versioned Objects library
+Home-page: https://docs.openstack.org/oslo.versionedobjects/latest/
+Author: OpenStack
+Author-email: openstack-discuss@lists.openstack.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.6
+Requires-Dist: WebOb (>=1.7.1)
+Requires-Dist: iso8601 (>=0.1.11)
+Requires-Dist: netaddr (>=0.7.18)
+Requires-Dist: oslo.concurrency (>=3.26.0)
+Requires-Dist: oslo.config (>=5.2.0)
+Requires-Dist: oslo.context (>=2.19.2)
+Requires-Dist: oslo.i18n (>=3.15.3)
+Requires-Dist: oslo.log (>=3.36.0)
+Requires-Dist: oslo.messaging (>=5.29.0)
+Requires-Dist: oslo.serialization (!=2.19.1,>=2.18.0)
+Requires-Dist: oslo.utils (>=4.7.0)
+
+========================
+Team and repository tags
+========================
+
+.. image:: https://governance.openstack.org/tc/badges/oslo.versionedobjects.svg
+    :target: https://governance.openstack.org/tc/reference/tags/index.html
+
+.. Change things from this point on
+
+=====================
+oslo.versionedobjects
+=====================
+
+.. image:: https://img.shields.io/pypi/v/oslo.versionedobjects.svg
+    :target: https://pypi.org/project/oslo.versionedobjects/
+    :alt: Latest Version
+
+.. image:: https://img.shields.io/pypi/dm/oslo.versionedobjects.svg
+    :target: https://pypi.org/project/oslo.versionedobjects/
+    :alt: Downloads
+
+The oslo.versionedobjects library provides a generic versioned object model
+that is RPC-friendly, with inbuilt serialization, field typing, and remotable
+method calls. It can be used to define a data model within a project
+independent of external APIs or database schema for the purposes of providing
+upgrade compatibility across distributed services.
+
+* Free software: Apache license
+* Documentation: https://docs.openstack.org/oslo.versionedobjects/latest
+* Source: http://opendev.org/openstack/oslo.versionedobjects
+* Bugs: http://bugs.launchpad.net/oslo.versionedobjects
+* Release notes: https://docs.openstack.org/releasenotes/oslo.versionedobjects/
+
+
+

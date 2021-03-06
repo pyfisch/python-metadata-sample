@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: trollius
+Version: 2.2.post1
+Summary: Deprecated, unmaintained port of the asyncio module (PEP 3156) on Python 2
+Home-page: https://github.com/jamadden/trollius
+Author: Victor Stinner
+Author-email: victor.stinner@gmail.com
+License: Apache License 2.0
+Keywords: Deprecated Unmaintained asyncio backport
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=2.7, < 3
+Description-Content-Type: text/x-rst
+Requires-Dist: six
+Requires-Dist: futures
+
+========
+Trollius
+========
+
+.. image:: http://unmaintained.tech/badge.svg
+   :target: http://unmaintained.tech/
+   :alt: No Maintenance Intended
+
+.. warning::
+   The Trollius project is deprecated and unsupported. It is on PyPI
+   to support existing dependencies only.
+
+

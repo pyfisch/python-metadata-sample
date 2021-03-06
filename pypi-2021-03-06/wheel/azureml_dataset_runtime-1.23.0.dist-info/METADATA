@@ -1,0 +1,34 @@
+Metadata-Version: 2.0
+Name: azureml-dataset-runtime
+Version: 1.23.0
+Summary: Azure Machine Learning dataset runtime - not intended for public use
+Home-page: https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py
+Author: Microsoft Corp
+License: https://aka.ms/azureml-sdk-license
+Platform: UNKNOWN
+Description-Content-Type: text/markdown
+Provides-Extra: fuse
+Provides-Extra: parquet
+Provides-Extra: pandas
+Provides-Extra: scipy
+Provides-Extra: pyspark
+Requires-Dist: azureml-dataprep (<2.11.0a,>=2.10.0a)
+Requires-Dist: pyarrow (<2.0.0,>=0.17.0)
+Requires-Dist: numpy (!=1.19.3); sys_platform == "linux"
+Requires-Dist: numpy (<=1.19.3); sys_platform == "win32"
+Provides-Extra: fuse
+Requires-Dist: fusepy (<4.0.0,>=3.0.1); extra == 'fuse'
+Provides-Extra: pandas
+Requires-Dist: numpy (<2.0.0,>=1.14.0); extra == 'pandas'
+Requires-Dist: pandas (<2.0.0,>=0.23.4); extra == 'pandas'
+Provides-Extra: parquet
+Provides-Extra: pyspark
+Requires-Dist: pyspark (==2.3.0); extra == 'pyspark'
+Provides-Extra: scipy
+Requires-Dist: scipy (<2.0.0,>=1.1.0); extra == 'scipy'
+
+# Azure Machine Learning SDK for Python
+
+The purpose of this package is to coordinate dependencies within AzureML packages. This package is internal, and is not intended to be used directly.
+
+

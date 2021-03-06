@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: PyKCS11
+Version: 1.5.10
+Summary: A Full PKCS#11 wrapper for Python
+Home-page: https://github.com/LudovicRousseau/PyKCS11
+Author: Giuseppe Amato (Midori)
+Author-email: paipai@tiscali.it
+Maintainer: Ludovic Rousseau
+Maintainer-email: ludovic.rousseau@free.fr
+License: GPL
+Download-URL: http://sourceforge.net/projects/pkcs11wrap/files/pykcs11/
+Keywords: crypto,pki,pkcs11,c++
+Platform: Win32 Unix
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU General Public License (GPL)
+Classifier: Natural Language :: English
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: OS Independent
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: C
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python
+Classifier: Topic :: Security :: Cryptography
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+
+A complete PKCS#11 wrapper for Python.
+You can use any PKCS#11 (aka CryptoKi) module such as the PSM which
+comes as part of mozilla or the various modules supplied by vendors of
+hardware crypto tokens, and almost all PKCS#11 functions and data types.
+The wrapper has been generated with the help of the SWIG compiler.
+

@@ -1,0 +1,66 @@
+Metadata-Version: 2.1
+Name: stups-cli-support
+Version: 1.1.21
+Summary: STUPS CLI support library
+Home-page: https://github.com/zalando-stups/stups-cli-support
+Author: Henning Jacobs
+Author-email: henning@zalando.de
+License: Apache License 2.0
+Keywords: stups zalando cli
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Dist: clickclick (>=0.11)
+Requires-Dist: PyYAML
+Requires-Dist: dnspython (>=1.15.0)
+Requires-Dist: requests
+
+=================
+STUPS CLI Support
+=================
+
+.. image:: https://img.shields.io/pypi/dw/stups-cli-support.svg
+   :target: https://pypi.python.org/pypi/stups-cli-support/
+   :alt: PyPI Downloads
+
+.. image:: https://img.shields.io/pypi/v/stups-cli-support.svg
+   :target: https://pypi.python.org/pypi/stups-cli-support/
+   :alt: Latest PyPI version
+
+.. image:: https://img.shields.io/pypi/l/stups-cli-support.svg
+   :target: https://pypi.python.org/pypi/stups-cli-support/
+   :alt: License
+
+Helper library for all STUPS command line tools.
+
+.. code-block:: bash
+
+    $ sudo pip3 install --upgrade stups
+    $ stups configure
+
+Local Development
+=================
+
+You can test the `configure` command with:
+
+.. code-block:: bash
+
+    $ python3 -m stups_cli
+
+Releasing
+=========
+
+.. code-block:: bash
+
+    $ ./release.sh <NEW-VERSION>
+
+

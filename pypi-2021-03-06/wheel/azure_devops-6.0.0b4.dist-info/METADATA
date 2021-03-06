@@ -1,0 +1,25 @@
+Metadata-Version: 2.1
+Name: azure-devops
+Version: 6.0.0b4
+Summary: Python wrapper around the Azure DevOps 6.x APIs
+Home-page: https://github.com/Microsoft/vsts-python-api
+Author: Microsoft Corporation
+Author-email: vstscli@microsoft.com
+License: MIT
+Description: 
+Keywords: Microsoft,VSTS,Team Services,SDK,AzureTfs,AzureDevOps,DevOps
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: msrest (<0.7.0,>=0.6.0)
+

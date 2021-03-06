@@ -1,0 +1,47 @@
+Metadata-Version: 1.1
+Name: flake8_formatter_junit_xml
+Version: 0.0.6
+Summary: JUnit XML Formatter for flake8
+Home-page: https://github.com/astj/flake8-formatter-junit-xml
+Author: Asato Wakisaka
+Author-email: asato.wakisaka@gmail.com
+License: MIT
+Description: ==========================
+        flake8-formatter-junit-xml
+        ==========================
+        .. image:: https://img.shields.io/pypi/v/flake8-formatter-junit-xml.svg
+            :target: https://pypi.python.org/pypi/flake8-formatter-junit-xml
+        .. image:: https://travis-ci.org/astj/flake8-formatter-junit-xml.svg
+            :target: https://travis-ci.org/astj/flake8-formatter-junit-xml
+        
+        JUnit XML Formatter for flake8.
+        
+        Installation
+        ============
+        
+        .. code::
+        
+            pip install flake8_formatter_junit_xml
+        
+        Usage
+        =====
+        
+        .. code::
+        
+            flake8 --format junit-xml ...
+        
+        License
+        =======
+        
+        MIT
+        
+Platform: UNKNOWN
+Classifier: Framework :: Flake8
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Quality Assurance

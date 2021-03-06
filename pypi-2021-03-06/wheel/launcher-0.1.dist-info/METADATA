@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: launcher
+Version: 0.1
+Summary: Launches any python program
+Home-page: https://github.com/ha6000/launcher-for-python
+Author: Harry Kruger
+Author-email: krugerh27@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+
+# launcher
+an python launcher
+
+

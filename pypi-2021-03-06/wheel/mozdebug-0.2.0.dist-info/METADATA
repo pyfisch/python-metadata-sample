@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: mozdebug
+Version: 0.2.0
+Summary: Utilities for running applications under native code debuggers intended for use in Mozilla testing
+Home-page: https://wiki.mozilla.org/Auto-tools/Projects/Mozbase
+Author: Mozilla Automation and Testing Team
+Author-email: tools@lists.mozilla.org
+License: MPL
+Keywords: mozilla
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 2 :: Only
+Requires-Dist: mozinfo
+
+see https://firefox-source-docs.mozilla.org/mozbase/index.html
+
+

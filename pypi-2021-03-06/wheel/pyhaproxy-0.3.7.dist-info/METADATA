@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: pyhaproxy
+Version: 0.3.7
+Summary: A Python library to parse haproxy configuration file
+Home-page: https://github.com/imjoey/pyhaproxy
+Author: Joey
+Author-email: majunjiev@gmail.com
+License: MIT License
+Keywords: haproxy,parse
+Platform: any
+
+UNKNOWN
+
+

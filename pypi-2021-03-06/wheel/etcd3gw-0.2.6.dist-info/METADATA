@@ -1,0 +1,39 @@
+Metadata-Version: 2.1
+Name: etcd3gw
+Version: 0.2.6
+Summary: A python client for etcd3 grpc-gateway v3 API
+Home-page: https://github.com/dims/etcd3-gateway
+Author: Davanum Srinivas
+Author-email: davanum@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: pbr (>=2.0)
+Requires-Dist: urllib3 (>=1.15.1)
+Requires-Dist: requests (>=2.20.0)
+Requires-Dist: six (>=1.9.0)
+Requires-Dist: futurist (!=0.15.0,>=0.11.0)
+
+# etcd3 gateway Python Client
+
+[![Build Status](https://travis-ci.org/dims/etcd3-gateway.svg?branch=master)](https://travis-ci.org/dims/etcd3-gateway)
+[![PyPI version](https://badge.fury.io/py/etcd3gw.svg)](https://badge.fury.io/py/etcd3gw)
+[![codecov](https://codecov.io/gh/dims/etcd3-gateway/branch/master/graph/badge.svg)](https://codecov.io/gh/dims/etcd3-gateway "Non-generated packages only")
+[![pypi status](https://img.shields.io/pypi/status/etcd3gw.svg)](https://pypi.python.org/pypi/etcd3gw)
+[![pypi supported versions](https://img.shields.io/pypi/pyversions/etcd3gw.svg)](https://pypi.python.org/pypi/etcd3gw)
+
+A python client for etcd3 grpc-gateway v3 API
+
+
+

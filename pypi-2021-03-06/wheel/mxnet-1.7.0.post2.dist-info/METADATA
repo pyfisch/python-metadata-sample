@@ -1,0 +1,60 @@
+Metadata-Version: 2.1
+Name: mxnet
+Version: 1.7.0.post2
+Summary: MXNet is an ultra-scalable deep learning framework. This version uses openblas.
+Home-page: https://github.com/apache/incubator-mxnet
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Cython
+Classifier: Programming Language :: Other
+Classifier: Programming Language :: Perl
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+Requires-Dist: numpy (<2.0.0,>1.16.0)
+Requires-Dist: requests (<3,>=2.20.0)
+Requires-Dist: graphviz (<0.9.0,>=0.8.1)
+
+Apache MXNet (Incubating) Python Package
+========================================
+[Apache MXNet](http://beta.mxnet.io) is a deep learning framework designed for both *efficiency* and *flexibility*.
+It allows you to mix the flavours of deep learning programs together to maximize the efficiency and your productivity.
+
+For feature requests on the PyPI package, suggestions, and issue reports, create an issue by clicking [here](https://github.com/apache/incubator-mxnet/issues/new).
+Prerequisites
+-------------
+This package supports Linux, Mac OSX, and Windows platforms. You may also want to check:
+- [mxnet-cu102](https://pypi.python.org/pypi/mxnet-cu101/) with CUDA-10.2 support.
+- [mxnet-cu101](https://pypi.python.org/pypi/mxnet-cu101/) with CUDA-10.1 support.
+- [mxnet-cu100](https://pypi.python.org/pypi/mxnet-cu100/) with CUDA-10.0 support.
+- [mxnet-cu92](https://pypi.python.org/pypi/mxnet-cu92/) with CUDA-9.2 support.
+- [mxnet-cu90](https://pypi.python.org/pypi/mxnet-cu90/) with CUDA-9.0 support.
+- [mxnet-cu80](https://pypi.python.org/pypi/mxnet-cu80/) with CUDA-8.0 support.
+- [mxnet-cu75](https://pypi.python.org/pypi/mxnet-cu75/) with CUDA-7.5 support.
+- [mxnet-native](https://pypi.python.org/pypi/mxnet-native/) CPU variant without MKLDNN.
+
+To install for other platforms (e.g. Windows, Raspberry Pi/ARM) or other versions, check [Installing MXNet](https://mxnet.apache.org/versions/master/install/index.html) for instructions on building from source.
+
+Installation
+------------
+To install, use:
+```bash
+pip install mxnet
+```
+

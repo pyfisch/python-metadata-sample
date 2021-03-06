@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: bert-tensorflow
+Version: 1.0.4
+Summary: BERT
+Home-page: https://github.com/google-research/bert
+Author: Google Inc.
+Author-email: no-reply@google.com
+License: Apache 2.0
+Platform: UNKNOWN
+Provides-Extra: tensorflow
+Provides-Extra: tensorflow_gpu
+Provides-Extra: tensorflow-hub
+Requires-Dist: six
+Provides-Extra: tensorflow
+Requires-Dist: tensorflow (>=1.12.0); extra == 'tensorflow'
+Provides-Extra: tensorflow-hub
+Requires-Dist: tensorflow-hub (>=0.1.1); extra == 'tensorflow-hub'
+Provides-Extra: tensorflow_gpu
+Requires-Dist: tensorflow-gpu (>=1.12.0); extra == 'tensorflow_gpu'
+
+UNKNOWN
+
+

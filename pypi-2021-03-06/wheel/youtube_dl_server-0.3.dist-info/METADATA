@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: youtube-dl-server
+Version: 0.3
+Summary: An API server based on youtube_dl
+Home-page: https://github.com/jaimeMF/youtube-dl-api-server
+Author: Jaime Marquínez Ferrándiz
+Author-email: jaime.marquinez.ferrandiz@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Topic :: Multimedia :: Video
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: License :: Public Domain
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Requires-Dist: Flask
+Requires-Dist: youtube-dl (>=2015.01.02)
+
+Get the videos from different sites using a server running youtube_dl
+
+

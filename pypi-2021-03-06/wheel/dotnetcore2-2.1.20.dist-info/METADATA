@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: dotnetcore2
+Version: 2.1.20
+Summary: .Net Core 2.1 runtime
+Home-page: https://github.com/dotnet/core
+Author: Microsoft Corporation
+Author-email: 
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Requires-Dist: distro (>=1.2.0)
+
+This wheel contains [.NET Core](https://docs.microsoft.com/en-us/dotnet/core/index), an open-source, general-purpose development platform maintained by Microsoft and the .NET community on [GitHub](https://github.com/dotnet/core). It's cross-platform (supporting Windows, macOS, and Linux) and can be used to build device, cloud, and IoT applications.
+
+See [About .NET Core](https://docs.microsoft.com/en-us/dotnet/core/about) to learn more about .NET Core, including its characteristics, supported languages and frameworks, and key APIs.
+
+This wheel is not intended for general use. This wheel is published to support Azure Machine Learning SDK.
+
+The major and minor versions of this wheel match the version of the .NET Core it contains. The revision number is not related to the .NET Core version (where version format is: {major}.{minor}.{revision}).
+

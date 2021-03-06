@@ -1,0 +1,34 @@
+Metadata-Version: 2.1
+Name: colcon-defaults
+Version: 0.2.5
+Summary: Extension for colcon to read defaults from a config file.
+Home-page: https://colcon.readthedocs.io
+Author: Dirk Thomas
+Author-email: web@dirk-thomas.net
+Maintainer: Dirk Thomas
+Maintainer-email: web@dirk-thomas.net
+License: Apache License, Version 2.0
+Project-URL: Changelog, https://github.com/colcon/colcon-defaults/milestones?direction=desc&sort=due_date&state=closed
+Project-URL: GitHub, https://github.com/colcon/colcon-defaults/
+Keywords: colcon
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Build Tools
+Requires-Dist: PyYAML
+Requires-Dist: colcon-core (>=0.5.5)
+
+colcon-defaults
+===============
+
+An extension for `colcon-core <https://github.com/colcon/colcon-core>`_ to provide custom default values for the command line arguments from a configuration file.
+
+For more information about the format of the configuration file see `colcon.readthedocs.io <http://colcon.readthedocs.io/en/released/user/configuration.html#defaults-yaml>`_.
+
+

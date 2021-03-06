@@ -1,0 +1,34 @@
+Metadata-Version: 1.1
+Name: django-statsd-mozilla
+Version: 0.4.0
+Summary: Django interface with statsd
+Home-page: https://github.com/django-statsd/django-statsd
+Author: Andy McKay
+Author-email: andym@mozilla.com
+License: BSD
+Description: ============================
+        Django Statsd |Build Status|
+        ============================
+        
+        Documentation is on `Read the Docs <https://django-statsd.readthedocs.org/>`_.
+        
+        -------
+        License
+        -------
+        
+        BSD and MPL
+        
+        Portions of this are from commonware:
+        
+        https://github.com/jsocol/commonware/blob/master/LICENSE
+        
+        .. |Build Status| image:: https://travis-ci.org/django-statsd/django-statsd.svg?branch=master
+           :target: https://travis-ci.org/django-statsd/django-statsd
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Framework :: Django
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3

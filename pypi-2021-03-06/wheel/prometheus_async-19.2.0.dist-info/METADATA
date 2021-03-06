@@ -1,0 +1,161 @@
+Metadata-Version: 2.1
+Name: prometheus-async
+Version: 19.2.0
+Summary: Async helpers for prometheus_client.
+Home-page: https://prometheus-async.readthedocs.io/
+Author: Hynek Schlawack
+Author-email: hs@ox.cx
+Maintainer: Hynek Schlawack
+Maintainer-email: hs@ox.cx
+License: Apache License, Version 2.0
+Project-URL: Documentation, https://prometheus-async.readthedocs.io/
+Project-URL: Bug Tracker, https://github.com/hynek/prometheus-async/issues
+Project-URL: Source Code, https://github.com/hynek/prometheus-async
+Keywords: metrics,prometheus,twisted,asyncio
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=2.7, !=3.0, !=3.1, !=3.2, !=3.3, !=3.4
+Requires-Dist: prometheus-client (>=0.0.18)
+Requires-Dist: wrapt
+Requires-Dist: monotonic ; python_version <= "3.5"
+Provides-Extra: aiohttp
+Requires-Dist: aiohttp (>=3) ; extra == 'aiohttp'
+Provides-Extra: consul
+Requires-Dist: aiohttp (>=3) ; extra == 'consul'
+Provides-Extra: dev
+Requires-Dist: aiohttp (>=3) ; extra == 'dev'
+Requires-Dist: twisted ; extra == 'dev'
+Requires-Dist: aiohttp ; extra == 'dev'
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: sphinxcontrib-asyncio ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: pytest (<4.1) ; extra == 'dev'
+Requires-Dist: pytest-twisted ; extra == 'dev'
+Requires-Dist: pre-commit ; extra == 'dev'
+Requires-Dist: pytest-asyncio ; (python_version >= "3.5") and extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: aiohttp ; extra == 'docs'
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinxcontrib-asyncio ; extra == 'docs'
+Requires-Dist: twisted ; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: coverage ; extra == 'tests'
+Requires-Dist: pytest (<4.1) ; extra == 'tests'
+Requires-Dist: pytest-asyncio ; (python_version >= "3.5") and extra == 'tests'
+Provides-Extra: twisted
+Requires-Dist: twisted ; extra == 'twisted'
+
+================
+prometheus_async
+================
+
+.. image:: https://img.shields.io/pypi/v/prometheus_async.svg
+   :target: https://pypi.org/project/prometheus_async/
+   :alt: PyPI
+
+.. image:: https://readthedocs.org/projects/prometheus-async/badge/?version=stable
+   :target: https://prometheus-async.readthedocs.io/en/stable/?badge=stable
+   :alt: Documentation Status
+
+.. image:: https://travis-ci.org/hynek/prometheus_async.svg?branch=master
+   :target: https://travis-ci.org/hynek/prometheus_async
+   :alt: CI status
+
+.. image:: https://codecov.io/github/hynek/prometheus_async/branch/master/graph/badge.svg
+   :target: https://codecov.io/github/hynek/prometheus_async
+   :alt: Test Coverage
+
+.. image:: https://img.shields.io/badge/code%20style-black-000000.svg
+   :target: https://github.com/ambv/black
+   :alt: Code style: black
+
+.. teaser-begin
+
+``prometheus_async`` adds support for asynchronous frameworks to the official `Python client`_ for the Prometheus_ metrics and monitoring system.
+
+Currently asyncio_ (Python 3.5+, PyPy3) and Twisted_ (Python 2.7, 3.5+, PyPy) are supported.
+
+
+It works by wrapping the metrics from the official client:
+
+.. code-block:: python
+
+   import asyncio
+
+   from aiohttp import web
+   from prometheus_client import Histogram
+   from prometheus_async.aio import time
+
+   REQ_TIME = Histogram("req_time_seconds", "time spent in requests")
+
+   @time(REQ_TIME)
+   async def req(request):
+       await asyncio.sleep(1)
+       return web.Response(body=b"hello")
+
+
+Even for *synchronous* applications, the metrics exposure methods can be useful since they are more powerful than the one shipped with the official client.
+For that, helper functions have been added that run them in separate threads (asyncio-only for the time being).
+
+The source code is hosted on GitHub_ and the documentation on `Read The Docs`_.
+
+
+.. _asyncio: https://docs.python.org/3/library/asyncio.html
+.. _`Python client`: https://github.com/prometheus/client_python
+.. _Prometheus: https://prometheus.io/
+.. _Twisted: https://twistedmatrix.com/
+.. _GitHub: https://github.com/hynek/prometheus_async
+.. _`Read The Docs`: https://prometheus-async.readthedocs.io/
+
+
+Release Information
+===================
+
+19.2.0 (2019-01-17)
+-------------------
+
+
+Backward-incompatible changes:
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+*none*
+
+
+Deprecations:
+^^^^^^^^^^^^^
+
+*none*
+
+
+Changes:
+^^^^^^^^
+
+- Revert the switch to decorator.py since it turned out to be a very breaking change.
+  Please note that the now current release of wrapt 1.11.0 has a `memory leak <https://github.com/GrahamDumpleton/wrapt/issues/128>`_ so you should blacklist it in your lockfile.
+
+  Sorry for the inconvenience that has been caused!
+
+`Full changelog <https://prometheus-async.readthedocs.io/en/stable/changelog.html>`_.
+
+Credits
+=======
+
+``prometheus_async`` is written and maintained by `Hynek Schlawack <https://hynek.me/>`_.
+
+The development is kindly supported by `Variomedia AG <https://www.variomedia.de/>`_.
+
+Other contributors can be found in `GitHub's overview <https://github.com/hynek/prometheus_async/graphs/contributors>`_.
+
+

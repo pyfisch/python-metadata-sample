@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: neutron-lib
+Version: 2.9.1
+Summary: Neutron shared routines and utilities
+Home-page: https://docs.openstack.org/neutron-lib/latest/
+Author: OpenStack
+Author-email: openstack-discuss@lists.openstack.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Requires-Dist: SQLAlchemy (>=1.2.0)
+Requires-Dist: WebOb (>=1.7.1)
+Requires-Dist: keystoneauth1 (>=3.4.0)
+Requires-Dist: netaddr (>=0.7.18)
+Requires-Dist: os-ken (>=0.3.0)
+Requires-Dist: os-traits (>=0.9.0)
+Requires-Dist: oslo.concurrency (>=3.26.0)
+Requires-Dist: oslo.config (>=5.2.0)
+Requires-Dist: oslo.context (>=2.19.2)
+Requires-Dist: oslo.db (>=4.44.0)
+Requires-Dist: oslo.i18n (>=3.15.3)
+Requires-Dist: oslo.log (>=3.36.0)
+Requires-Dist: oslo.messaging (>=7.0.0)
+Requires-Dist: oslo.policy (>=1.30.0)
+Requires-Dist: oslo.serialization (!=2.19.1,>=2.18.0)
+Requires-Dist: oslo.service (!=1.28.1,>=1.24.0)
+Requires-Dist: oslo.utils (>=3.33.0)
+Requires-Dist: oslo.versionedobjects (>=1.31.2)
+Requires-Dist: osprofiler (>=1.4.0)
+Requires-Dist: pbr (!=2.1.0,>=2.0.0)
+Requires-Dist: pecan (!=1.0.2,!=1.0.3,!=1.0.4,!=1.2,>=1.0.0)
+Requires-Dist: setproctitle (>=1.1.10)
+Requires-Dist: stevedore (>=1.20.0)
+
+========================
+Team and repository tags
+========================
+
+.. image:: https://governance.openstack.org/tc/badges/neutron-lib.svg
+    :target: https://governance.openstack.org/tc/reference/tags/index.html
+
+.. Change things from this point on
+
+===============================
+neutron-lib
+===============================
+
+Neutron shared routines and utilities
+
+* Free software: Apache license
+* Documentation: https://docs.openstack.org/neutron-lib/latest/
+* Source: https://opendev.org/openstack/neutron-lib
+* Bugs: https://bugs.launchpad.net/neutron
+* Release notes: https://docs.openstack.org/releasenotes/neutron-lib/
+
+Features
+--------
+
+* TODO
+
+
+

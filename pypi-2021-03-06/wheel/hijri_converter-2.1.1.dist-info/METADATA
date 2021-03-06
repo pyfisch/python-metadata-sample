@@ -1,0 +1,242 @@
+Metadata-Version: 2.1
+Name: hijri-converter
+Version: 2.1.1
+Summary: Accurate Hijri-Gregorian date converter based on the Umm al-Qura calendar
+Home-page: https://github.com/dralshehri/hijri-converter
+Author: Mohammed Alshehri
+Author-email: 
+License: MIT
+Project-URL: Documentation, https://hijri-converter.readthedocs.io/
+Keywords: hijri gregorian date converter ummalqura saudi calendar
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Intended Audience :: Legal Industry
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Internationalization
+Classifier: Topic :: Software Development :: Localization
+Classifier: Topic :: Utilities
+Classifier: Typing :: Typed
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+
+Hijri Converter
+===============
+
+A Python package to convert accurately between Hijri and Gregorian dates
+using the Umm al-Qura calendar of Saudi Arabia.
+
+|travis| |codecov| |docs| |supported| |version| |license|
+
+.. |travis|
+   image:: https://img.shields.io/travis/com/dralshehri/hijri-converter.svg
+   :alt: Build Status
+   :target: https://travis-ci.com/dralshehri/hijri-converter
+.. |codecov|
+   image:: https://img.shields.io/codecov/c/github/dralshehri/hijri-converter.svg
+   :alt: Coverage Status
+   :target: https://codecov.io/github/dralshehri/hijri-converter
+.. |docs|
+   image:: https://img.shields.io/readthedocs/hijri-converter/stable.svg
+   :alt: Docs Status
+   :target: https://hijri-converter.readthedocs.io/
+.. |supported|
+   image:: https://img.shields.io/pypi/pyversions/hijri-converter.svg
+   :alt: Python version support
+   :target: https://pypi.python.org/pypi/hijri-converter
+.. |version|
+   image:: https://img.shields.io/pypi/v/hijri-converter.svg
+   :alt: PyPI Package version
+   :target: https://pypi.python.org/pypi/hijri-converter
+.. |license|
+   image:: https://img.shields.io/github/license/dralshehri/hijri-converter.svg
+   :alt: License
+   :target: https://github.com/dralshehri/hijri-converter/blob/master/LICENSE
+
+Features
+--------
+
+- Accurate and tested conversion.
+- Optimized code performance compared to similar packages.
+- Intuitive, clean, and easy-to-use interface.
+- Most of methods and formats are similar to those of standard library.
+- Multilingual representation of weekday names, months, and calendar notations.
+- Easily extendable to support other natural languages.
+- Rich comparison between dates.
+- Validation of input dates.
+- Works on Python 3.6+ with zero dependencies.
+- Thoroughly tested on all supported python versions.
+
+Installation
+------------
+
+.. code-block:: bash
+
+   $ pip install -U hijri-converter
+
+Basic Usage
+-----------
+
+.. code-block:: python
+
+   from hijri_converter import convert
+
+   g = convert.Hijri(1403, 2, 17).to_gregorian()
+   print(g)
+   # 1982-12-02
+
+   h = convert.Gregorian(1982, 12, 2).to_hijri()
+   print(h)
+   # 1403-02-17
+
+Online Tool
+-----------
+
+The following is a simple online conversion tool that was developed to convert
+between Hijri and Gregorian dates using the latest version of *Hijri Converter*
+package:
+
+https://www.dralshehri.com/hijri-converter/
+
+Documentation
+-------------
+
+Please see https://hijri-converter.readthedocs.io/ for full documentation of
+this package, including overview, benchmarking, usage examples and API
+reference.
+
+Contributing
+------------
+
+Contributions are welcome! See
+`CONTRIBUTING.rst <https://github.com/dralshehri/hijri-converter/blob/master/CONTRIBUTING.rst>`__
+for more info.
+
+Authors
+-------
+
+The main author is Mohammed Alshehri —
+`@dralshehri <https://github.com/dralshehri>`__.
+
+Acknowledgment
+--------------
+
+Thanks to `R.H. van Gent <http://www.staff.science.uu.nl/~gent0113>`__
+for inspiration and help.
+
+License
+-------
+
+This package is distributed under an MIT license.
+See `LICENSE <https://github.com/dralshehri/hijri-converter/blob/master/LICENSE>`__.
+
+Change Log
+----------
+
+**2.1.1**
+
+- Added ``dmyformat()`` to return dates in DD/MM/YYYY format.
+- Deprecated ``slashformat()`` method to be replaced by ``dmyformat()`` method.
+- Fixed PyPI package not including a required file. Issue `#3 <https://github.com/dralshehri/hijri-converter/issues/3>`__ by `@PureTryOut <https://github.com/PureTryOut>`__.
+- Fixed some typos.
+- Updated tests.
+
+**2.1.0**
+
+This version has more accurate conversion and better internal code.
+Details are as follows:
+
+- Dropped support for the years before 1343 AH because the Umm al-Qura calendar
+  was not established then.
+- Added ``validate`` parameter to Hijri object for optional disabling of
+  Hijri date validation and improving performance.
+- Verified conversion against original references and updated the
+  ``month_starts`` tuple for more accurate conversion.
+- Improved ``Hijri`` object rich comparison methods.
+- Improved date validation methods for better performance and readability.
+- Made the ``Hijri`` object hashable by adding a custom ``__hash__`` method.
+- Refactored many internal methods (not affecting the API).
+- Other minor fixes, enhancements and performance boost.
+
+**2.0.0**
+
+In short, this version supports only lunar Hijri calendar on Python 3.6+, and
+the conversion is in complete agreement with the official Umm al-Qura calendar.
+Details are as follows:
+
+- Renamed the package to ``hijri-converter``.
+- Dropped support for the solar Hijri calendar.
+- Dropped support for Python 3.5.
+- Refactored localization and ``ummalqura.py`` module.
+- Updated ``month_starts`` tuple in alignment with the Umm al-Qura calendar.
+- Added ``fromdate()`` classmethod to ``Gregorian`` object.
+- Added ``notation()`` method to ``Hijri`` and ``Gregorian`` objects.
+- Added more methods to ``Gregorian`` object including ``slashformat()``,
+  ``month_name()``, ``day_name()`` and ``to_julian()``.
+- Renamed ``month_days()`` method of ``Hijri`` object to ``month_length()``.
+- Changed formatted string to use f-strings.
+- Improved documentation and examples.
+- Updated unit tests.
+- Fixed other minor issues and typos.
+
+**1.5.0**
+
+- Added ``fromisoformat()`` classmethod to ``Hijri`` object.
+- Added support for rich comparison between Hijri dates.
+- Updated documentation and testing code.
+- Other minor fixes and enhancements.
+
+**1.4.0**
+
+- Refactored conversion methods to improve performance.
+- Changed date validation back to be the default and removed optional parameter.
+- Added ``to_julian()`` method to ``Hijri`` object.
+- Updated documentation and testing code.
+- Other minor fixes and enhancements.
+
+**1.3.3**
+
+- Fixed a bug in range validation for the Gregorian date.
+- Changed generic typing to built-in types.
+- Added more tests to cover the solar calendar.
+- Improved code structure and documentation.
+
+**1.3.2**
+
+- Improved documentation and changelog.
+
+**1.3.1**
+
+- Fixed README file.
+
+**1.3.0**
+
+- Added documentation directory with an online version.
+- Changed date input validation to be optional and disabled by default.
+- Improved code readability and performance.
+- Other minor fixes and enhancements.
+
+**1.2.0**
+
+- Added ``slashformat()`` method to ``Hijri`` object.
+- Improved date validation code.
+- Fixed some typos in documentation and docstrings.
+
+**1.0.1**
+
+- Improved examples and documentation.
+
+**1.0.0**
+
+- First release.
+
+

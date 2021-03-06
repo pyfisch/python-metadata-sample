@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: edn-format
+Version: 0.7.5
+Summary: EDN format reader and writer in Python
+Home-page: https://github.com/swaroopch/edn_format
+Author: Swaroop C H
+Author-email: swaroop@swaroopch.com
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Software Development
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: ply (>=3.10)
+Requires-Dist: pyRFC3339 (>=0.2)
+Requires-Dist: pytz (>=2016.10)
+
+# edn_format #
+
+Implements the [EDN format](https://github.com/edn-format/edn) in Python.
+
+All features of EDN are implemented, including custom tagged elements.
+
+![Build Status](https://github.com/swaroopch/edn_format/workflows/build/badge.svg)
+[![PyPI version](https://img.shields.io/pypi/v/edn_format.svg)](https://pypi.org/project/edn_format/)
+
+## Installation ##
+
+    pip install edn_format
+
+## Usage ##
+
+```pycon
+>>> import edn_format
+>>> edn_format.dumps({1, 2, 3})
+'#{1 2 3}'
+>>> edn_format.loads("[1 true nil]")
+[1, True, None]
+>>> edn_format.loads_all("1 2 3 4")
+[1, 2, 3, 4]
+```
+
+
+In general, `edn_format.loads(edn_format.dumps(obj)) == obj`. If this is
+false, it may be a bug.
+
+See `tests.py` for full details.
+
+## Contributors ##
+
+Special thanks to the following contributors for making this library
+usable:
+
+- [@bfontaine](https://github.com/bfontaine)
+- [@marianoguerra](https://github.com/marianoguerra)
+- [@bitemyapp](https://github.com/bitemyapp)
+- [@jashugan](https://github.com/jashugan)
+- [@exilef](https://github.com/exilef)
+
+## FAQ ##
+
+### Why immutable list & dict? ###
+
+IIRC, it was related to https://github.com/edn-format/edn#rationale :
+
+> edn will yield distinct object identities when read, unless a reader implementation goes out of its way to make such a promise. Thus **the resulting values should be considered immutable**, and a reader implementation should yield values that ensure this, to the extent possible.
+
+

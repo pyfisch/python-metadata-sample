@@ -1,0 +1,190 @@
+Metadata-Version: 2.1
+Name: timezonefinderL
+Version: 4.0.2
+Summary: lightweight python package for finding the timezone of any point on earth (coordinates) 
+Home-page: https://github.com/MrMinimal64/timezonefinderL
+Author: J. Michelfeit
+Author-email: python@michelfe.it
+License: MIT licence
+Keywords: timezone coordinates latitude longitude location pytzwhere tzwhere
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Localization
+Requires-Dist: numpy
+Requires-Dist: importlib-resources
+
+===============
+timezonefinderL
+===============
+
+
+.. image:: https://img.shields.io/travis/MrMinimal64/timezonefinderL/master.svg
+    :target: https://travis-ci.org/MrMinimal64/timezonefinderL
+
+.. image:: https://img.shields.io/pypi/wheel/timezonefinderL.svg
+    :target: https://pypi.python.org/pypi/timezonefinderL
+
+.. image:: https://pepy.tech/badge/timezonefinderL
+    :alt: Total PyPI downloads
+    :target: https://pypi.python.org/pypi/timezonefinderL
+
+.. image:: https://img.shields.io/pypi/v/timezonefinderL.svg
+    :target: https://pypi.python.org/pypi/timezonefinderL
+
+
+timezonefinderL is the faster and lightweight, but inaccurate version of the original `timezonefinder <https://github.com/MrMinimal64/timezonefinder>`__.
+Use this package in favour of ``timezonefinder`` when memory usage and speed matter more to you than accuracy.
+
+
+Only the function ``timezone_at()`` is being supported and ``numba`` cannot be used for precompilation.
+The commands need to modified:
+
+::
+
+    pip install timezonefinderL
+
+
+.. code-block:: python
+
+    from timezonefinderL import TimezoneFinder
+
+    tf = TimezoneFinder()
+
+    longitude, latitude = 13.358, 52.5061
+    tf.timezone_at(lng=longitude, lat=latitude)  # returns 'Europe/Berlin'
+
+
+For everything else please refer to the original `Documentation <https://github.com/MrMinimal64/timezonefinder>`__.
+
+
+Operating Principle
+-------------------
+
+Instead of storing timezone polygons and checking which polygon a query point is included in, like with the vanilla ``timezonefinder``,
+this package uses only the precomputed shortcuts to instantly lookup a timezone.
+The zone which has the highest amount of timezone polygons (not covered surface!) in a shortcut is instantly being returned.
+
+This requires far less memory and computing time, but of course is not accurate close to the borders of two neighbouring timezones.
+
+
+The size of the shortcuts (<-> accuracy) is equal to the one used in the vanilla ``timezonefinder`` (1 shortcut per degree longitude, 2 per degree latitude, 260KB binary file size).
+In order to increase the accuracy (more and smaller shortcut rectangles), increment the parameters ``NR_SHORTCUTS_PER_LNG`` and ``NR_SHORTCUTS_PER_LAT`` in ``global_settings.py`` and compile a new binary shortcut file by running ``file_converter.py``.
+
+
+Speed Test Results:
+-------------------
+
+obtained on MacBook Pro (15-inch, 2017), 2,8 GHz Intel Core i7
+It can be seen that ``timezonefinderL`` is roughly one order of magnitude faster than ``timezonefinder``:
+
+::
+
+    Speed Tests:
+    -------------
+    "realistic points": points included in a timezone
+
+    in memory mode: False
+
+    testing 100000 realistic points
+    total time: 0.5513s
+    avg. points per second: 1.8 * 10^5
+
+    testing 100000 random points
+    total time: 0.5682s
+    avg. points per second: 1.8 * 10^5
+
+
+    in memory mode: True
+
+    testing 100000 realistic points
+    total time: 0.1688s
+    avg. points per second: 5.9 * 10^5
+
+
+    testing 100000 random points
+    total time: 0.1837s
+    avg. points per second: 5.4 * 10^5
+
+
+
+Contact
+-------
+
+Most certainly there is stuff I missed, things I could have optimized even further etc. I would be really glad to get some feedback on my code.
+
+If you notice that the tz data is outdated, encounter any bugs, have
+suggestions, criticism, etc. feel free to **open an Issue**, **add a Pull Requests** on Git or ...
+
+contact me: *[python] {*-at-*} [michelfe] {-*dot*-} [it]*
+
+
+
+License
+-------
+
+``timezonefinder`` is distributed under the terms of the MIT license
+(see LICENSE.txt).
+
+
+
+Also see:
+`GitHub <https://github.com/MrMinimal64/timezonefinderL>`__,
+`PyPI <https://pypi.python.org/pypi/timezonefinderL/>`__,
+`GUI and API <http://timezonefinder.michelfe.it/gui>`__ of the outdated ``timezonefinderL``
+`timezonefinder <https://github.com/MrMinimal64/timezonefinder>`__,
+
+
+Changelog
+=========
+
+
+4.0.2 (2019-05-23)
+------------------
+
+* MAJOR UPDATE: only the function ``timezone_at()`` is being supported
+* not based on the simplification of the timezone polygons any more (not easily achievable with the new boundary data set)
+* use the precomputed shortcuts to instantly look up a timezone ("instant shortcut", most common zone of the polygons within that shortcut)
+* updated the code to the status of the current ``timezonefinder`` main package ``v4.0.2``
+* data in use now is `timezone-boundary-builder 2019a <https://github.com/evansiroky/timezone-boundary-builder/releases/tag/2019a>`__
+* described options for increasing the accuracy in readme
+* dropped python2 support
+
+
+2.0.1 (2017-04-08)
+------------------
+
+* added missing package data entries (2.0.0 didn't include all necessary .bin files)
+
+
+2.0.0 (2017-04-07)
+------------------
+
+* introduction of this version of `timezonefinder <https://github.com/MrMinimal64/timezonefinder/>`__
+* data has been simplified which affects speed and data size. Around 56% of the coordinates of the timezone polygons have been deleted and around 60% of the polygons (mostly small islands) have been included in the simplified polygons. For any coordinate on landmass the results should stay the same, but accuracy at the shorelines is lost. This eradicates the usefulness of closest_timezone_at() and certain_timezone_at() but the main use case for this package (= determining the timezone of a point on landmass) is improved.
+* file_converter.py has been complemented and modified to perform those simplifications
+* introduction of new function get_geometry() for querying timezones for their geometric shape
+* added shortcuts_unique_id.bin for instantly returning an id if the shortcut corresponding to the coords only contains polygons of one zone
+* data is now stored in separate binaries for ease of debugging and readability
+* polygons are stored sorted after their timezone id and size
+* timezonefinder can now be called directly as a script (experimental with reduced functionality, see readme)
+* optimisations on point in polygon algorithm
+* small simplifications in the helper functions
+* clarification of the readme
+* clarification of the comments in the code
+* referenced the new conda-feedstock in the readme
+* referenced the new timezonefinder API/GUI
+
+
+for older versions refer to `timezonefinder <https://github.com/MrMinimal64/timezonefinder/>`__.
+
+

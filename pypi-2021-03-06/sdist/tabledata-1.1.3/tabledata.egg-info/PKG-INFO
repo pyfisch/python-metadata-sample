@@ -1,0 +1,94 @@
+Metadata-Version: 2.1
+Name: tabledata
+Version: 1.1.3
+Summary: tabledata is a Python library to represent tabular data. Used for pytablewriter/pytablereader/SimpleSQLite.
+Home-page: https://github.com/thombashi/tabledata
+Author: Tsuyoshi Hombashi
+Author-email: tsuyoshi.hombashi@gmail.com
+License: MIT License
+Project-URL: Documentation, https://tabledata.rtfd.io/
+Project-URL: Source, https://github.com/thombashi/tabledata
+Project-URL: Tracker, https://github.com/thombashi/tabledata/issues
+Description: .. contents:: **tabledata**
+           :backlinks: top
+           :depth: 2
+        
+        Summary
+        ---------
+        `tabledata <https://github.com/thombashi/tabledata>`__ is a Python library to represent tabular data. Used for pytablewriter/pytablereader/SimpleSQLite.
+        
+        .. image:: https://badge.fury.io/py/tabledata.svg
+            :target: https://badge.fury.io/py/tabledata
+            :alt: PyPI package version
+        
+        .. image:: https://img.shields.io/pypi/pyversions/tabledata.svg
+            :target: https://pypi.org/project/tabledata
+            :alt: Supported Python versions
+        
+        .. image:: https://img.shields.io/travis/thombashi/tabledata/master.svg?label=Linux/macOS%20CI
+            :target: https://travis-ci.org/thombashi/tabledata
+            :alt: Linux/macOS CI status
+        
+        .. image:: https://img.shields.io/appveyor/ci/thombashi/tabledata/master.svg?label=Windows%20CI
+            :target: https://ci.appveyor.com/project/thombashi/tabledata/branch/master
+            :alt: Windows CI status
+        
+        .. image:: https://coveralls.io/repos/github/thombashi/tabledata/badge.svg?branch=master
+            :target: https://coveralls.io/github/thombashi/tabledata?branch=master
+            :alt: Test coverage
+        
+        Installation
+        ============
+        
+        Install from PyPI
+        ------------------------------
+        ::
+        
+            pip install tabledata
+        
+        Install from PPA (for Ubuntu)
+        ------------------------------
+        ::
+        
+            sudo add-apt-repository ppa:thombashi/ppa
+            sudo apt update
+            sudo apt install python3-tabledata
+        
+        
+        Dependencies
+        ============
+        - Python 3.5+
+        - `Mandatory Python package dependencies (automatically installed) <https://github.com/thombashi/tabledata/network/dependencies>`__
+        
+        Optional Python packages
+        ------------------------------------------------
+        - `loguru <https://github.com/Delgan/loguru>`__
+            - Used for logging if the package installed
+        - `pandas <https://pandas.pydata.org/>`__
+            - required to get table data as a pandas data frame
+        
+        Documentation
+        ===============
+        https://tabledata.rtfd.io/
+        
+        
+Keywords: table
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.5
+Description-Content-Type: text/x-rst
+Provides-Extra: logging
+Provides-Extra: test

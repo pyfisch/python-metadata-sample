@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: tenacity
+Version: 7.0.0
+Summary: Retry code until it succeeds
+Home-page: https://github.com/jd/tenacity
+Author: Julien Danjou
+Author-email: julien@danjou.info
+License: Apache 2.0
+Description: Tenacity is a general-purpose retrying library to simplify the task of adding retry behavior to just about anything.
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Utilities
+Provides-Extra: doc

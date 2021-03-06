@@ -1,0 +1,32 @@
+Metadata-Version: 1.2
+Name: colcon-core
+Version: 0.6.1
+Summary: Command line tool to build sets of software packages.
+Home-page: https://colcon.readthedocs.io
+Author: Dirk Thomas
+Author-email: web@dirk-thomas.net
+Maintainer: Dirk Thomas
+Maintainer-email: web@dirk-thomas.net
+License: Apache License, Version 2.0
+Project-URL: Changelog, https://github.com/colcon/colcon-core/milestones?direction=desc&sort=due_date&state=closed
+Project-URL: GitHub, https://github.com/colcon/colcon-core/
+Description: colcon - collective construction
+        ================================
+        
+        ``colcon`` is a command line tool to improve the workflow of building, testing and using multiple software packages.
+        It automates the process, handles the ordering and sets up the environment to use the packages.
+        
+        For more information see `colcon.readthedocs.io <https://colcon.readthedocs.io>`_.
+        
+Keywords: colcon
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Build Tools
+Requires-Python: >=3.5

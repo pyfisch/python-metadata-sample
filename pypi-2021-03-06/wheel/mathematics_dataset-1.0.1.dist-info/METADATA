@@ -1,0 +1,38 @@
+Metadata-Version: 2.1
+Name: mathematics-dataset
+Version: 1.0.1
+Summary: A synthetic dataset of school-level mathematics questions
+Home-page: https://github.com/deepmind/mathematics_dataset
+Author: DeepMind
+Author-email: saxton@google.com
+License: Apache License, Version 2.0
+Keywords: mathematics dataset
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Dist: absl-py (>=0.1.0)
+Requires-Dist: numpy (>=1.10)
+Requires-Dist: six
+Requires-Dist: sympy (>=1.2)
+
+A synthetic dataset of school-level mathematics questions.
+
+This dataset code generates mathematical question and answer pairs, from a range
+of question types (such as in arithmetic, algebra, probability, etc), at roughly
+school-level difficulty. This is designed to test the mathematical learning and
+reasoning skills of learning models.
+
+Original paper: Analysing Mathematical Reasoning Abilities of Neural Models
+(Saxton, Grefenstette, Hill, Kohli) (https://openreview.net/pdf?id=H1gR5iR5FX).
+
+

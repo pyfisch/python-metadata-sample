@@ -1,0 +1,28 @@
+Metadata-Version: 1.1
+Name: hl7
+Version: 0.4.2
+Summary: Python library parsing HL7 v2.x messages
+Home-page: http://python-hl7.readthedocs.org
+Author: John Paulett
+Author-email: john@paulett.org
+License: BSD
+Description: 
+            python-hl7 is a simple library for parsing messages of Health Level 7
+            (HL7) version 2.x into Python objects.
+        
+            * Documentation: http://python-hl7.readthedocs.org
+            * Source Code: http://github.com/johnpaulett/python-hl7
+            
+Keywords: HL7,Health Level 7,healthcare,health care,medical record,mllp
+Platform: POSIX
+Platform: Windows
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Healthcare Industry
+Classifier: Topic :: Communications
+Classifier: Topic :: Scientific/Engineering :: Medical Science Apps.
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

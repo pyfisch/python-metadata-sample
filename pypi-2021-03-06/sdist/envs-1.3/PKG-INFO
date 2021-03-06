@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: envs
+Version: 1.3
+Summary: Easy access of environment variables from Python with support for strings, booleans, list, tuples, and dicts.
+Home-page: https://github.com/bjinwright/envs
+Author: Brian Jinwright
+License: GNU GPL v3
+Description: UNKNOWN
+Keywords: environment variables
+Platform: UNKNOWN
+Provides-Extra: cli

@@ -1,0 +1,743 @@
+Metadata-Version: 2.1
+Name: py7zr
+Version: 0.14.1
+Summary: Pure python 7-zip library
+Home-page: https://github.com/miurahr/py7zr
+Author: Hiroshi Miura
+Author-email: miurahr@linux.com
+License: LGPL-2.1+
+Description: ======================================
+        |logo| py7zr -- a 7z library on python
+        ======================================
+        
+        .. |logo| image:: logo.svg
+            :width: 80pt
+            :height: 80pt
+            :target: https://pypi.org/project/py7zr
+        
+        .. image:: https://readthedocs.org/projects/py7zr/badge/?version=latest
+          :target: https://py7zr.readthedocs.io/en/latest/?badge=latest
+        
+        .. image:: https://badge.fury.io/py/py7zr.svg
+          :target: https://badge.fury.io/py/py7zr
+        
+        .. image:: https://github.com/miurahr/py7zr/workflows/Run%20Tox%20tests/badge.svg
+          :target: https://github.com/miurahr/py7zr/actions
+        
+        .. image:: https://dev.azure.com/miurahr/github/_apis/build/status/miurahr.py7zr?branchName=master
+          :target: https://dev.azure.com/miurahr/github/_build/latest?definitionId=14&branchName=master
+        
+        .. image:: https://coveralls.io/repos/github/miurahr/py7zr/badge.svg?branch=master
+          :target: https://coveralls.io/github/miurahr/py7zr?branch=master
+        
+        
+        
+        
+        py7zr is a library and utility to support 7zip archive compression, decompression,
+        encryption and decryption written by Python programming language.
+        
+        =======
+        WARNING
+        =======
+        
+        **Test archive data, which affected a malware,  have been existed from Aug, 2020 - 20, Jan, 2021!**
+        
+        All the git history is re-writed, so please remove your local and fork copy of the git repository,
+        and clone again(if necessary)!
+        
+        Problematic file is named `issue_218.7z` and `issue_218_2.7z`.
+        
+        **There is NO affected in library itself.**  and the test execution also does not extract the malware file.
+        There is no problem when you install py7zr with `pip` command.
+        
+        Release that has a clean source:
+        
+        - v0.11.3 and later
+        - v0.10.2
+        - v0.9.10
+        - v0.9.4 and before
+        
+        Install
+        =======
+        
+        You can install py7zr as usual other libraries using pip.
+        
+        .. code-block:: shell
+        
+            $ pip install py7zr
+        
+        
+        Documents
+        =========
+        
+        User manuals
+        ------------
+        
+        * `User Guide`_ for latest version.
+        
+        * `API Guide`_ for latest version.
+        
+        * `Manual`_ for stable version.
+        
+        Developer guide
+        ---------------
+        
+        * `Contributor guide`_ for one want to contribute the project.
+        
+        * `7z file specification`_
+        
+        
+        .. _`User Guide`: https://py7zr.readthedocs.io/en/latest/user_guide.html
+        
+        .. _`API Guide` : https://py7zr.readthedocs.io/en/latest/api.html
+        
+        .. _`Manual` : https://py7zr.readthedocs.io/en/stable/
+        
+        .. _`Contributor guide` : https://py7zr.readthedocs.io/en/latest/contribution.html
+        
+        .. _`7z file specification` : https://py7zr.readthedocs.io/en/latest/archive_format.html
+        
+        
+        CLI Usage
+        =========
+        
+        You can run command script py7zr like as follows;
+        
+        * List archive contents
+        
+        .. code-block:: shell
+        
+            $ py7zr l test.7z
+        
+        * Extract archive
+        
+        .. code-block:: shell
+        
+            $ py7zr x test.7z
+        
+        * Extract archive with password
+        
+        .. code-block:: shell
+        
+            $ py7zr x -P test.7z
+              password?: ****
+        
+        * Create and compress to archive
+        
+        .. code-block:: shell
+        
+            $ py7zr c target.7z test_dir
+        
+        * Create multi-volume archive
+        
+        .. code-block:: shell
+        
+            $ py7zr c -v 500k target.7z test_dir
+        
+        * Test archive
+        
+        .. code-block:: shell
+        
+            $ py7zr t test.7z
+        
+        * Append files to archive
+        
+        .. code-block:: shell
+        
+            $ py7zr a test.7z test_dir
+        
+        * Show information
+        
+        .. code-block:: shell
+        
+            $ py7zr i
+        
+        * Show version
+        
+        .. code-block:: shell
+        
+            $ py7zr --version
+        
+        
+        SevenZipFile Class Usage
+        ========================
+        
+        py7zr is a library which can use in your python application.
+        
+        Decompression/Decryption
+        ------------------------
+        
+        Here is a code snippet how to decompress some file in your application.
+        
+        .. code-block:: python
+        
+            import py7zr
+        
+            archive = py7zr.SevenZipFile('sample.7z', mode='r')
+            archive.extractall(path="/tmp")
+            archive.close()
+        
+        
+        
+        You can also use 'with' block because py7zr provide context manager(v0.6 and later).
+        
+        .. code-block:: python
+        
+            import py7zr
+        
+            with py7zr.SevenZipFile('sample.7z', mode='r') as z:
+                z.extractall()
+        
+            with py7zr.SevenZipFile('target.7z', 'w') as z:
+                z.writeall('./base_dir')
+        
+        
+        py7zr also supports extraction of single or selected files by 'extract(targets=['file path'])'.
+        Note: if you specify only a file but not a parent directory, it will fail.
+        
+        .. code-block:: python
+        
+            import py7zr
+            import re
+        
+            filter_pattern = re.compile(r'<your/target/file_and_directories/regex/expression>')
+            with SevenZipFile('archive.7z', 'r') as archive:
+                allfiles = archive.getnames()
+                selective_files = [f if filter_pattern.match(f) for f in allfiles]
+                archive.extract(targets=selective_files)
+        
+        
+        py7zr support an extraction of password protected archive.(v0.6 and later)
+        
+        .. code-block:: python
+        
+            import py7zr
+        
+            with py7zr.SevenZipFile('encrypted.7z', mode='r', password='secret') as z:
+                z.extractall()
+        
+        Compression/Encryption
+        ----------------------
+        
+        Here is a code snippet how to produce archive.
+        
+        .. code-block:: python
+        
+            import py7zr
+        
+            with py7zr.SevenZipFile('target.7z', 'w') as archive:
+                archive.writeall('/path/to/base_dir', 'base')
+        
+        
+        To create encrypted archive, please pass a password.
+        
+        .. code-block:: python
+        
+            import py7zr
+        
+            with py7zr.SevenZipFile('target.7z', 'w', password='secret') as archive:
+                archive.writeall('/path/to/base_dir', 'base')
+        
+        
+        To create archive with algorithms such as zstandard, you can call with custom filter.
+        
+        .. code-block:: python
+        
+            import py7zr
+        
+            my_filters = [{"id": py7zr.FILTER_ZSTD}]
+            another_filters = [{"id": py7zr.FILTER_ARM}, {"id": py7zr.FILTER_LZMA2, "preset": 7}]
+            with py7zr.SevenZipFile('target.7z', 'w', filters=my_filter) as archive:
+                archive.writeall('/path/to/base_dir', 'base')
+        
+        
+        shutil helper
+        =============
+        
+        py7zr also support `shutil`  interface.
+        
+        .. code-block:: python
+        
+            from py7zr import pack_7zarchvie, unpack_7zarchive
+            import shutil
+        
+            # register file format at first.
+            shutil.register_archive_format('7zip', pack_7zarchive, description='7zip archive')
+            shutil.register_unpack_format('7zip', ['.7z'], unpack_7zarchive)
+        
+            # extraction
+            shutil.unpack_archive('test.7z', '/tmp')
+        
+            # compression
+            shutil.make_archive('target', '7zip', 'src')
+        
+        
+        Required Python versions
+        ========================
+        
+        `py7zr` uses a python3 standard `lzma module`_ for extraction and compression.
+        The standard lzma module uses `liblzma`_ that support core compression algorithm of 7zip.
+        
+        Minimum required version is Python 3.5.
+        Two additional library is required only on Python3.5; contextlib2 and pathlib2.
+        
+        Compression is supported on Python 3.6 and later.
+        Multi-volume archive creation issupported on Python 3.7 and later.
+        
+        There are other runtime requrements; texttable, pycryptodome
+        
+        Version recommendations are:
+        
+        - CPython 3.7.5, CPython 3.8.0 and later.
+        - PyPy3.6-7.2.0 and later.
+        
+        Following fixes are included in these versions, and it is not fixed on python3.6.
+        
+        - `BPO-21872`_: LZMA library sometimes fails to decompress a file
+        - `PyPy3-3090`_: lzma.LZMADecomporessor.decompress does not respect max_length
+        
+        
+        .. _`lzma module`: https://docs.python.org/3/library/lzma.html
+        .. _`liblzma`: https://tukaani.org/xz/
+        .. _`BPO-21872`: https://bugs.python.org/issue21872
+        .. _`PyPy3-3090`: https://foss.heptapod.net/pypy/pypy/-/issues/3090
+        
+        
+        Compression Methods supported
+        =============================
+        
+        'py7zr' supports algorithms and filters which `lzma module`_ and `liblzma`_ support.
+        It also support BZip2 and Deflate that are implemented in python core libraries,
+        and ZStandard with third party libraries.
+        
+        Supported algorithms are:
+        
+        * compress
+            * LZMA2
+            * LZMA
+            * Bzip2
+            * Deflate
+            * Copy
+            * PPMd
+            * Zstandard
+        
+        * crypt
+            * 7zAES
+        
+        * Filters
+            * Delta
+            * BCJ(X86,ARMT,ARM,PPC,SPARC,IA64)
+        
+        * No supported
+            * BCJ2
+            * Deflate64
+        
+        - A feature handling symbolic link is basically compatible with 'p7zip' implementation,
+          but not work with original 7-zip because the original does not implement the feature.
+        
+        Dependencies
+        ============
+        
+        There are several dependencies to support algorithms and CLI expressions.
+        
+        ================  ================================
+        Package           Purpose
+        ================  ================================
+        `Pycryptodome`_   7zAES encryption
+        `ppmd-cffi`_      PPMd compression
+        `zstandard`_      ZStandard compression
+        `texttable`_      CLI
+        ================  ================================
+        
+        .. _`Pycryptodome` : https://pypi.org/project/pycryptodome/
+        .. _`ppmd-cffi` : https://pypi.org/project/ppmd-cffi/
+        .. _`zstandard` : https://pypi.org/project/zstandard
+        .. _`texttable` : https://pypi.org/project/texttable
+        
+        
+        Performance
+        ===========
+        
+        You can find a compression and decompression benchmark results at
+        [Github issue](https://github.com/miurahr/py7zr/issues/297) and [wiki page](https://github.com/miurahr/py7zr/wiki/Benchmarks)
+        
+        Benchmarks are run with Github Actions manually triggered at
+        [Github actions workflow](https://github.com/miurahr/py7zr/actions/workflows/run-benchmark.yml)
+        
+        py7zr works well, but slower than `7-zip` and `p7zip` C implementation by several reasons.
+        When compression/decompression **speed** is quite important, it is recommended to use these
+        alternatives through `subprocess.run` python interface.
+        
+        Use Cases
+        =========
+        
+        - `aqtinstall`_ Another (unofficial) Qt (aqt) CLI Installer on multi-platforms.
+        - PreNLP_ Preprocessing Library for Natural Language Processing
+        - mlox_  a tool for sorting and analyzing Morrowind plugin load order
+        
+        .. _aqtinstall: https://github.com/miurahr/aqtinstall
+        .. _PreNLP: https://github.com/lyeoni/prenlp
+        .. _mlox: https://github.com/mlox/mlox
+        
+        License
+        =======
+        
+        * Copyright (C) 2019-2021 Hiroshi Miura
+        
+        * pylzma Copyright (c) 2004-2015 by Joachim Bauch
+        * 7-Zip Copyright (C) 1999-2010 Igor Pavlov
+        * LZMA SDK Copyright (C) 1999-2010 Igor Pavlov
+        
+        This library is free software; you can redistribute it and/or
+        modify it under the terms of the GNU Lesser General Public
+        License as published by the Free Software Foundation; either
+        version 2.1 of the License, or (at your option) any later version.
+        
+        This library is distributed in the hope that it will be useful,
+        but WITHOUT ANY WARRANTY; without even the implied warranty of
+        MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+        Lesser General Public License for more details.
+        
+        You should have received a copy of the GNU Lesser General Public
+        License along with this library; if not, write to the Free Software
+        Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+        
+        ===============
+        Py7zr ChangeLog
+        ===============
+        
+        All notable changes to this project will be documented in this file.
+        
+        `Unreleased`_
+        =============
+        
+        Added
+        -----
+        
+        Changed
+        -------
+        
+        Fixed
+        -----
+        
+        Deprecated
+        ----------
+        
+        Removed
+        -------
+        
+        Security
+        --------
+        
+        `v0.14.1`_
+        ==========
+        
+        Fixed
+        -----
+        
+        * Fix of empty file archive(#305,#310)
+        
+        
+        `v0.14.0`_
+        ==========
+        
+        Added
+        -----
+        
+        * Introduce writed() method that accept dict[name, BinaryIO](#302)
+        
+        Changed
+        -------
+        
+        * READ_BLOCKSIZE configurable on constructor(#307)
+        * Use pyzstd for zstandard algorithm on CPython(#304)
+        * Use bcj-cffi library for lzma+bcj performance(#303)
+        * CLI: Fix getting module_name on 3.6.13(#308)
+        
+        
+        
+        `v0.13.0`_
+        ==========
+        
+        Added
+        -----
+        
+        * Add writestr() and writef() methods in SevenZipFile class.(#290,#293)
+        * Add benchmark tests for compression algorithms(#295)
+        * Track benchmark results on Github issue(#296)
+        
+        Changed
+        -------
+        
+        * Refactoring BCF Filter classes, and move to individual module.(#292)
+        
+        
+        `v0.12.0`_
+        ==========
+        
+        Changed
+        -------
+        
+        * PPMd and ZStandard is now one of default algorithms(#289)
+        * Increment copyright year
+        
+        Fixed
+        -----
+        
+        * Crash when append files to an empty files archive(#286)
+        
+        
+        `v0.11.3`_
+        ==========
+        
+        Fixed
+        -----
+        
+        * Fix test failure when running on pypi source(#279)
+        
+        Security
+        --------
+        
+        * Drop issue_218.7z test data wihch is reported a blackmoon trojan(#285)
+        
+        
+        `v0.11.1`_
+        ==========
+        
+        Changed
+        -------
+        * Improve BCJ filter performance with LZMA1, ZStd compressions.
+        
+        Fixed
+        -----
+        
+        * Fix to allow writing encrypted header(#280)
+        * Avoid crash when creationtime is wrong or Unix epoch. (#275,#276)
+        
+        
+        `v0.11.0`_
+        ==========
+        
+        Changed
+        -------
+        
+        * PPMd: Use stream encoder/decoder instead of buffered one.
+        * PPMd: Use ppmd-cffi@v0.3.1 and later.(#268)
+        
+        Added
+        -----
+        
+        * PPMd compression/decompression support.(#255)
+        * New API to set methods to set header encode mode, encode or encrypted.(#259)
+        * Support Python 3.9.(#261)
+        * Support arm64/aarch64 architecture on Linux.(#262)
+        
+        Fixed
+        -----
+        
+        * Append mode cause error when target archive use LZMA2+BCJ.(#266)
+        * Fix zstandard compression/decompression.(#258)
+        
+        Deprecated
+        ----------
+        
+        * Drop support for python 3.5 which become end-of-line in Sept. 2020.
+        
+        `v0.10.1`_
+        ==========
+        
+        Fixed
+        -----
+        
+        *  Fix exception when reading header which size is larger than buffer size (#252)
+        
+        
+        `v0.10.0`_
+        ==========
+        
+        Added
+        -----
+        
+        * Compatibility test with python-libarchive-c/libarchive for compression(#247)
+        * Document: express how to handle multi-volume archive (#243)
+        * SevenZipFile.needs_password() method.(#208, #235)
+        * CLI: Support append mode command line.(#228)
+        * Support "APPEND" mode. User can open SevenZipFile() class with mode='a' (#227)
+        
+        Changed
+        -------
+        
+        * Calculate CRC32 of header without re-reading header from disk again.(#245)
+        * read(), extract(): improve performance when specifying parts of archived file,
+          by skipping rest of arcvhive when target file has extracted.(#239,#242)
+        * read(), extract(): improve performance when specifying parts of archived file,
+          by not running threads for unused compression blocks(folders).(#239,#242)
+        * docs: improve API documentation.(#244)
+        * setup: set minimum required python version as >=3.5
+        * Compression will be happened when call write() not close() (#222, #226)
+        * Handle file read/write in SevenZipCompressor/Decompressor class (#213)
+        
+        Fixed
+        -----
+        
+        * Fix BCJ(x86) filter code with a missing logic which cause extraction error
+          for certain data. (#249, #250)
+        * Raise PasswordRequired when encrypted header without passing password (#234, #237)
+        * CLI: don't raise exception when password is wrong or not given.(#229)
+        * Fix specification typo.
+        * Catch exception in threading extraction(#218,#219)
+        
+        `v0.9.2`_
+        =========
+        
+        Changed
+        -------
+        
+        * Utilize max_length argument for each decompressor.(#210, #211)
+        * Change READ_BUFFER_SIZE 32768 for python 3.7.5 and before.
+        * Extend Buffer size when necessary.(#209)
+        
+        
+        `v0.9.1`_
+        =========
+        
+        Changed
+        -------
+        
+        * Improve DecompressionChain.decompress() logics.(#207)
+        
+        Fixed
+        -----
+        
+        * Fix BCJ filter for decompression that can cause infinite loop or wrong output.(#204,#205,#206)
+        
+        `v0.9.0`_
+        =========
+        
+        Added
+        -----
+        
+        * BCJ Decoder/Encoder written by python.(#198, #199)
+        * Support Bzip2, Defalte + BCJ(X86, PPC, ARM, ARMT, SPARC) (#199)
+        * Add Copy method as an extraction only support.(#184)
+        
+        Changed
+        -------
+        
+        * Use large(1MB) read blocksize for Python 3.7.5 and later and PyPy 7.2.0 and later.
+        * Set ZStandard compression as unsupported because of a bug with unknown reason.(#198)
+        * Manage compression methods to handle whether decompressor requires coder['property'] or not.
+        
+        Fixed
+        -----
+        
+        * Significantly improve decompress performance which is as same speed as v0.7.*.
+          by updating buffer handling.
+        * Fix decompression max_size to pass lzma module. Now it is as same as out_remaining.
+        * Support LZMA+BCJ(X86, PPC, ARM, ARMT, SPARC) with alternative BCJ filter.(#198, #199)
+        * Fix packinfo crc  read and write (#187, #189)
+        * Accept archive which Method ID is NULL(size=0)(#181, #182)
+        * CLI: Does not crash when trying extract archive which use unsupported method(#183)
+        
+        
+        v0.8.0
+        ======
+        
+        Added
+        -----
+        
+        * test: add test for #178 bug report the case of LZMA+BCJ as xfails.
+        * File format specification: add ISO/IEC standard style specification document.
+        * Support extra methods for archiveinfo() method.(#150)
+        * test: unit tests for Sparc, ARMT and IA64 filters.
+        * Support for PPC and ARM filters.
+        * Support encryption(#145)
+        * Export supported filter constants, such as FILTER_ZSTD(#145)
+        
+        Changed
+        -------
+        
+        * Improve README, documents and specifications.
+        * Update password handling and drop get_password() helper (#162)
+        * Enable encoded header and add more test with 7zip compatibility.(#164)
+        * Refactoring SevenZipFile class internals. (#160)
+        * Refactoring classes in compressor module. (#161)
+        * Add 'packinfo.crcs' field digests data when creating archive.(#157)
+          It help checking archive integrity without extraction.
+        * CLI: help option to show py7zr version and python version.
+        * Use importlib for performance improvement instead of pkg_resources module.
+        * Documents: additional methods, filter examples.
+        * CI configurations: Manage coverage with Coveralls.
+        * Refactoring decompression classes to handle data precisely with folder.unpacksizes(#146)
+        * Default compression mode is LZMA2+BCJ which is as same as
+          7zip and p7zip(#145)
+        * Enhance encryption strength, IV is now 16 bytes, and generated
+          with cryptodom.random module.(#145)
+        * Refactoring compression algorythm related modules.
+        
+        Fixed
+        -----
+        
+        * Now return correct header size by archiveinfo() method.(#169)
+        * Disable adding CRC for encoded header packinfo.(#164)
+        * Fix password leak/overwrite among SevenZipFile objects in a process.(#159)
+          This can cause decryption error or encryption with unintended password.
+        * Release password on close()
+        * SevenZipFile.test() method now working properly. (#155)
+        * Fix extraction error on python 3.5.(#151)
+        * Support combination of filters(#145)
+        * Compression of Delta, BZip2, ZStandard, and Deflate(#145)
+        * Fix archived head by multiple filter specified.
+        * Fix delta filter.
+        * Working with BCJ filter.
+        * Fix archiveinfo to provide proper names.
+        
+        Removed
+        -------
+        
+        * test: Drop some test case with large files.
+        * Drop ArchiveProperty class: A field has already deprecated or not used.(#170)
+        * Drop AntiFile property: a property has already deprecated or not used.
+        * remove final_header definition.
+        
+        
+        
+        .. History links
+        .. _Unreleased: https://github.com/miurahr/py7zr/compare/v0.14.1...HEAD
+        .. _v0.14.1: https://github.com/miurahr/py7zr/compare/v0.14.0...v0.14.1
+        .. _v0.14.0: https://github.com/miurahr/py7zr/compare/v0.13.0...v0.14.0
+        .. _v0.13.0: https://github.com/miurahr/py7zr/compare/v0.12.0...v0.13.0
+        .. _v0.12.0: https://github.com/miurahr/py7zr/compare/v0.11.3...v0.12.0
+        .. _v0.11.3: https://github.com/miurahr/py7zr/compare/v0.11.1...v0.11.3
+        .. _v0.11.1: https://github.com/miurahr/py7zr/compare/v0.11.0...v0.11.1
+        .. _v0.11.0: https://github.com/miurahr/py7zr/compare/v0.10.1...v0.11.0
+        .. _v0.10.1: https://github.com/miurahr/py7zr/compare/v0.10.0...v0.10.1
+        .. _v0.10.0: https://github.com/miurahr/py7zr/compare/v0.9.2...v0.10.0
+        .. _v0.9.2: https://github.com/miurahr/py7zr/compare/v0.9.1...v0.9.2
+        .. _v0.9.1: https://github.com/miurahr/py7zr/compare/v0.9.0...v0.9.1
+        .. _v0.9.0: https://github.com/miurahr/py7zr/compare/v0.8.0...v0.9.0
+        
+Keywords: compression,7zip,lzma,zstandard,ppmd,lzma2,bcj,archive
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: License :: OSI Approved :: GNU Lesser General Public License v2 or later (LGPLv2+)
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: System :: Archiving :: Compression
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Description-Content-Type: text/x-rst
+Provides-Extra: test_compat
+Provides-Extra: test
+Provides-Extra: docs
+Provides-Extra: check

@@ -1,0 +1,131 @@
+Metadata-Version: 2.1
+Name: dbnd
+Version: 0.35.1
+Summary: Machine Learning Orchestration
+Home-page: https://github.com/databand-ai/dbnd
+Author: Evgeny Shulman
+Author-email: evgeny.shulman@databand.ai
+Maintainer: Evgeny Shulman
+Maintainer-email: evgeny.shulman@databand.ai
+License: UNKNOWN
+Project-URL: Documentation, https://dbnd.readme.io/
+Project-URL: Bug-Tracker, https://github.com/databand-ai/dbnd/issues
+Project-URL: Source-Code, https://github.com/databand-ai/dbnd
+Keywords: orchestration,data,machinelearning
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+Requires-Dist: tzlocal (<2.0.0,>=1.0.0)
+Requires-Dist: six
+Requires-Dist: more-itertools
+Requires-Dist: attrs
+Requires-Dist: pyyaml
+Requires-Dist: pytz
+Requires-Dist: pytzdata
+Requires-Dist: requests (>=2.18.0)
+Requires-Dist: configparser (<3.6.0,>=3.5.0)
+Requires-Dist: jinja2 (<2.11.0,>=2.10.1)
+Requires-Dist: gitpython
+Requires-Dist: python-dateutil
+Requires-Dist: contextlib2 ; python_version < "3"
+Requires-Dist: pygments (<=2.5.2) ; python_version < "3.0"
+Requires-Dist: pathlib2 ; python_version < "3.0"
+Requires-Dist: typing ; python_version < "3.7"
+Requires-Dist: pathlib2 ; python_version <= "2.7"
+Requires-Dist: enum34 ; python_version <= "2.7"
+Requires-Dist: pygments (>=2.6.1) ; python_version >= "3.0"
+Requires-Dist: colorama ; sys_platform=="win32"
+Provides-Extra: tests
+Requires-Dist: qtconsole (==4.7.7) ; extra == 'tests'
+Requires-Dist: coverage ; extra == 'tests'
+Requires-Dist: pytest (==4.5.0) ; extra == 'tests'
+Requires-Dist: pytest-cov (==2.9.0) ; extra == 'tests'
+Requires-Dist: pluggy (==0.11.0) ; extra == 'tests'
+Requires-Dist: zope.interface ; extra == 'tests'
+Requires-Dist: mock ; extra == 'tests'
+Requires-Dist: pandas (<2.0.0,>=0.17.1) ; extra == 'tests'
+Requires-Dist: urllib3 (==1.23) ; extra == 'tests'
+Requires-Dist: tox (==3.12.1) ; extra == 'tests'
+Requires-Dist: tables (==3.5.1) ; extra == 'tests'
+Requires-Dist: feather-format ; extra == 'tests'
+Requires-Dist: pyarrow ; extra == 'tests'
+Requires-Dist: nbconvert ; extra == 'tests'
+Requires-Dist: nbformat ; extra == 'tests'
+Requires-Dist: jupyter ; extra == 'tests'
+Requires-Dist: traitlets (<5.0.0,>=4.2) ; extra == 'tests'
+Requires-Dist: IPython (<7.0,>=4.0.0) ; extra == 'tests'
+Requires-Dist: jupyter-contrib-nbextensions ; extra == 'tests'
+Requires-Dist: idna (<=2.7) ; extra == 'tests'
+Requires-Dist: openpyxl (==2.6.4) ; extra == 'tests'
+Requires-Dist: sklearn ; extra == 'tests'
+Requires-Dist: WTForms (<2.3.0) ; extra == 'tests'
+Requires-Dist: wheel ; extra == 'tests'
+Requires-Dist: future (==0.16.0) ; (python_version < "3.0") and extra == 'tests'
+Requires-Dist: numpy (==1.16.6) ; (python_version < "3.5") and extra == 'tests'
+Requires-Dist: matplotlib (==2.2.5) ; (python_version < "3.5") and extra == 'tests'
+Requires-Dist: numpy (==1.19.5) ; (python_version >= "3.5") and extra == 'tests'
+Requires-Dist: matplotlib (==3.3.0) ; (python_version >= "3.5") and extra == 'tests'
+
+[![pipeline status](https://gitlab.com/databand-ai/dbnd/badges/master/pipeline.svg)](https://gitlab.com/databand-ai/dbnd/pipelines)
+
+![PyPI - Downloads](https://img.shields.io/pypi/dm/dbnd) ![PyPI](https://img.shields.io/pypi/v/dbnd)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/dbnd) ![PyPI - License](https://img.shields.io/pypi/l/dbnd)
+![Code style: ](https://img.shields.io/badge/code%20style-black-000000.svg)
+
+# DBND
+
+DBND an open source framework for building and tracking data pipelines. DBND is used for processes ranging from data ingestion, preparation, machine learning model training and production.
+
+DBND includes a Python library, set of APIs, and CLI that enables you to collect metadata from your workflows, create a system of record for runs, and easily orchestrate complex processes.
+
+DBND simplifies the process of building and running data pipelines
+from dbnd import task
+
+```python
+from dbnd import task
+
+@task
+def say_hello(name: str = "databand.ai") -> str:
+    value = "Hello %s!" % name
+    return value
+```
+
+And makes it easy to track your critical pipeline metadata
+
+```python
+from dbnd import log_metric, log_dataframe
+
+log_dataframe("my_dataset", my_dataset)
+log_metric("r2", r2)
+```
+
+## Getting Started
+
+See our [documentation](https://dbnd.readme.io/) with examples and quickstart guides to get up and running with DBND.
+
+## The Latest and Greatest
+
+For using DBND, we recommend that you work with a virtual environment like [Virtualenv](https://virtualenv.pypa.io/en/latest/) or [Conda](https://docs.conda.io/en/latest/). Update to the latest and greatest:
+
+```shell script
+pip install dbnd
+```
+
+If you would like access to our latest features, or have any questions, feedback, or contributions we would love to here from you! Get in touch through contact@databand.ai
+
+

@@ -1,0 +1,41 @@
+Metadata-Version: 2.1
+Name: dbnd-docker
+Version: 0.35.1
+Summary: Machine Learning Orchestration
+Home-page: https://github.com/databand-ai/dbnd
+Author: Evgeny Shulman
+Author-email: evgeny.shulman@databand.ai
+Maintainer: Evgeny Shulman
+Maintainer-email: evgeny.shulman@databand.ai
+License: UNKNOWN
+Project-URL: Documentation, https://dbnd.readme.io/
+Project-URL: Bug-Tracker, https://github.com/databand-ai/dbnd/issues
+Project-URL: Source-Code, https://github.com/databand-ai/dbnd
+Keywords: orchestration,data,machinelearning
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+Requires-Dist: dbnd (==0.35.1)
+Requires-Dist: dbnd-airflow (==0.35.1)
+Requires-Dist: docker (~=3.0)
+Requires-Dist: kubernetes (==9.0.0)
+Requires-Dist: cryptography (>=2.0.0)
+
+UNKNOWN
+
+

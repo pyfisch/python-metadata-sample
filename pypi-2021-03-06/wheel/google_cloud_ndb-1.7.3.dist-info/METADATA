@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: google-cloud-ndb
+Version: 1.7.3
+Summary: NDB library for Google Cloud Datastore
+Home-page: https://github.com/googleapis/python-ndb
+Author: Google LLC
+Author-email: googleapis-packages@google.com
+License: Apache 2.0
+Project-URL: Documentation, https://googleapis.dev/python/python-ndb/latest
+Project-URL: Issue Tracker, https://github.com/googleapis/python-ndb/issues
+Platform: Posix; MacOS X; Windows
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Internet
+Description-Content-Type: text/markdown
+Requires-Dist: google-cloud-datastore (<2.0.0dev,>=1.7.0)
+Requires-Dist: pymemcache
+Requires-Dist: redis
+
+# Google Cloud Datastore `ndb` Client Library
+
+## Introduction
+
+This is an updated version of the `ndb` client library for use with
+[Google Cloud Datastore][0]. 
+
+* [Client Library Documentation](https://googleapis.dev/python/python-ndb/latest)
+
+The original Python 2 version of `ndb` was designed specifically for the
+[Google App Engine][1] `python27` runtime and can be found at
+https://github.com/GoogleCloudPlatform/datastore-ndb-python. This version of
+`ndb` is designed for the [Google App Engine Python 3 runtime][2], and will
+run on other Python platforms as well.
+
+[0]: https://cloud.google.com/datastore
+[1]: https://cloud.google.com/appengine
+[2]: https://cloud.google.com/appengine/docs/standard/python3/
+
+## Release Status
+
+GA
+
+### Officially Supported Python Versions
+Python 2.7 & Python 3.6, 3.7, 3.8, 3.9
+
+

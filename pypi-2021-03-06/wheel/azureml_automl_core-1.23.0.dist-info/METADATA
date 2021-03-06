@@ -1,0 +1,29 @@
+Metadata-Version: 2.0
+Name: azureml-automl-core
+Version: 1.23.0
+Summary: AutoML client common library
+Home-page: https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py
+Author: Microsoft Corp
+License: https://aka.ms/azureml-sdk-license
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.5,<3.9
+Description-Content-Type: text/x-rst
+Requires-Dist: azureml-dataset-runtime (~=1.23.0)
+Requires-Dist: azureml-telemetry (~=1.23.0)
+
+The azureml-automl-core package is a package containing functionality used by the azureml-train-automl package. It is not designed for end-user consumption and is meant only for use as part of the Azure Machine Learning SDK.
+
+
+

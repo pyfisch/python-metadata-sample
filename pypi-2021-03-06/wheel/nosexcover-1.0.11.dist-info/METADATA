@@ -1,0 +1,46 @@
+Metadata-Version: 2.0
+Name: nosexcover
+Version: 1.0.11
+Summary: Extends nose.plugins.cover to add Cobertura-style XML reports
+Home-page: http://github.com/cmheisel/nose-xcover/
+Author: Chris Heisel
+Author-email: chris@heisel.org
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: coverage (>=3.4)
+Requires-Dist: nose
+
+nose-xmlcover
+--------------
+
+A companion to the built-in nose.plugins.cover, this plugin will write out an XML coverage report to a file named coverage.xml.
+
+It will honor all the options you pass to the `Nose coverage plugin <http://somethingaboutorange.com/mrl/projects/nose/1.0.0/plugins/cover.html>`_, especially --cover-package.
+
+Usage
+------
+You can not use both --with-xcoverage and --with-coverage.  Using --with-xcover implies --with-coverage
+
+If you want to change the name of the output file you can use --xcoverage-file=FILE (--cover-xml-file from coverage won't work)
+
+As of nose-xcover 1.0.6 --with-xcoverage provides all the functionality of the built-in coverage plugin in addition to Cobertura-style output::
+
+    #nosetests --with-xcoverage {{ coverage options }}
+    nosetests --with-xcoverage --cover-package=myapp --cover-tests
+
+
+
+
+

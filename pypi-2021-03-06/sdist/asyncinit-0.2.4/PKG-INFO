@@ -1,0 +1,52 @@
+Metadata-Version: 2.1
+Name: asyncinit
+Version: 0.2.4
+Summary: Class decorator to enable async __init__
+Home-page: https://github.com/kchmck/pyasyncinit
+Author: Mick Koch
+Author-email: mick@kochm.co
+License: MIT
+Description: # asyncinit -- Enable async `__init__`
+        
+        [Documentation](http://kchmck.github.io/pdoc/asyncinit/)
+        
+        This package provides the `asyncinit` decorator, which enables an asynchronous constructor
+        to be called like any other asynchronous function.
+        
+        ## Example
+        
+        ```python
+        from asyncinit import asyncinit
+        
+        @asyncinit
+        class MyClass:
+            async def __init__(self, param):
+                self.val = await self.deferredFn(param)
+        
+            async def deferredFn(self, x):
+                # ...
+                return x + 2
+        
+        obj = await MyClass(42)
+        assert obj.val == 44
+        ```
+        
+        ## Installation
+        
+        This package requires Python >= 3.5.0 and can be installed with `pip`:
+        ```
+        pip install asyncinit
+        ```
+        
+Keywords: async init asyncio
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.5
+Description-Content-Type: text/markdown
+Provides-Extra: dev

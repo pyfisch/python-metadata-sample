@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: apache-beam
+Version: 2.28.0
+Summary: Apache Beam SDK for Python
+Home-page: https://beam.apache.org
+Author: Apache Software Foundation
+Author-email: dev@beam.apache.org
+License: Apache License, Version 2.0
+Download-URL: https://pypi.python.org/pypi/apache-beam
+Description: 
+        Apache Beam is a unified programming model for both batch and streaming
+        data processing, enabling efficient execution across diverse distributed
+        execution engines and providing extensibility points for connecting to
+        different technologies and user communities.
+        
+Keywords: apache beam
+Platform: UNKNOWN
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6
+Provides-Extra: docs
+Provides-Extra: test
+Provides-Extra: gcp
+Provides-Extra: interactive
+Provides-Extra: interactive_test
+Provides-Extra: aws
+Provides-Extra: azure

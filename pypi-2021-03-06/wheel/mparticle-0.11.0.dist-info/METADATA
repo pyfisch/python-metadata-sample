@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: mparticle
+Version: 0.11.0
+Summary: Python client for the mParticle platform
+Home-page: https://github.com/mParticle/mparticle-python-sdk
+Author: Sam Dozor
+Author-email: support@mparticle.com
+License: Apache 2.0
+Keywords: mparticle analytics marketing
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: urllib3 (>=1.15)
+Requires-Dist: six (>=1.10)
+Requires-Dist: certifi
+Requires-Dist: python-dateutil
+
+`Package Documentation <https://github.com/mParticle/mparticle-python-sdk/wiki>`_ 
+
+This SDK is a helper library for the mParticle server-to-server HTTP API, it exposes mParticle's schema as simple models and provides an HTTP client interface. This SDK is stateless and will only send the data that you populate, whereas our mobile SDKs will automatically collect app and device information, session events, install events, and maintain persistence.
+

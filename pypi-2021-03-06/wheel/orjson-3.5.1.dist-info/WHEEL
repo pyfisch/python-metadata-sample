@@ -1,0 +1,4 @@
+Wheel-Version: 1.0
+Generator: maturin (0.9.0)
+Root-Is-Purelib: false
+Tag: cp310-cp310-manylinux2014_aarch64

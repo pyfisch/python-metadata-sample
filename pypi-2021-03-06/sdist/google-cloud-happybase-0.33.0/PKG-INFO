@@ -1,0 +1,93 @@
+Metadata-Version: 1.2
+Name: google-cloud-happybase
+Version: 0.33.0
+Summary: Client library for Google Cloud Bigtable: HappyBase layer
+Home-page: https://github.com/googleapis/google-cloud-python-happybase
+Author: Google Cloud Platform
+Author-email: googleapis-publisher@google.com
+License: Apache 2.0
+Description: Google Cloud Python HappyBase Client
+        ====================================
+        
+            Python idiomatic client for `Google Cloud Platform`_ HappyBase emulation.
+        
+        .. _Google Cloud Platform: https://cloud.google.com/
+        
+        |pypi| |versions|
+        
+        -  `Documentation`_
+        
+        .. _Documentation: http://google-cloud-python-happybase.readthedocs.io/
+        
+        This client is provided as a `HappyBase`_ emulation layer which uses
+        Google Cloud Bigtable as the underlying storage layer.
+        
+        If you need support for other Google APIs, check out the
+        `Google APIs Python Client library`_.
+        
+        .. _Google APIs Python Client library: https://github.com/google/google-api-python-client
+        .. _HappyBase: https://happybase.readthedocs.io/en/latest/
+        
+        Quick Start
+        -----------
+        
+        ::
+        
+            $ pip install --upgrade google-cloud-happybase
+        
+        
+        Supported Python Versions
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+        Python >= 3.4
+        
+        Deprecated Python Versions
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^
+        Python == 2.7. Python 2.7 support will be removed on January 1, 2020.
+        
+        
+        Authentication
+        --------------
+        
+        With ``google-cloud-python`` we try to make authentication as painless as
+        possible. Check out the `Authentication section`_ in our documentation to
+        learn more. You may also find the `authentication document`_ shared by all
+        the ``google-cloud-*`` libraries to be helpful.
+        
+        .. _Authentication section: http://google-cloud-python.readthedocs.io/en/latest/google-cloud-auth.html
+        .. _authentication document: https://github.com/googleapis/gcloud-common/tree/master/authentication
+        
+        Contributing
+        ------------
+        
+        Contributions to this library are always welcome and highly encouraged.
+        
+        See `CONTRIBUTING`_ for more information on how to get started.
+        
+        .. _CONTRIBUTING: https://github.com/googleapis/google-cloud-python-happybase/blob/master/CONTRIBUTING.rst
+        
+        License
+        -------
+        
+        MIT - See `LICENSE`_ for more information.
+        
+        .. _LICENSE: https://github.com/googleapis/google-cloud-python-happybase/blob/master/LICENSE
+        
+        .. |pypi| image:: https://img.shields.io/pypi/v/google-cloud-happybase.svg
+           :target: https://pypi.org/project/google-cloud-happybase/
+        .. |versions| image:: https://img.shields.io/pypi/pyversions/google-cloud-happybase.svg
+           :target: https://pypi.org/project/google-cloud-happybase/
+        
+Platform: Posix; MacOS X; Windows
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Internet
+Requires-Python: >=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*

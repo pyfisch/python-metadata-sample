@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: vcsi
+Version: 7.0.13
+Summary: Create video contact sheets, thumbnails, screenshots
+Home-page: https://github.com/amietn/vcsi
+Author: Nils Amiet
+Author-email: amietn@foobar.tld
+License: MIT
+Description: UNKNOWN
+Keywords: video thumbnail contact sheet multimedia
+Platform: UNKNOWN
+Provides-Extra: dev
+Provides-Extra: test

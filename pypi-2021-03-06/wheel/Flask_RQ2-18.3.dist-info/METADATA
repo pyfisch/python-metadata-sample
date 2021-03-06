@@ -1,0 +1,154 @@
+Metadata-Version: 2.1
+Name: Flask-RQ2
+Version: 18.3
+Summary: A Flask extension for RQ.
+Home-page: https://flask-rq2.readthedocs.io/
+Author: Jannis Leidel
+Author-email: jannis@leidel.info
+License: MIT
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: System Administrators 
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix 
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: System :: Distributed Computing
+Classifier: Topic :: System :: Monitoring
+Classifier: Topic :: System :: Systems Administration
+Requires-Dist: Flask (>=0.10)
+Requires-Dist: rq (>=0.13.0)
+Requires-Dist: redis (>=3.0.0)
+Requires-Dist: rq-scheduler (>=0.9.0)
+Provides-Extra: all
+Requires-Dist: Sphinx (>=1.4) ; extra == 'all'
+Requires-Dist: pytest ; extra == 'all'
+Requires-Dist: redis (>3.0.0) ; extra == 'all'
+Requires-Dist: rq-scheduler (>=0.9.0) ; extra == 'all'
+Requires-Dist: flask-cli (>=0.4.0) ; extra == 'all'
+Requires-Dist: pytest (>=2.8.0) ; extra == 'all'
+Requires-Dist: pytest-cache (>=1.0) ; extra == 'all'
+Requires-Dist: pytest-flake8 (>=0.5) ; extra == 'all'
+Requires-Dist: pytest-wholenodeid ; extra == 'all'
+Requires-Dist: pytest-coverage ; extra == 'all'
+Requires-Dist: pytest-pythonpath ; extra == 'all'
+Requires-Dist: Flask-CLI (>=0.4.0) ; extra == 'all'
+Provides-Extra: cli
+Requires-Dist: Flask-CLI (>=0.4.0) ; extra == 'cli'
+Provides-Extra: docs
+Requires-Dist: Sphinx (>=1.4) ; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: redis (>3.0.0) ; extra == 'tests'
+Requires-Dist: rq-scheduler (>=0.9.0) ; extra == 'tests'
+Requires-Dist: flask-cli (>=0.4.0) ; extra == 'tests'
+Requires-Dist: pytest (>=2.8.0) ; extra == 'tests'
+Requires-Dist: pytest-cache (>=1.0) ; extra == 'tests'
+Requires-Dist: pytest-flake8 (>=0.5) ; extra == 'tests'
+Requires-Dist: pytest-wholenodeid ; extra == 'tests'
+Requires-Dist: pytest-coverage ; extra == 'tests'
+Requires-Dist: pytest-pythonpath ; extra == 'tests'
+
+Flask-RQ2
+=========
+
+.. image:: https://readthedocs.org/projects/flask-rq2/badge/?version=latest
+   :target: https://flask-rq2.readthedocs.io/en/latest/?badge=latest
+   :alt: Documentation Status
+
+.. image:: https://travis-ci.org/rq/Flask-RQ2.svg?branch=master
+   :target: https://travis-ci.org/rq/Flask-RQ2
+   :alt: Test Status
+
+.. image:: https://codecov.io/gh/rq/Flask-RQ2/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/rq/Flask-RQ2
+   :alt: Test Coverage Status
+
+.. image:: https://img.shields.io/badge/calver-YY.MINOR.MICRO-22bfda.svg
+   :target: https://calver.org/
+   :alt: CalVer - Timely Software Versioning
+
+Resources
+---------
+
+- `Documentation <https://flask-rq2.readthedocs.io/>`_
+- `Issue Tracker <https://github.com/rq/flask-rq2/issues>`_
+- `Code <https://github.com/rq/flask-rq2/>`_
+- `Continuous Integration <https://travis-ci.org/rq/Flask-RQ2>`_
+
+.. snip
+
+A Flask extension for RQ_ (Redis Queue).
+
+This is a continuation of `Flask-RQ`_ more in spirit than in code. Many thanks
+to `Matt Wright`_ for the inspiration and providing the shoulders to stand on.
+
+.. _`RQ`: http://python-rq.org/
+.. _`Flask-RQ`: https://github.com/mattupstate/flask-rq
+.. _`Matt Wright`: https://github.com/mattupstate
+
+Installation
+------------
+
+.. code-block:: console
+
+    pip install Flask-RQ2
+
+Getting started
+---------------
+
+To quickly start using Flask-RQ2, simply create an ``RQ`` instance:
+
+.. code-block:: python
+
+    from flask import Flask
+    from flask_rq2 import RQ
+
+    app = Flask(__name__)
+    rq = RQ(app)
+
+Alternatively, if you're using the `application factory`_ pattern:
+
+.. code-block:: python
+
+    from flask_rq2 import RQ
+    rq = RQ()
+
+and then later call ``init_app`` where you create your application object:
+
+.. code-block:: python
+
+    from flask import Flask
+
+    def create_app():
+        app = Flask(__name__)
+
+        from yourapplication.jobs import rq
+        rq.init_app(app)
+
+        # more here..
+        return app
+
+.. _`application factory`: http://flask.pocoo.org/docs/0.10/patterns/appfactories/
+
+.. snap
+
+For more information see the `full documentation
+<https://flask-rq2.readthedocs.io/>`_  on Read The Docs.
+
+

@@ -1,0 +1,27 @@
+Metadata-Version: 2.0
+Name: azureml-pipeline-core
+Version: 1.23.0
+Summary: azureml pipeline core
+Home-page: UNKNOWN
+Author: Microsoft Corp
+License: https://aka.ms/azureml-sdk-license
+Keywords: ipython,jupyter,widgets
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Framework :: IPython
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Multimedia :: Graphics
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.5,<4
+Description-Content-Type: text/x-rst
+Requires-Dist: azureml-core (~=1.23.0)
+
+Core functionality to enable `azureml-pipeline <https://pypi.org/project/azureml-pipeline/>`_ feature.
+
+
+

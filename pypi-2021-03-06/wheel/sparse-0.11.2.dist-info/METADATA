@@ -1,0 +1,75 @@
+Metadata-Version: 2.1
+Name: sparse
+Version: 0.11.2
+Summary: Sparse n-dimensional arrays
+Home-page: https://github.com/pydata/sparse/
+Maintainer: Hameer Abbasi
+Maintainer-email: hameerabbasi@yahoo.com
+License: BSD 3-Clause License (Revised)
+Project-URL: Documentation, https://sparse.pydata.org/
+Project-URL: Source, https://github.com/pydata/sparse/
+Project-URL: Tracker, https://github.com/pydata/sparse/issues
+Keywords: sparse,numpy,scipy,dask
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Requires-Python: >=3.6, <4
+Requires-Dist: numpy
+Requires-Dist: scipy (>=0.19)
+Requires-Dist: numba (>=0.49)
+Provides-Extra: all
+Requires-Dist: dask[array] ; extra == 'all'
+Requires-Dist: pytest (>=3.5) ; extra == 'all'
+Requires-Dist: pytest-black ; extra == 'all'
+Requires-Dist: pytest-cov ; extra == 'all'
+Requires-Dist: tox ; extra == 'all'
+Requires-Dist: sphinx ; extra == 'all'
+Requires-Dist: sphinx-rtd-theme ; extra == 'all'
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Provides-Extra: tests
+Requires-Dist: dask[array] ; extra == 'tests'
+Requires-Dist: pytest (>=3.5) ; extra == 'tests'
+Requires-Dist: pytest-black ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+Provides-Extra: tox
+Requires-Dist: dask[array] ; extra == 'tox'
+Requires-Dist: pytest (>=3.5) ; extra == 'tox'
+Requires-Dist: pytest-black ; extra == 'tox'
+Requires-Dist: pytest-cov ; extra == 'tox'
+Requires-Dist: tox ; extra == 'tox'
+
+Sparse Multidimensional Arrays
+==============================
+
+|Build Status| |Docs Status| |Coverage|
+
+This library provides multi-dimensional sparse arrays.
+
+* `Documentation <http://sparse.pydata.org/>`_
+* `Contributing <https://github.com/pydata/sparse/blob/master/docs/contributing.rst>`_
+* `Bug Reports/Feature Requests <https://github.com/pydata/sparse/issues>`_
+
+.. |Build Status| image:: https://dev.azure.com/einsteinedison/PyData%20Sparse/_apis/build/status/Tests?branchName=master
+   :target: https://dev.azure.com/einsteinedison/PyData%20Sparse/_build/latest?definitionId=1&branchName=master
+   :alt: Build status
+
+.. |Docs Status| image:: https://readthedocs.org/projects/sparse-nd/badge/?version=latest
+   :target: http://sparse.pydata.org/en/latest/?badge=latest
+   :alt: Documentation Status
+
+.. |Coverage| image:: https://codecov.io/gh/pydata/sparse/branch/master/graph/badge.svg
+   :target: https://codecov.io/gh/pydata/sparse
+   :alt: Coverage Report
+
+

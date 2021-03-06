@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: mozprocess
+Version: 1.2.1
+Summary: Mozilla-authored process handling
+Home-page: https://wiki.mozilla.org/Auto-tools/Projects/Mozbase
+Author: Mozilla Automation and Tools team
+Author-email: tools@lists.mozilla.org
+License: MPL 2.0
+Keywords: mozilla
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: mozinfo
+
+see https://firefox-source-docs.mozilla.org/mozbase/index.html
+
+

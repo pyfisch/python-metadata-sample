@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: streamlit
+Version: 0.78.0
+Summary: The fastest way to build data apps in Python
+Home-page: https://streamlit.io
+Author: Streamlit Inc
+Author-email: hello@streamlit.io
+License: Apache 2
+Description: Streamlit's open-source app framework is the easiest way for data scientists and machine learning engineers to create beautiful, performant apps in only a few hours! All in pure Python. All for free.
+Platform: UNKNOWN
+Requires-Python: >=3.6

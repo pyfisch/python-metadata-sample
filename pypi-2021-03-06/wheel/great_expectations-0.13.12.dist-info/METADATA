@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: great-expectations
+Version: 0.13.12
+Summary: Always know what to expect from your data.
+Home-page: https://github.com/great-expectations/great_expectations
+Author: The Great Expectations Team
+Author-email: team@greatexpectations.io
+License: Apache-2.0
+Keywords: data science testing pipeline data quality dataquality validation datavalidation
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Other Audience
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Testing
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: altair (<5,>=4.0.0)
+Requires-Dist: Click (>=7.1.2)
+Requires-Dist: importlib-metadata (>=1.7.0)
+Requires-Dist: ipywidgets (>=7.5.1)
+Requires-Dist: jinja2 (>=2.10)
+Requires-Dist: jsonpatch (>=1.22)
+Requires-Dist: jsonschema (>=2.5.1)
+Requires-Dist: mistune (>=0.8.4)
+Requires-Dist: numpy (<1.20.0,>=1.14.1)
+Requires-Dist: pandas (>=0.23.0)
+Requires-Dist: pyparsing (<3,>=2.4)
+Requires-Dist: python-dateutil (>=2.8.1)
+Requires-Dist: pytz (>=2015.6)
+Requires-Dist: requests (>=2.20)
+Requires-Dist: ruamel.yaml (>=0.16)
+Requires-Dist: scipy (>=0.19.0)
+Requires-Dist: termcolor (>=1.1.0)
+Requires-Dist: tzlocal (>=1.2)
+Provides-Extra: airflow
+Requires-Dist: apache-airflow[s3] (>=1.9.0) ; extra == 'airflow'
+Requires-Dist: boto3 (>=1.7.3) ; extra == 'airflow'
+Provides-Extra: gcp
+Requires-Dist: google-cloud (>=0.34.0) ; extra == 'gcp'
+Requires-Dist: google-cloud-storage (>=1.28.0) ; extra == 'gcp'
+Requires-Dist: google-cloud-secret-manager (>=1.0.0) ; extra == 'gcp'
+Requires-Dist: pybigquery (==0.4.15) ; extra == 'gcp'
+Provides-Extra: redshift
+Requires-Dist: psycopg2 (>=2.8) ; extra == 'redshift'
+Provides-Extra: s3
+Requires-Dist: boto3 (>=1.14) ; extra == 's3'
+Provides-Extra: snowflake
+Requires-Dist: snowflake-sqlalchemy (>=1.2) ; extra == 'snowflake'
+Provides-Extra: spark
+Requires-Dist: pyspark (>=2.3.2) ; extra == 'spark'
+Provides-Extra: sqlalchemy
+Requires-Dist: sqlalchemy (>=1.2) ; extra == 'sqlalchemy'
+
+Always know what to expect from your data. (See https://github.com/great-expectations/great_expectations for full description).
+
+

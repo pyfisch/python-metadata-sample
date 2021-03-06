@@ -1,0 +1,67 @@
+Metadata-Version: 2.1
+Name: opencensus-ext-zipkin
+Version: 0.2.2
+Summary: OpenCensus Zipkin Trace Exporter
+Home-page: https://github.com/census-instrumentation/opencensus-python/tree/master/contrib/opencensus-ext-zipkin
+Author: OpenCensus Authors
+Author-email: census-developers@googlegroups.com
+License: Apache-2.0
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: opencensus (<1.0.0,>=0.6.0)
+
+OpenCensus Zipkin Exporter
+============================================================================
+
+|pypi|
+
+.. |pypi| image:: https://badge.fury.io/py/opencensus-ext-zipkin.svg
+   :target: https://pypi.org/project/opencensus-ext-zipkin/
+
+Installation
+------------
+
+::
+
+    pip install opencensus-ext-zipkin
+
+Usage
+-----
+
+The **OpenCensus Zipkin Exporter** allows you to export `OpenCensus`_ traces to `Zipkin`_.
+
+.. _OpenCensus: https://github.com/census-instrumentation/opencensus-python/
+.. _Zipkin: https://zipkin.io/
+
+.. code:: python
+
+    from opencensus.ext.zipkin.trace_exporter import ZipkinExporter
+    from opencensus.trace import tracer as tracer_module
+
+    tracer = tracer_module.Tracer(exporter=ZipkinExporter(
+        service_name='my service',
+        host_name='localhost',
+        port=9411,
+    ))
+
+    with tracer.span(name='hello'):
+        print('Hello, World!')
+
+References
+----------
+
+* `OpenCensus Project <https://opencensus.io/>`_
+* `Zipkin <https://zipkin.io/>`_
+
+

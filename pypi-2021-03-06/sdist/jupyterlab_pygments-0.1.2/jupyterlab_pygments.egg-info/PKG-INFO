@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: jupyterlab-pygments
+Version: 0.1.2
+Summary: Pygments theme using JupyterLab CSS variables
+Home-page: http://jupyter.org
+Author: Jupyter Development Team
+Author-email: jupyter@googlegroups.com
+License: BSD
+Description: UNKNOWN
+Keywords: jupyterlab,pygments
+Platform: UNKNOWN

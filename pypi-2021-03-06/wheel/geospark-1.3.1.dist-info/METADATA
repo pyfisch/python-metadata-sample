@@ -1,0 +1,32 @@
+Metadata-Version: 2.1
+Name: geospark
+Version: 1.3.1
+Summary: GeoSpark Python
+Home-page: https://github.com/DataSystemsLab/GeoSpark/tree/master/python
+Author: Pawel Kocinski
+Author-email: pawel93kocinski@gmail.com
+License: UNKNOWN
+Project-URL: Bug Reports, https://github.com/DataSystemsLab/GeoSpark
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: Apache Software License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: pyspark
+Requires-Dist: findspark
+Requires-Dist: attrs
+Requires-Dist: shapely
+
+# geospark
+
+This library is Python wrapper on GeoSpark library.
+
+GeoSpark is a cluster computing system for processing large-scale spatial data. GeoSpark extends Apache Spark / SparkSQL with a set of out-of-the-box Spatial Resilient Distributed Datasets (SRDDs)/ SpatialSQL that efficiently load, process, and analyze large-scale spatial data across machines.
+
+Python version supports:
+<li> GeoSpark core </li>
+<li> GeoSpark SQL </li>
+
+Please follow tutorial on official GeoSpark website:
+https://datasystemslab.github.io/GeoSpark/
+

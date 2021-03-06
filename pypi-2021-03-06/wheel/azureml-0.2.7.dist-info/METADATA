@@ -1,0 +1,24 @@
+Metadata-Version: 2.0
+Name: azureml
+Version: 0.2.7
+Summary: Microsoft Azure Machine Learning Python client library
+Home-page: https://github.com/Azure/Azure-MachineLearning-ClientLibrary-Python
+Author: Microsoft Corporation
+Author-email: ptvshelp@microsoft.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: pandas
+Requires-Dist: python-dateutil
+Requires-Dist: requests
+
+UNKNOWN
+
+

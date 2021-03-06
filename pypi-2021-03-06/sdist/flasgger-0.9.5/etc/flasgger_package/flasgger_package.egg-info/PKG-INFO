@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: flasgger-package
+Version: 0.0.1
+Summary: A package to use during local and CI tests
+Home-page: https://github.com/rochacbruno/flasgger/
+Author: testing@flasgger
+Author-email: testing@flasgger
+License: MIT
+Description: UNKNOWN
+Platform: any

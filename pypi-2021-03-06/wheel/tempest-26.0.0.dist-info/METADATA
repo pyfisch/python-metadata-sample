@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: tempest
+Version: 26.0.0
+Summary: OpenStack Integration Testing
+Home-page: https://docs.openstack.org/tempest/latest/
+Author: OpenStack
+Author-email: openstack-discuss@lists.openstack.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.6
+Requires-Dist: PrettyTable (<0.8,>=0.7.1)
+Requires-Dist: PyYAML (>=3.12)
+Requires-Dist: cliff (!=2.9.0,>=2.8.0)
+Requires-Dist: debtcollector (>=1.2.0)
+Requires-Dist: fixtures (>=3.0.0)
+Requires-Dist: jsonschema (>=3.2.0)
+Requires-Dist: netaddr (>=0.7.18)
+Requires-Dist: oslo.concurrency (>=3.26.0)
+Requires-Dist: oslo.config (>=5.2.0)
+Requires-Dist: oslo.log (>=3.36.0)
+Requires-Dist: oslo.serialization (!=2.19.1,>=2.18.0)
+Requires-Dist: oslo.utils (>=3.33.0)
+Requires-Dist: paramiko (>=2.7.0)
+Requires-Dist: pbr (!=2.1.0,>=2.0.0)
+Requires-Dist: python-subunit (>=1.0.0)
+Requires-Dist: six (>=1.10.0)
+Requires-Dist: stestr (>=1.0.0)
+Requires-Dist: stevedore (>=1.20.0)
+Requires-Dist: testtools (>=2.2.0)
+Requires-Dist: unittest2 (>=1.1.0)
+Requires-Dist: urllib3 (>=1.21.1)
+
+========================
+Team and repository tags
+========================
+
+.. image:: https://governance.openstack.org/tc/badges/tempest.svg
+    :target: https://governance.openstack.org/tc/reference/tags/index.html
+
+.. Change things from this point on
+
+Tempest - The OpenStack Integration Test Suite
+==============================================
+
+This is a set of integration tests to be run against a live OpenStack
+cluster. Tempest has batteries of tests for OpenStack API validation,
+scenarios, and other specific tests useful in validating an OpenStack
+deployment.
+
+  * Documentation: https://docs.openstack.org/tempest/latest/
+  * Features: https://specs.openstack.org/openstack/qa-specs/#tempest
+  * Bugs: https://bugs.launchpad.net/tempest/
+  * Release Notes: https://docs.openstack.org/releasenotes/tempest
+
+Get in touch via `email <mailto:openstack-discuss@lists.openstack.org>`_. Use
+[tempest] in your subject.
+
+
+

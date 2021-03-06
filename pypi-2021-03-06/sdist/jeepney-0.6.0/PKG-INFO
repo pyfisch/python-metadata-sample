@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: jeepney
+Version: 0.6.0
+Summary: Low-level, pure Python DBus protocol wrapper.
+Home-page: https://gitlab.com/takluyver/jeepney
+Author: Thomas Kluyver
+Author-email: thomas@kluyver.me.uk

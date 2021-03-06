@@ -1,0 +1,44 @@
+Metadata-Version: 2.1
+Name: os-traits
+Version: 2.5.0
+Summary: A library containing standardized trait strings
+Home-page: https://docs.openstack.org/os-traits/latest/
+Author: OpenStack
+Author-email: openstack-discuss@lists.openstack.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.6
+Requires-Dist: pbr (!=2.1.0,>=2.0.0)
+
+=========
+os-traits
+=========
+
+`os-traits` is an OpenStack library containing standardized trait strings.
+
+Traits are strings that represent a feature of a resource provider hosted by
+the Placement_ service. This library contains the catalog of constants that
+have been standardized in the OpenStack community to refer to a particular
+hardware, virtualization, storage, network, or device trait.
+
+* Free software: Apache license
+* Documentation: https://docs.openstack.org/os-traits/latest/
+* Source: http://opendev.org/openstack/os-traits
+* Bugs: https://storyboard.openstack.org/#!/project/openstack/os-traits
+* Release Notes: https://docs.openstack.org/releasenotes/os-traits
+
+.. _Placement: https://docs.openstack.org/placement/latest/
+
+
+

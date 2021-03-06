@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: mozterm
+Version: 1.0.0
+Summary: Terminal abstractions built around the blessings module.
+Home-page: UNKNOWN
+Author: Andrew Halberstadt
+Author-email: ahalberstadt@mozilla.com
+License: MPL 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5

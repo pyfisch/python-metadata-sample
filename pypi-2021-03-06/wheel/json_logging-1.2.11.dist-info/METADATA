@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: json-logging
+Version: 1.2.11
+Summary: JSON Python Logging
+Home-page: https://github.com/thangbn/json-logging
+Author: Bui Nguyen Thang (Bob)
+Author-email: bob.bui@outlook.com
+License: Apache License 2.0
+Keywords: json,elastic,python,python3,python2,logging,logging-library,json,elasticsearch,elk,elk-stack,logstash,kibana
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: System :: Logging
+Classifier: Framework :: Flask
+
+json-logging
+============
+
+Python logging library to emit JSON log that can be easily indexed and
+searchable by logging infrastructure such as
+`ELK <https://www.elastic.co/webinars/introduction-elk-stack>`_.
+
+Go here for full documentation: https://github.com/thangbn/json-logging-python
+

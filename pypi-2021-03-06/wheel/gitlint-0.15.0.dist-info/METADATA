@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: gitlint
+Version: 0.15.0
+Summary: Git commit message linter written in python, checks your commit messages for style.
+Home-page: https://jorisroovers.github.io/gitlint
+Author: Joris Roovers
+License: MIT
+Project-URL: Documentation, https://jorisroovers.github.io/gitlint
+Project-URL: Source, https://github.com/jorisroovers/gitlint
+Keywords: gitlint git lint
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Quality Assurance
+Classifier: Topic :: Software Development :: Testing
+Classifier: License :: OSI Approved :: MIT License
+Requires-Python: >=3.6
+Requires-Dist: Click (==7.1.2)
+Requires-Dist: arrow (==0.17.0)
+Requires-Dist: sh (==1.14.1) ; sys_platform != "win32"
+
+
+Great for use as a commit-msg git hook or as part of your gating script in a CI pipeline (e.g. jenkins, github actions).
+Many of the gitlint validations are based on `well-known`_ community_ `standards`_, others are based on checks that
+we've found useful throughout the years. Gitlint has sane defaults, but you can also easily customize it to your
+own liking.
+
+Demo and full documentation on `jorisroovers.github.io/gitlint`_.
+To see what's new in the latest release, visit the CHANGELOG_.
+
+Source code on `github.com/jorisroovers/gitlint`_.
+
+.. _well-known: http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html
+.. _community: http://addamhardy.com/blog/2013/06/05/good-commit-messages-and-enforcing-them-with-git-hooks/
+.. _standards: http://chris.beams.io/posts/git-commit/
+.. _jorisroovers.github.io/gitlint: https://jorisroovers.github.io/gitlint
+.. _CHANGELOG: https://github.com/jorisroovers/gitlint/blob/main/CHANGELOG.md
+.. _github.com/jorisroovers/gitlint: https://github.com/jorisroovers/gitlint
+
+

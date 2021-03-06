@@ -1,0 +1,14 @@
+Metadata-Version: 2.0
+Name: sfmergeutility
+Version: 0.1.6
+Summary: Service Fabric Yaml merge utility
+Home-page: https://github.com/Azure/azure-cli-extensions
+Author: Microsoft Corporation
+Author-email: azpycli@microsoft.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: pyyaml
+
+UNKNOWN
+
+

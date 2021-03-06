@@ -1,0 +1,78 @@
+Metadata-Version: 2.1
+Name: azure-synapse-artifacts
+Version: 0.4.0
+Summary: Microsoft Azure Synapse Artifacts Client Library for Python
+Home-page: https://github.com/Azure/azure-sdk-for-python
+Author: Microsoft Corporation
+Author-email: azpysdkhelp@microsoft.com
+License: MIT License
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: License :: OSI Approved :: MIT License
+Description-Content-Type: text/markdown
+Requires-Dist: msrest (>=0.5.0)
+Requires-Dist: azure-common (~=1.1)
+Requires-Dist: azure-core (<2.0.0,>=1.6.0)
+Requires-Dist: azure-synapse-nspkg ; python_version<'3.0'
+
+# Microsoft Azure SDK for Python
+
+This is the Microsoft Azure Synapse Artifacts Client Library.
+This package has been tested with Python 2.7, 3.5, 3.6, 3.7 and 3.8.
+For a more complete view of Azure libraries, see the [azure sdk python release](https://aka.ms/azsdk/python/all).
+
+
+# Usage
+
+
+
+
+For code examples, see [Synapse Artifacts](https://docs.microsoft.com/python/api/overview/azure/) on docs.microsoft.com.
+
+
+# Provide Feedback
+
+If you encounter any bugs or have suggestions, please file an issue in the
+[Issues](https://github.com/Azure/azure-sdk-for-python/issues)
+section of the project.
+
+
+![Impressions](https://azure-sdk-impressions.azurewebsites.net/api/impressions/azure-sdk-for-python%2Fazure-synapse-artifacts%2FREADME.png)
+
+
+# Release History
+
+## 0.4.0 (2020-12-08)
+
+** Features **
+
+- Add Workspace git repo management operations
+- Add rename method for data flow, dataset, linked service, notebook, pipeline, spark job definition, sql script operations
+
+## 0.3.0 (2020-09-15)
+
+** Features **
+
+- Add Workspace operations
+- Add SqlPools operations
+- Add BigDataPools operations
+- Add IntegrationRuntimes operations
+
+** Breaking changes **
+
+- Migrated most long running operation to polling mechanism (operation now starts with `begin`)
+
+## 0.2.0 (2020-07-01)
+
+* Initial Release
+
+

@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: comet-git-pure
+Version: 0.19.16
+Summary: Python Git Library
+Home-page: UNKNOWN
+License: Apachev2 or later or GPLv2
+Keywords: git vcs
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Topic :: Software Development :: Version Control
+Requires-Dist: urllib3 (>=1.24.1)
+Requires-Dist: certifi
+Provides-Extra: fastimport
+Requires-Dist: fastimport ; extra == 'fastimport'
+Provides-Extra: https
+Requires-Dist: urllib3[secure] (>=1.24.1) ; extra == 'https'
+Provides-Extra: pgp
+Requires-Dist: gpg ; extra == 'pgp'
+
+UNKNOWN
+
+

@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: mozversion
+Version: 2.3.0
+Summary: Library to get version information for applications
+Home-page: https://wiki.mozilla.org/Auto-tools/Projects/Mozbase
+Author: Mozilla Automation and Testing Team
+Author-email: tools@lists.mozilla.org
+License: MPL
+Keywords: mozilla
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: mozlog (>=6.0)
+Requires-Dist: six (>=1.10.0)
+
+see https://firefox-source-docs.mozilla.org/mozbase/index.html
+
+

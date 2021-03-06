@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: flit_core
+Version: 3.1.0
+Summary: Distribution-building parts of Flit. See flit package for more information
+Home-page: https://github.com/takluyver/flit
+Author: Thomas Kluyver & contributors
+Author-email: thomas@kluyver.me.uk

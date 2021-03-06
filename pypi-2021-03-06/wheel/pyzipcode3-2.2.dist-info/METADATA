@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: pyzipcode3
+Version: 2.2
+Summary: Search by ZIP Code, Place and Geo data
+Home-page: https://www.github.com/dvf/pyzipcode3
+Author: Daniel van Flymen
+Author-email: vanflymen@gmail.com
+License: GPL
+Download-URL: https://www.github.com/dvf/pyzipcode3/archive/2.0.tar.gz
+Keywords: zip code distance geo
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+
+UNKNOWN
+
+

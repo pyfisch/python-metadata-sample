@@ -1,0 +1,37 @@
+Metadata-Version: 2.0
+Name: txAWS
+Version: 0.5.0
+Summary: Async library for EC2, OpenStack, and Eucalyptus
+Home-page: https://github.com/twisted/txaws
+Author: txAWS Developers
+Author-email: UNKNOWN
+License: MIT
+Description-Content-Type: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Information Technology
+Classifier: Programming Language :: Python
+Classifier: Topic :: Database
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: License :: OSI Approved :: MIT License
+Requires-Dist: attrs
+Requires-Dist: python-dateutil
+Requires-Dist: twisted[tls] (>=15.5.0)
+Requires-Dist: venusian
+Requires-Dist: lxml
+Requires-Dist: incremental
+Requires-Dist: pyrsistent
+Requires-Dist: constantly
+Provides-Extra: dev
+Requires-Dist: treq; extra == 'dev'
+Requires-Dist: zope.datetime; extra == 'dev'
+Requires-Dist: boto3; extra == 'dev'
+
+Twisted-based Asynchronous Libraries for Amazon Web Services and Eucalyptus
+private clouds This project's goal is to have a complete Twisted API
+representing the spectrum of Amazon's web services as well as support for
+Eucalyptus clouds.
+
+

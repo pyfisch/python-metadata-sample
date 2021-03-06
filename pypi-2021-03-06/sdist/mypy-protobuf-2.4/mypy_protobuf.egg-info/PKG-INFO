@@ -1,0 +1,13 @@
+Metadata-Version: 1.2
+Name: mypy-protobuf
+Version: 2.4
+Summary: Generate mypy stub files from protobuf specs
+Home-page: https://github.com/dropbox/mypy-protobuf
+Author: Nipunn Koorapati
+Author-email: nipunn@dropbox.com
+License: Apache License 2.0
+Download-URL: https://github.com/dropbox/mypy-protobuf/archive/v2.4.tar.gz
+Description: UNKNOWN
+Keywords: mypy proto dropbox
+Platform: UNKNOWN
+Requires-Python: >=3.6

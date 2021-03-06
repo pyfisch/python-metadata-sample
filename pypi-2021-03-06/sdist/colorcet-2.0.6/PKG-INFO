@@ -1,0 +1,30 @@
+Metadata-Version: 2.1
+Name: colorcet
+Version: 2.0.6
+Summary: Collection of perceptually uniform colormaps
+Home-page: https://colorcet.holoviz.org
+Author: James A. Bednar
+Author-email: jbednar@anaconda.com
+Maintainer: James A. Bednar
+Maintainer-email: jbednar@anaconda.com
+License: CC-BY License
+Project-URL: Bug Tracker, http://github.com/holoviz/colorcet/issues
+Project-URL: Documentation, https://colorcet.holoviz.org
+Project-URL: Source Code, http://github.com/holoviz/colorcet
+Description: README.md
+Platform: UNKNOWN
+Classifier: License :: OSI Approved
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Python: >=2.7
+Provides-Extra: tests
+Provides-Extra: examples
+Provides-Extra: doc
+Provides-Extra: tests_extra
+Provides-Extra: build
+Provides-Extra: all

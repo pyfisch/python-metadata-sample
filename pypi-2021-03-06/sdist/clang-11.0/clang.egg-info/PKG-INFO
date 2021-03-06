@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: clang
+Version: 11.0
+Summary: libclang python bindings
+Home-page: http://clang.llvm.org/
+Author: LLVM team - pypi upload by Loic Jaquemet
+Author-email: UNKNOWN
+License: License :: OSI Approved :: University of Illinois/NCSA Open Source License
+Download-URL: http://llvm.org/releases/download.html
+Description: This is the python bindings subdir of llvm clang repository.
+        https://github.com/llvm-mirror/clang/tree/master/bindings/python
+        
+        This is a non-official packaging directly from the debian packages for the purpose of pypi package.
+        
+Keywords: llvm,clang,libclang
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: University of Illinois/NCSA Open Source License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Topic :: Software Development :: Compilers
+Classifier: Programming Language :: Python :: 3

@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: publication
+Version: 0.0.3
+Summary: Publication helps you maintain public-api-friendly modules by preventing unintentional access to private implementation details via introspection.
+Home-page: https://github.com/glyph/publication
+Author: Glyph
+Author-email: glyph@twistedmatrix.com

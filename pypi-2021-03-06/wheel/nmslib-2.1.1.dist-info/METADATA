@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: nmslib
+Version: 2.1.1
+Summary: Non-Metric Space Library (NMSLIB)
+Home-page: https://github.com/nmslib/nmslib
+Author: B. Naidan, L. Boytsov, Yu. Malkov, B. Frederickson, D. Novak, et al.
+Author-email: UNKNOWN
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Dist: pybind11 (<2.6.2)
+Requires-Dist: psutil
+Requires-Dist: numpy (<1.17,>=1.10.0) ; python_version == "2.7"
+Requires-Dist: numpy (>=1.10.0) ; python_version >= "3.5"
+
+Non-Metric Space Library (NMSLIB) is an efficient cross-platform
+similarity search library and a toolkit for evaluation of similarity search methods. 
+The goal of the project is to create an effective and comprehensive toolkit for searching 
+in generic and non-metric spaces. Even though the library contains a variety of metric-space 
+access methods, our main focus is on generic and approximate search methods, in particular, 
+on methods for non-metric spaces. NMSLIB is possibly the first library with a principled 
+support for non-metric space searching.
+

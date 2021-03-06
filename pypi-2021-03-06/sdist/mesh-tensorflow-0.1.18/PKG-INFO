@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: mesh-tensorflow
+Version: 0.1.18
+Summary: Mesh TensorFlow
+Home-page: http://github.com/tensorflow/mesh
+Author: Google Inc.
+Author-email: no-reply@google.com
+License: Apache 2.0
+Description: UNKNOWN
+Keywords: tensorflow machine learning
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Provides-Extra: auto_mtf
+Provides-Extra: tensorflow
+Provides-Extra: transformer

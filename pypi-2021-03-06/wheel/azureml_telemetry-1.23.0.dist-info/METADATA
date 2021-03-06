@@ -1,0 +1,35 @@
+Metadata-Version: 2.0
+Name: azureml-telemetry
+Version: 1.23.0
+Summary: Azure Machine Learning Telemetry API for Python
+Home-page: https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py
+Author: Microsoft Corp
+License: https://aka.ms/azureml-sdk-license
+Platform: UNKNOWN
+Requires-Python: >=3.5,<4
+Description-Content-Type: text/x-rst
+Requires-Dist: applicationinsights
+Requires-Dist: azureml-core (~=1.23.0)
+
+Microsoft Azure Machine Learning Telemetry API for Python
+=========================================================
+
+The azureml-telemetry package is used to collect telemetry data and includes the following:
+
+- Provides functionality for logging, capturing events and metrics, and monitoring code activity.
+- Collect different types of telemetry using free text or structured logging.
+- Log messages, metrics, events, and activity messages can written to Application Insights.
+
+*****************
+Setup
+*****************
+
+Install the Azure ML telemetry package:
+
+.. code-block:: python
+
+  pip install azureml-telemetry
+
+
+
+

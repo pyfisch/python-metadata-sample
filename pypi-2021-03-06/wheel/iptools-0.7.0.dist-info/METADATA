@@ -1,0 +1,35 @@
+Metadata-Version: 2.1
+Name: iptools
+Version: 0.7.0
+Summary: Python utilites for manipulating IPv4 and IPv6 addresses
+Home-page: https://github.com/bd808/python-iptools
+Author: Bryan Davis
+Author-email: bd808@bd808.com
+License: BSD
+Download-URL: http://pypi.python.org/packages/source/i/iptools/
+Keywords: ip2long long2ip django cidr ipv4 ipv6
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Utilities
+Classifier: Topic :: Internet
+Provides-Extra: testing
+Requires-Dist: nose (>=1.0) ; extra == 'testing'
+
+
+Utilities for manipulating IPv4 and IPv6 addresses including a
+class that can be used to include CIDR network blocks in Django's
+INTERNAL_IPS setting.
+
+Full documentation at http://python-iptools.readthedocs.org/
+
+

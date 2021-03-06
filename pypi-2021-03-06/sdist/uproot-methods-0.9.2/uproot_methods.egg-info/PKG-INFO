@@ -1,0 +1,65 @@
+Metadata-Version: 1.2
+Name: uproot-methods
+Version: 0.9.2
+Summary: Pythonic mix-ins for ROOT classes.
+Home-page: https://github.com/scikit-hep/uproot-methods
+Author: Jim Pivarski (IRIS-HEP)
+Author-email: pivarski@princeton.edu
+Maintainer: Jim Pivarski (IRIS-HEP)
+Maintainer-email: pivarski@princeton.edu
+License: BSD 3-clause
+Download-URL: https://github.com/scikit-hep/uproot-methods/releases
+Description: .. inclusion-marker-1-5-do-not-remove
+        
+        This package is typically used as a dependency for `uproot <https://github.com/scikit-hep/uproot>`__, to define methods on the classes that are automatically generated from ROOT files. This includes histograms (TH*) and physics objects like TLorentzVectors. The reason it's a separate library is so that we can add physics-specific functionality on a shorter timescale than we can update uproot itself, which is purely an I/O package.
+        
+        Occasionally, this library is used without uproot, as a way to make arrays of TLorentzVectors.
+        
+        .. inclusion-marker-2-do-not-remove
+        
+        Installation
+        ============
+        
+        Install uproot-methods like any other Python package:
+        
+        .. code-block:: bash
+        
+            pip install uproot-methods                # maybe with sudo or --user, or in virtualenv
+        
+        or install with `conda <https://conda.io/en/latest/miniconda.html>`__:
+        
+        .. code-block:: bash
+        
+            conda config --add channels conda-forge   # if you haven't added conda-forge already
+            conda install uproot-methods
+        
+        Both installers automatically install the dependencies.
+        
+        Dependencies:
+        -------------
+        
+        - `numpy <https://scipy.org/install.html>`__ (1.13.1+)
+        - `awkward-array <https://github.com/scikit-hep/awkward-array>`__ (0.11.0+)
+Platform: Any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Scientific/Engineering :: Physics
+Classifier: Topic :: Software Development
+Classifier: Topic :: Utilities

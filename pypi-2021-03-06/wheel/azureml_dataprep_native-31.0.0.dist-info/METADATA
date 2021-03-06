@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: azureml-dataprep-native
+Version: 31.0.0
+Summary: Python Package for AzureML DataPrep specific native extensions.
+Home-page: http://aka.ms/data-prep-sdk
+Author: Microsoft Corporation
+Author-email: dataprepms@microsoft.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: MacOS
+Description-Content-Type: text/markdown
+
+
+# Azure Machine Learning Data Prep SDK
+
+Specific native code extensions for package [azureml-dataprep](https://pypi.org/project/azureml-dataprep/)
+
+

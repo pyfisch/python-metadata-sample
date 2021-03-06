@@ -1,0 +1,86 @@
+Metadata-Version: 2.0
+Name: azureml-sdk
+Version: 1.23.0
+Summary: Microsoft Azure Machine Learning Python SDK
+Home-page: https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py
+Author: Microsoft Corp
+License: https://aka.ms/azureml-sdk-license
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Requires-Python: >=3.5,<4
+Description-Content-Type: text/x-rst
+Provides-Extra: services
+Provides-Extra: accel-models
+Provides-Extra: tensorboard
+Provides-Extra: explain
+Provides-Extra: automl_databricks
+Provides-Extra: notebooks
+Provides-Extra: contrib
+Provides-Extra: automl
+Provides-Extra: databricks
+Provides-Extra: interpret
+Requires-Dist: azureml-core (~=1.23.0)
+Requires-Dist: azureml-dataset-runtime[fuse] (~=1.23.0)
+Requires-Dist: azureml-train (~=1.23.0)
+Requires-Dist: azureml-train-automl-client (~=1.23.0)
+Requires-Dist: azureml-pipeline (~=1.23.0)
+Provides-Extra: accel-models
+Requires-Dist: azureml-accel-models (~=1.23.0); extra == 'accel-models'
+Provides-Extra: automl
+Requires-Dist: azureml-train-automl (~=1.23.0); extra == 'automl'
+Provides-Extra: automl_databricks
+Requires-Dist: azureml-train-automl (~=1.23.0); extra == 'automl_databricks'
+Provides-Extra: contrib
+Requires-Dist: azureml-contrib-pipeline-steps (~=1.23.0); extra == 'contrib'
+Requires-Dist: azureml-contrib-server (~=1.23.0); extra == 'contrib'
+Requires-Dist: azureml-contrib-services (~=1.23.0); extra == 'contrib'
+Requires-Dist: azureml-contrib-notebook (~=1.23.0); extra == 'contrib'
+Provides-Extra: databricks
+Provides-Extra: explain
+Requires-Dist: azureml-explain-model (~=1.23.0); extra == 'explain'
+Provides-Extra: interpret
+Requires-Dist: azureml-interpret (~=1.23.0); extra == 'interpret'
+Provides-Extra: notebooks
+Requires-Dist: azureml-widgets (~=1.23.0); extra == 'notebooks'
+Requires-Dist: azureml-contrib-notebook (~=1.23.0); extra == 'notebooks'
+Provides-Extra: services
+Requires-Dist: azureml-contrib-services (~=1.23.0); extra == 'services'
+Provides-Extra: tensorboard
+Requires-Dist: azureml-tensorboard (~=1.23.0); extra == 'tensorboard'
+
+What is the Azure Machine Learning SDK for Python?
+==================================================
+
+The Azure Machine Learning SDK for Python is used by data scientists and AI developers 
+to build and run machine learning workflows upon the Azure Machine Learning service. 
+You can interact with the service in any Python environment, including Jupyter Notebooks 
+or your favorite Python IDE.
+
+Use this SDK to quickly build, train, and deploy your machine learning and deep learning 
+models for various domains.
+
+Azure Machine Learning service stores free form text that the customer provides (e.g. names
+for workspaces, resource groups, experiments, files, and images) or experiment parameters 
+in the United States.
+
+Getting Started: https://docs.microsoft.com/en-us/python/api/overview/azure/ml/intro
+
+Examples: https://github.com/Azure/MachineLearningNotebooks
+
+Release updates: https://docs.microsoft.com/en-us/azure/machine-learning/service/azure-machine-learning-release-notes
+
+
+
+

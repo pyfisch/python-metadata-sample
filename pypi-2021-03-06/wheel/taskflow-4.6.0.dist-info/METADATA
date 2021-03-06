@@ -1,0 +1,139 @@
+Metadata-Version: 2.1
+Name: taskflow
+Version: 4.6.0
+Summary: Taskflow structured state management library.
+Home-page: https://docs.openstack.org/taskflow/latest/
+Author: OpenStack
+Author-email: openstack-discuss@lists.openstack.org
+License: UNKNOWN
+Keywords: reliable,tasks,execution,parallel,dataflow,workflows,distributed
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: System :: Distributed Computing
+Requires-Python: >=3.6
+Requires-Dist: automaton (>=1.9.0)
+Requires-Dist: cachetools (>=2.0.0)
+Requires-Dist: fasteners (>=0.7.0)
+Requires-Dist: futurist (>=1.2.0)
+Requires-Dist: jsonschema (>=3.2.0)
+Requires-Dist: networkx (>=2.1.0)
+Requires-Dist: oslo.serialization (!=2.19.1,>=2.18.0)
+Requires-Dist: oslo.utils (>=3.33.0)
+Requires-Dist: pbr (!=2.1.0,>=2.0.0)
+Requires-Dist: pydot (>=1.2.4)
+Requires-Dist: six (>=1.10.0)
+Requires-Dist: stevedore (>=1.20.0)
+Requires-Dist: tenacity (>=6.0.0)
+Provides-Extra: database
+Requires-Dist: PyMySQL (>=0.7.6) ; extra == 'database'
+Requires-Dist: SQLAlchemy (!=1.1.5,!=1.1.6,!=1.1.7,!=1.1.8,>=1.0.10) ; extra == 'database'
+Requires-Dist: SQLAlchemy-Utils (>=0.30.11) ; extra == 'database'
+Requires-Dist: alembic (>=0.8.10) ; extra == 'database'
+Requires-Dist: psycopg2 (>=2.8.0) ; extra == 'database'
+Provides-Extra: eventlet
+Requires-Dist: eventlet (!=0.18.3,!=0.20.1,!=0.21.0,>=0.18.2) ; extra == 'eventlet'
+Provides-Extra: redis
+Requires-Dist: redis (>=2.10.0) ; extra == 'redis'
+Provides-Extra: test
+Requires-Dist: hacking (<0.11,>=0.10.0) ; extra == 'test'
+Requires-Dist: mock (>=2.0.0) ; extra == 'test'
+Requires-Dist: oslotest (>=3.2.0) ; extra == 'test'
+Requires-Dist: pydotplus (>=2.0.2) ; extra == 'test'
+Requires-Dist: stestr (>=2.0.0) ; extra == 'test'
+Requires-Dist: testscenarios (>=0.4) ; extra == 'test'
+Requires-Dist: testtools (>=2.2.0) ; extra == 'test'
+Provides-Extra: workers
+Requires-Dist: kombu (>=4.3.0) ; extra == 'workers'
+Provides-Extra: zookeeper
+Requires-Dist: kazoo (>=2.6.0) ; extra == 'zookeeper'
+Requires-Dist: zake (>=0.1.6) ; extra == 'zookeeper'
+
+========================
+Team and repository tags
+========================
+
+.. image:: https://governance.openstack.org/tc/badges/taskflow.svg
+    :target: https://governance.openstack.org/tc/reference/tags/index.html
+
+.. Change things from this point on
+
+TaskFlow
+========
+
+.. image:: https://img.shields.io/pypi/v/taskflow.svg
+    :target: https://pypi.org/project/taskflow/
+    :alt: Latest Version
+
+A library to do [jobs, tasks, flows] in a highly available, easy to understand
+and declarative manner (and more!) to be used with OpenStack and other
+projects.
+
+* Free software: Apache license
+* Documentation: https://docs.openstack.org/taskflow/latest/
+* Source: https://opendev.org/openstack/taskflow
+* Bugs: https://bugs.launchpad.net/taskflow/
+* Release notes: https://docs.openstack.org/releasenotes/taskflow/
+
+Join us
+-------
+
+- https://launchpad.net/taskflow
+
+Testing and requirements
+------------------------
+
+Requirements
+~~~~~~~~~~~~
+
+Because this project has many optional (pluggable) parts like persistence
+backends and engines, we decided to split our requirements into two
+parts: - things that are absolutely required (you can't use the project
+without them) are put into ``requirements.txt``. The requirements
+that are required by some optional part of this project (you can use the
+project without them) are put into our ``test-requirements.txt`` file (so
+that we can still test the optional functionality works as expected). If
+you want to use the feature in question (`eventlet`_ or the worker based engine
+that uses `kombu`_ or the `sqlalchemy`_ persistence backend or jobboards which
+have an implementation built using `kazoo`_ ...), you should add
+that requirement(s) to your project or environment.
+
+Tox.ini
+~~~~~~~
+
+Our ``tox.ini`` file describes several test environments that allow to test
+TaskFlow with different python versions and sets of requirements installed.
+Please refer to the `tox`_ documentation to understand how to make these test
+environments work for you.
+
+Developer documentation
+-----------------------
+
+We also have sphinx documentation in ``docs/source``.
+
+*To build it, run:*
+
+::
+
+    $ python setup.py build_sphinx
+
+.. _kazoo: https://kazoo.readthedocs.io/en/latest/
+.. _sqlalchemy: https://www.sqlalchemy.org/
+.. _kombu: https://kombu.readthedocs.io/en/latest/
+.. _eventlet: http://eventlet.net/
+.. _tox: https://tox.testrun.org/
+
+
+

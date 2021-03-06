@@ -1,0 +1,32 @@
+Metadata-Version: 2.0
+Name: spark-df-profiling
+Version: 1.1.13
+Summary: Create HTML profiling reports from Apache Spark DataFrames
+Home-page: https://github.com/julioasotodv/spark-df-profiling
+Author: Julio Antonio Soto de Vicente
+Author-email: julio@esbet.es
+License: MIT
+Keywords: spark pyspark report big-data pandas data-science data-analysis python jupyter ipython
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Environment :: Console
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Scientific/Engineering
+Classifier: Framework :: IPython
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: jinja2 (>=2.8)
+Requires-Dist: matplotlib (>=1.4)
+Requires-Dist: pandas (>=0.17.0)
+Requires-Dist: six (>=1.9.0)
+
+UNKNOWN
+
+

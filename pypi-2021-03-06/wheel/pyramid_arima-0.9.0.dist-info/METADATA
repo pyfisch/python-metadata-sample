@@ -1,0 +1,73 @@
+Metadata-Version: 2.1
+Name: pyramid-arima
+Version: 0.9.0
+Summary: Python's forecast::auto.arima equivalent
+Home-page: https://github.com/tgsmith61591/pyramid
+Maintainer: Taylor G. Smith
+Maintainer-email: taylor.smith@alkaline-ml.com
+License: MIT
+Download-URL: https://github.com/tgsmith61591/pyramid/archive/v0.9.0.tar.gz
+Keywords: arima timeseries forecasting pyramid pyramid-arima scikit-learn statsmodels
+Platform: UNKNOWN
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Financial and Insurance Industry
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development
+Classifier: Topic :: Scientific/Engineering
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4
+Description-Content-Type: text/markdown
+Requires-Dist: Cython (>=0.23)
+Requires-Dist: numpy (>=1.10)
+Requires-Dist: scipy (>=0.9)
+Requires-Dist: scikit-learn (>=0.17)
+Requires-Dist: pandas (>=0.19)
+Requires-Dist: statsmodels (>=0.9.0)
+
+[![PyPI version](https://badge.fury.io/py/pyramid-arima.svg)](https://badge.fury.io/py/pyramid-arima)
+[![Linux build status](https://travis-ci.org/tgsmith61591/pyramid.svg?branch=master)](https://travis-ci.org/tgsmith61591/pyramid)
+[![Windows build status](https://ci.appveyor.com/api/projects/status/592vawuu69kd6d21?svg=true)](https://ci.appveyor.com/project/tgsmith61591/pyramid)
+[![PyPy build status](https://circleci.com/gh/tgsmith61591/pyramid.svg?style=svg)](https://circleci.com/gh/tgsmith61591/pyramid)
+[![codecov](https://codecov.io/gh/tgsmith61591/pyramid/branch/master/graph/badge.svg)](https://codecov.io/gh/tgsmith61591/pyramid)
+![Supported versions](https://img.shields.io/badge/python-2.7-blue.svg)
+![Supported versions](https://img.shields.io/badge/python-3.5-blue.svg)
+
+# pyramid
+Pyramid is a no-nonsense statistical Python library with a solitary objective: bring R's
+[`auto.arima`](https://www.rdocumentation.org/packages/forecast/versions/7.3/topics/auto.arima)
+functionality to Python. Pyramid operates by wrapping
+[`statsmodels.tsa.ARIMA`](https://github.com/statsmodels/statsmodels/blob/master/statsmodels/tsa/arima_model.py) and
+[`statsmodels.tsa.statespace.SARIMAX`](https://github.com/statsmodels/statsmodels/blob/master/statsmodels/tsa/statespace/sarimax.py)
+into one estimator class and creating a more user-friendly estimator interface for programmers familiar with scikit-learn.
+
+
+## Installation
+
+Pyramid is on pypi under the package name `pyramid-arima` and can be downloaded via `pip`:
+
+```bash
+$ pip install pyramid-arima
+```
+
+To ensure the package was built correctly, import the following module in python:
+
+```python
+from pyramid.arima import auto_arima
+```
+
+
+### Documentation
+
+All of your questions and more (including examples and guides) can be answered
+by the [Pyramid documentation](https://www.alkaline-ml.com/pyramid). If not,
+always feel free to file an issue.
+
+

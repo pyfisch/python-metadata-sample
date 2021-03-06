@@ -1,0 +1,106 @@
+Metadata-Version: 2.1
+Name: databand
+Version: 0.35.1
+Summary: Machine Learning Orchestration
+Home-page: https://github.com/databand-ai/dbnd
+Author: Evgeny Shulman
+Author-email: evgeny.shulman@databand.ai
+Maintainer: Evgeny Shulman
+Maintainer-email: evgeny.shulman@databand.ai
+License: UNKNOWN
+Project-URL: Documentation, https://dbnd.readme.io/
+Project-URL: Bug-Tracker, https://github.com/databand-ai/dbnd/issues
+Project-URL: Source-Code, https://github.com/databand-ai/dbnd
+Description: [![pipeline status](https://gitlab.com/databand-ai/dbnd/badges/master/pipeline.svg)](https://gitlab.com/databand-ai/dbnd/pipelines)
+        
+        ![PyPI - Downloads](https://img.shields.io/pypi/dm/dbnd) ![PyPI](https://img.shields.io/pypi/v/dbnd)
+        ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/dbnd) ![PyPI - License](https://img.shields.io/pypi/l/dbnd)
+        ![Code style: ](https://img.shields.io/badge/code%20style-black-000000.svg)
+        
+        # DBND
+        
+        DBND an open source framework for building and tracking data pipelines. DBND is used for processes ranging from data ingestion, preparation, machine learning model training and production.
+        
+        DBND includes a Python library, set of APIs, and CLI that enables you to collect metadata from your workflows, create a system of record for runs, and easily orchestrate complex processes.
+        
+        DBND simplifies the process of building and running data pipelines
+        from dbnd import task
+        
+        ```python
+        from dbnd import task
+        
+        @task
+        def say_hello(name: str = "databand.ai") -> str:
+            value = "Hello %s!" % name
+            return value
+        ```
+        
+        And makes it easy to track your critical pipeline metadata
+        
+        ```python
+        from dbnd import log_metric, log_dataframe
+        
+        log_dataframe("my_dataset", my_dataset)
+        log_metric("r2", r2)
+        ```
+        
+        ## Getting Started
+        
+        See our [documentation](https://dbnd.readme.io/) with examples and quickstart guides to get up and running with DBND.
+        
+        ## The Latest and Greatest
+        
+        For using DBND, we recommend that you work with a virtual environment like [Virtualenv](https://virtualenv.pypa.io/en/latest/) or [Conda](https://docs.conda.io/en/latest/). Update to the latest and greatest:
+        
+        ```shell script
+        pip install dbnd
+        ```
+        
+        If you would like access to our latest features, or have any questions, feedback, or contributions we would love to here from you! Get in touch through contact@databand.ai
+        
+Keywords: orchestration,data,machinelearning
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+Provides-Extra: airflow
+Provides-Extra: airflow_bundle
+Provides-Extra: airflow_1_10_7
+Provides-Extra: airflow_1_10_8
+Provides-Extra: airflow_1_10_9
+Provides-Extra: airflow_1_10_10
+Provides-Extra: airflow_1_10_11
+Provides-Extra: airflow_1_10_12
+Provides-Extra: airflow-export
+Provides-Extra: airflow-auto-tracking
+Provides-Extra: airflow-operator
+Provides-Extra: airflow-versioned-dag
+Provides-Extra: aws
+Provides-Extra: azure
+Provides-Extra: databricks
+Provides-Extra: docker
+Provides-Extra: gcp
+Provides-Extra: hdfs
+Provides-Extra: mlflow
+Provides-Extra: qubole
+Provides-Extra: spark
+Provides-Extra: postgres
+Provides-Extra: redshift
+Provides-Extra: snowflake
+Provides-Extra: tensorflow
+Provides-Extra: luigi
+Provides-Extra: k8s

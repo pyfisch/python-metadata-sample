@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: XStatic-Bootstrap-SCSS
+Version: 3.4.1.0
+Summary: Bootstrap-SCSS 3.4.1 (XStatic packaging standard)
+Home-page: https://github.com/twbs/bootstrap-sass
+Maintainer: Radomir Dopieralski
+Maintainer-email: openstack@sheep.art.pl
+License: MIT
+Keywords: bootstrap_scss xstatic
+Platform: any
+
+XStatic-Bootstrap-SCSS
+----------------------
+
+Bootstrap style library packaged for setuptools (easy_install) / pip.
+
+This package is intended to be used by **any** project that needs these files.
+
+It intentionally does **not** provide any extra code except some metadata
+**nor** has any extra requirements. You MAY use some minimal support code from
+the XStatic base package, if you like.
+
+You can find more info about the xstatic packaging way in the package `XStatic`.
+
+
+

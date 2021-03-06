@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: typer
+Version: 0.3.2
+Summary: Typer, build great CLIs. Easy to code. Based on Python type hints.
+Home-page: https://github.com/tiangolo/typer
+Author: Sebastián Ramírez
+Author-email: tiangolo@gmail.com

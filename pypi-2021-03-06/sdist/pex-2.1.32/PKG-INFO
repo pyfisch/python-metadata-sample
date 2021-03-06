@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: pex
+Version: 2.1.32
+Summary: The PEX packaging toolchain.
+Home-page: https://github.com/pantsbuild/pex
+Author: The PEX developers
+Author-email: pantsbuild@gmail.com

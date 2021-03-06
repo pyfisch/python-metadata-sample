@@ -1,0 +1,23 @@
+Metadata-Version: 2.0
+Name: twitter.common.app
+Version: 0.3.11
+Summary: Twitter's Python application lifecycle framework.
+Home-page: https://github.com/twitter/commons/tree/master/src/python/twitter/common/app
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: Apache License, Version 2.0
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Requires-Dist: twitter.common.collections (==0.3.11)
+Requires-Dist: twitter.common.lang (==0.3.11)
+Requires-Dist: twitter.common.log (==0.3.11)
+Requires-Dist: twitter.common.options (==0.3.11)
+Requires-Dist: twitter.common.process (==0.3.11)
+Requires-Dist: twitter.common.util (==0.3.11)
+
+UNKNOWN
+
+

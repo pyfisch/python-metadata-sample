@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: timing-asgi
+Version: 0.2.1
+Summary: ASGI middleware to emit timing metrics with something like statsd
+License: MIT
+Author: Steinn Eldjárn Sigurðarson
+Author-email: steinnes@gmail.com
+Requires-Python: >=3.6,<4.0
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: alog (>=0.9.13,<0.10.0)

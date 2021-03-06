@@ -1,0 +1,71 @@
+Metadata-Version: 2.1
+Name: os-xenapi
+Version: 0.3.4
+Summary: XenAPI library for OpenStack projects
+Home-page: http://www.citrix.com
+Author: Citrix
+Author-email: openstack@citrix.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: pbr (!=2.1.0,>=2.0.0)
+Requires-Dist: Babel (!=2.4.0,>=2.3.4)
+Requires-Dist: eventlet (!=0.18.3,!=0.20.1,>=0.18.2)
+Requires-Dist: oslo.concurrency (>=3.26.0)
+Requires-Dist: oslo.log (>=3.36.0)
+Requires-Dist: oslo.utils (>=3.33.0)
+Requires-Dist: oslo.i18n (>=3.15.3)
+Requires-Dist: paramiko (>=2.0.0)
+Requires-Dist: six (>=1.10.0)
+
+=========
+os-xenapi
+=========
+
+XenAPI library for OpenStack projects
+
+This library provides the support functions needed to connect to and manage a XenAPI-based
+hypervisor, such as Citrix's XenServer.
+
+* Free software: Apache license
+* Source: http://git.openstack.org/cgit/openstack/os-xenapi
+* Bugs: http://bugs.launchpad.net/os-xenapi
+* Install Devstack on XenServer: https://github.com/openstack/os-xenapi/blob/master/tools/README.rst
+
+Features
+--------
+
+The following features are supported since 0.3.1:
+
+* VDI streaming
+  It will allow the library user to create XenServer VDI from a gzipped
+  image data stream; or create gzipped image data stream from a specified
+  XenServer VDI. By comparing to the existing dom0 glance plugin, the
+  image data gets processed on the fly via streams. So it doesn't create
+  intermediate files. And it completely uses the formal VDI import or
+  export APIs when it exchanges VDI data with XenServer.
+
+* XAPI pool
+  With this feature, we can deploy OpenStack on hosts which belong to a
+  XAPI pool, so that we can get the benefits from XAPI pool features:
+  e.g. it's able to live migrate instance between two hosts without
+  moving the disks on shared storage.
+
+The following features are supported since 0.3.2:
+
+* Bootstrap compute node via a single command
+  Now we can support to boostrap an OpenStack compute node by running the
+  command of ``xenapi_bootstrap`` from a VM which is running on XenServer.
+  At the moment, only CentOS 7.x is supported.
+
+
+

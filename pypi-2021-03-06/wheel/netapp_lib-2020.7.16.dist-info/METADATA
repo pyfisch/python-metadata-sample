@@ -1,0 +1,17 @@
+Metadata-Version: 2.0
+Name: netapp-lib
+Version: 2020.7.16
+Summary: netapp-lib is required for Ansible deployments to interact with NetApp storage systems.
+Home-page: https://netapp.io/
+Author: NetApp, Inc.
+Author-email: ng-ansibleteam@netapp.com
+License: Apache License, Version 2.0
+Keywords: netapp,netapp_lib,ansible
+Platform: UNKNOWN
+Classifier: Environment :: Plugins
+Requires-Dist: xmltodict
+Requires-Dist: lxml
+
+UNKNOWN
+
+

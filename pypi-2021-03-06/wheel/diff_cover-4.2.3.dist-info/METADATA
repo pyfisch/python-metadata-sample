@@ -1,0 +1,33 @@
+Metadata-Version: 2.1
+Name: diff-cover
+Version: 4.2.3
+Summary: Automatically find diff lines that need test coverage.
+Home-page: https://github.com/Bachmann1234/diff-cover
+Author: Matt Bachmann
+License: Apache 2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Testing
+Classifier: Topic :: Software Development :: Quality Assurance
+Requires-Python: >= 3.5
+Requires-Dist: inflect (==3.0.2)
+Requires-Dist: pygments
+Requires-Dist: Jinja2 (>=2.7.1)
+Requires-Dist: jinja2-pluralize
+Requires-Dist: pluggy
+Requires-Dist: chardet (==4.0.0)
+
+UNKNOWN
+
+

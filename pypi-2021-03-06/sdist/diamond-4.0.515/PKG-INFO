@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: diamond
+Version: 4.0.515
+Summary: Smart data producer for graphite graphing package
+Home-page: https://github.com/python-diamond/Diamond
+Author: The Diamond Team
+Author-email: diamond@librelist.com
+License: MIT License
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2

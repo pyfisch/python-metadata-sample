@@ -1,0 +1,34 @@
+Metadata-Version: 1.2
+Name: pyexasol
+Version: 0.18.0
+Summary: Exasol python driver with extra features
+Home-page: https://github.com/badoo/pyexasol
+Author: Vitaly Markov
+Author-email: wild.desu@gmail.com
+License: UNKNOWN
+Description-Content-Type: text/markdown
+Description: 
+        Exasol driver with low overhead, fast HTTP transport and compression. It is implemented in Python 3.6+.
+        
+        Main features:
+        
+        -  Based on WebSocket protocol;
+        -  Optimized for minimum overhead;
+        -  Easy integration with pandas via HTTP transport;
+        -  Compression to reduce network bottleneck;
+        
+        PyEXASOL does not follow DB-API 2.0 in favor of Exasol-specific features.
+        
+        Please read "Best practices" manual page to learn how to use PyEXASOL with maximum efficiency.
+            
+Keywords: exasol sql database performance websocket import export
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Database
+Requires-Python: >=3.6

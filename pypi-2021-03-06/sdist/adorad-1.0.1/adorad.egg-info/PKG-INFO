@@ -1,0 +1,12 @@
+Metadata-Version: 1.1
+Name: adorad
+Version: 1.0.1
+Summary: A Tensor library in Python, built in C++
+Home-page: https://github.com/jasmcaus/caer
+Author: Jason Dsouza
+Author-email: jasmcaus@gmail.com
+License: UNKNOWN
+Download-URL: https://github.com/jasmcaus/caer
+Description: UNKNOWN
+Keywords: c++,tensor,deep learning,machine learning,gradients,computer vision,image processing,opencv,matplotlib
+Platform: UNKNOWN

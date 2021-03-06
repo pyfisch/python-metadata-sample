@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: electrical_calendar
+Version: 0.6
+Summary: Electrical sector holidays and workdays using workalendar. Spain and Portugal data
+Home-page: https://www.gisce.net
+Author: GISCE Enginyeria, SL
+Author-email: devel@gisce.net
+License: General Public Licence 3
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Provides: electrical_calendar

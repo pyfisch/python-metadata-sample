@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: grpcio-opentracing
+Version: 1.1.4
+Summary: Python OpenTracing Extensions for gRPC
+Home-page: UNKNOWN
+Author: LightStep
+Author-email: UNKNOWN
+License: Apache
+Description: UNKNOWN
+Keywords: opentracing
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6

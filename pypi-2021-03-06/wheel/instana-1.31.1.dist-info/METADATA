@@ -1,0 +1,105 @@
+Metadata-Version: 2.1
+Name: instana
+Version: 1.31.1
+Summary: 🐍 Python Distributed Tracing & Metrics Sensor for Instana
+Home-page: https://www.instana.com/
+Author: Instana Inc.
+Author-email: peter.lombardo@instana.com
+License: MIT
+Project-URL: CI: CircleCI, https://circleci.com/gh/instana/python-sensor
+Project-URL: Documentation, https://docs.instana.io/ecosystem/python/
+Project-URL: GitHub: issues, https://github.com/instana/python-sensor/issues
+Project-URL: GitHub: repo, https://github.com/instana/python-sensor
+Project-URL: Support, https://support.instana.com
+Keywords: performance,opentracing,metrics,monitoring,tracing,distributed-tracing
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Framework :: Django
+Classifier: Framework :: Flask
+Classifier: Framework :: Pyramid
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Internet :: WWW/HTTP :: WSGI :: Middleware
+Classifier: Topic :: System :: Monitoring
+Classifier: Topic :: System :: Networking :: Monitoring
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Description-Content-Type: text/markdown
+Requires-Dist: autowrapt (>=1.0)
+Requires-Dist: basictracer (>=3.1.0)
+Requires-Dist: certifi (>=2018.4.16)
+Requires-Dist: fysom (>=2.1.2)
+Requires-Dist: opentracing (>=2.3.0)
+Requires-Dist: requests (>=2.8.0)
+Requires-Dist: six (>=1.12.0)
+Requires-Dist: urllib3 (<1.26,>=1.21.1)
+
+<div align="center">
+<img src="https://disznc.s3.amazonaws.com/python-dashboard-2019.gif"/>
+</div>
+
+# Instana
+
+The `instana` Python package collects key metrics and distributed traces for [Instana](https://www.instana.com/).
+
+This package supports Python 2.7 or greater.
+
+Any and all feedback is welcome.  Happy Python visibility.
+
+[![CircleCI](https://circleci.com/gh/instana/python-sensor/tree/master.svg?style=svg)](https://circleci.com/gh/instana/python-sensor/tree/master)
+[![OpenTracing Badge](https://img.shields.io/badge/OpenTracing-enabled-blue.svg)](http://opentracing.io)
+
+## Installation
+
+None
+
+_Instana remotely instruments your Python web servers automatically via Instana [AutoTrace™️](https://www.instana.com/supported-technologies/instana-autotrace/).  To configure which Python processes this applies to, see the [Configuration page](https://docs.instana.io/ecosystem/python/configuration/#general)._
+
+##  Manual Installation
+
+If you wish to manually instrument your applications you can install the package with the following into the virtualenv, pipenv or container ([hosted on pypi](https://pypi.python.org/pypi/instana)):
+
+    pip install instana
+
+or to alternatively update an existing installation:
+
+    pip install -U instana
+
+### Activating Without Code Changes
+
+The Instana package can then be activated _without any code changes required_ by setting the following environment variable for your Python application:
+
+    export AUTOWRAPT_BOOTSTRAP=instana
+
+This will cause the Instana Python package to automatically instrument your Python application.  Once it finds the Instana host agent, it will begin to report Python metrics and distributed traces.
+
+### Activating via Import
+
+Alternatively, if you prefer the really manual method, simply import the `instana` package inside of your Python application:
+
+    import instana
+
+See also our detailed [Installation document](https://www.instana.com/docs/ecosystem/python/#installing) for additional information covering Django, Flask, End-user Monitoring (EUM) and more.
+
+## Documentation
+
+You can find more documentation covering supported components and minimum versions in the Instana [documentation portal](https://docs.instana.io/ecosystem/python/).
+
+## Contributing
+
+Bug reports and pull requests are welcome on GitHub at https://github.com/instana/python-sensor.
+
+## More
+
+Want to instrument other languages?  See our [Nodejs](https://github.com/instana/nodejs-sensor), [Go](https://github.com/instana/golang-sensor), [Ruby](https://github.com/instana/ruby-sensor) instrumentation or [many other supported technologies](https://www.instana.com/supported-technologies/).
+
+

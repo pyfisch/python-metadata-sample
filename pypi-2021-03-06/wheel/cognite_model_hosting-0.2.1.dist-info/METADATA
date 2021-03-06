@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: cognite-model-hosting
+Version: 0.2.1
+Summary: Utilities Cognite's model hosting environment
+Home-page: UNKNOWN
+Author: Nils Barlaug
+Author-email: nils.barlaug@cognite.com
+License: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5
+Requires-Dist: cognite-sdk (==1.*)
+Requires-Dist: marshmallow (==3.0.0rc4)
+
+UNKNOWN
+
+

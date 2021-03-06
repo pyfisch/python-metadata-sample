@@ -1,0 +1,19 @@
+Metadata-Version: 1.1
+Name: sq-native
+Version: 1.0.5.0.0
+Summary: Native module for the Python agent
+Home-page: https://www.sqreen.com
+Author: Sqreen
+Author-email: support@sqreen.com
+License: proprietary
+Description: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Topic :: Security

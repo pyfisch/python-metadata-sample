@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: edxval
+Version: 2.0.1
+Summary: edx-val
+Home-page: http://github.com/edx/edx-val
+Author: edX
+License: AGPL
+Description: edx-val
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: GNU Affero General Public License v3
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Framework :: Django
+Classifier: Framework :: Django :: 2.2
+Description-Content-Type: text/x-rst

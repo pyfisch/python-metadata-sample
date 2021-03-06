@@ -1,0 +1,31 @@
+Metadata-Version: 2.1
+Name: mozrunner
+Version: 8.1.0
+Summary: Reliable start/stop/configuration of Mozilla Applications (Firefox, Thunderbird, etc.)
+Home-page: https://wiki.mozilla.org/Auto-tools/Projects/Mozbase
+Author: Mozilla Automation and Tools team
+Author-email: tools@lists.mozilla.org
+License: MPL 2.0
+Keywords: mozilla
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: mozdevice (<5,>=4.0.0)
+Requires-Dist: mozfile (>=1.2)
+Requires-Dist: mozinfo (<2,>=0.7)
+Requires-Dist: mozlog (>=6.0)
+Requires-Dist: mozprocess (<2,>=1.2.0)
+Requires-Dist: mozprofile (~=2.3)
+Requires-Dist: six (<2,>=1.13.0)
+Provides-Extra: crash
+Requires-Dist: mozcrash (>=2.0) ; extra == 'crash'
+
+see https://firefox-source-docs.mozilla.org/mozbase/index.html
+
+

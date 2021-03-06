@@ -1,0 +1,26 @@
+Metadata-Version: 2.1
+Name: shippo
+Version: 2.0.2
+Summary: Shipping API Python library (USPS, FedEx, UPS and more)
+Home-page: https://goshippo.com/
+Author: Shippo
+Author-email: support@goshippo.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Dist: requests (<=2.24.0,>=2.21.0)
+Requires-Dist: simplejson (<=3.17.2,>=3.16.0)
+
+UNKNOWN
+
+

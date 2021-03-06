@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: tableauhyperapi
+Version: 0.0.12249
+Summary: Hyper API for Python
+Home-page: https://help.tableau.com/current/api/hyper_api/en-us/
+Author: Tableau Software, LLC
+Author-email: tableauhyperapi@tableau.com
+License: Proprietary
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: License :: Other/Proprietary License
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: cffi (!=1.14.3,<2,>=1.12.2)
+
+The Hyper API contains a set of functions you can use to automate your interactions with Tableau extract (.hyper) files. You can use the API to create new extract files, or to open existing files, and then insert, delete, update, or read data from those files.
+
+Using the Hyper API developers and administrators can:
+- Create extract files for data sources not currently supported by Tableau.
+- Automate custom extract, transform and load (ETL) processes (for example, implement rolling window updates or custom incremental updates).
+- Retrieve data from an extract file.
+
+More information can be found here: https://help.tableau.com/current/api/hyper_api/en-us/.
+
+

@@ -1,0 +1,11 @@
+Metadata-Version: 1.0
+Name: Resource
+Version: 0.2.1
+Summary: A Python library concentrated on the Resource layer of RESTful APIs.
+Home-page: https://github.com/RussellLuo/resource
+Author: RussellLuo
+Author-email: luopeng.he@gmail.com
+License: MIT
+Description: A Python library concentrated on the Resource layer of RESTful APIs.
+Keywords: Resource,REST,Python
+Platform: UNKNOWN

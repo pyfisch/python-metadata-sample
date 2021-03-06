@@ -1,0 +1,110 @@
+Metadata-Version: 2.0
+Name: json-encoder
+Version: 0.4.4
+Summary: json encoder uses singledispatch pattern instead of JSONEncoder class overwrites
+Home-page: UNKNOWN
+Author: NZME
+Author-email: sysadmin@grabone.co.nz
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: six (>=1.10.0)
+Requires-Dist: singledispatch (>=3.4.0.3)
+Provides-Extra: simplejson
+Requires-Dist: simplejson (>=3.8.2); extra == 'simplejson'
+
+json-encoder
+=======================
+
+* json encoder uses `singledispatch pattern`_ instead of JSONEncoder class overwrites.
+
+* No more *json.dumps(data, cls=MyJSONEncoder)* everywhere.
+
+* Comes with default serialization for time, date, datetime, UUID and Decimal
+
+* Easy to use, easy to change serialization behaviour
+
+* Not tight to any json implementation *json, simplejson, ujson* ...
+
+* It parse json float numbers into Decimal objects to prevent python float precision issues.
+
+
+.. image:: https://travis-ci.org/NZME/json-encoder.svg?branch=master&maxAge=259200
+    :target: https://travis-ci.org/NZME/json-encoder
+
+.. image:: https://img.shields.io/pypi/v/json-encoder.svg?maxAge=259200
+    :target: https://pypi.python.org/pypi/json-encoder
+
+Installation
+------------
+
+.. code-block:: bash
+
+    $ pip install json-encoder
+
+Quick start
+-----------
+
+* Use "json_encoder.json" instead of default python json::
+
+    from json_encoder import json
+
+    result = json.dumps(data)
+
+Configuration
+-------------
+
+* Chose json implementation::
+
+    # simplejson library is used as default json implementation if present
+    # otherwise standard python json implementation is used
+    # to use other json implementation globally, do:
+
+    import ujson
+    from json_encoder import use_json_library
+
+    use_json_library(ujson)
+
+* To change json implementation for concrete call do::
+
+    from json_encoder import json
+    import simplejson
+
+    result = json.dumps(data, json=simplejson)
+
+* To make your object JSON serializable do::
+
+    # example how to make python fraction object json serializable
+
+    from fractions import Fraction
+    from json_encoder.encoder import json_encoder
+
+    @json_encoder.register(Fraction)
+    def encode_fraction(obj):
+        return '{}/{}'.format(obj.numerator, obj.denominator)
+
+* To overwrite JSON serializer behaviour defined in json_encoder.encoder::
+
+    from uuid import UUID
+    from six import text_type
+    from json_encoder.encoder import json_encoder
+
+    @json_encoder.register(UUID)
+    def encode_uuid(obj):
+        return text_type(obj).replace('-', '')
+
+Requirements
+------------
+
+* `singledispatch`_ >= 3.4.0.3 for python version < 3.4 only
+
+.. _singledispatch pattern: https://docs.python.org/3/library/functools.html#functools.singledispatch
+.. _singledispatch: https://bitbucket.org/ambv/singledispatch
+
+

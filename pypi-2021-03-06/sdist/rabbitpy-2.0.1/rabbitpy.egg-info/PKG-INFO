@@ -1,0 +1,82 @@
+Metadata-Version: 1.1
+Name: rabbitpy
+Version: 2.0.1
+Summary: A pure python, thread-safe, minimalistic and pythonic RabbitMQ client library
+Home-page: https://rabbitpy.readthedocs.io
+Author: Gavin M. Roy
+Author-email: gavinmroy@gmail.com
+License: BSD
+Description: rabbitpy - RabbitMQ simplified
+        ==============================
+        
+        A pure python, thread-safe, minimalistic and Pythonic BSD Licensed
+        AMQP/RabbitMQ library that supports Python 2.7+ and Python 3.4+.
+        rabbitpy aims to provide a simple and easy to use API for interfacing with
+        RabbitMQ, minimizing the programming overhead often found in other libraries.
+        
+        |Version| |Downloads| |Status| |Coverage| |License|
+        
+        Installation
+        ------------
+        
+        rabbitpy may be installed via the Python package index with the tool of
+        your choice. I prefer pip:
+        
+        .. code:: bash
+        
+            pip install rabbitpy
+        
+        But there's always easy_install:
+        
+        .. code:: bash
+        
+            easy_install rabbitpy
+        
+        Documentation
+        -------------
+        
+        Documentation is available on `ReadTheDocs <https://rabbitpy.readthedocs.io>`_.
+        
+        
+        Requirements
+        ------------
+        
+        -  `pamqp <https://github.com/pika/pamqp>`_
+        
+        Version History
+        ---------------
+        Available at https://rabbitpy.readthedocs.org/en/latest/history.html
+        
+        .. |Version| image:: https://img.shields.io/pypi/v/rabbitpy.svg?
+           :target: http://badge.fury.io/py/rabbitpy
+        
+        .. |Status| image:: https://img.shields.io/travis/gmr/rabbitpy.svg?
+           :target: https://travis-ci.org/gmr/rabbitpy
+        
+        .. |Coverage| image:: https://img.shields.io/codecov/c/github/gmr/rabbitpy.svg?
+           :target: https://codecov.io/github/gmr/rabbitpy?branch=master
+        
+        .. |Downloads| image:: https://img.shields.io/pypi/dm/rabbitpy.svg?
+           :target: https://pypi.python.org/pypi/rabbitpy
+        
+        .. |License| image:: https://img.shields.io/pypi/l/rabbitpy.svg?
+           :target: https://rabbitpy.readthedocs.org
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Topic :: Communications
+Classifier: Topic :: Internet
+Classifier: Topic :: Software Development :: Libraries

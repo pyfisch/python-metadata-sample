@@ -1,0 +1,10 @@
+Metadata-Version: 1.2
+Name: pyros-genpy
+Version: 0.6.5
+Summary: Python ROS message and service generators.
+Home-page: https://github.com/ros/genpy
+Author: Ken Conley, Troy Straszheim, Morten Kjaergaard
+Maintainer-email: dthomas@osrfoundation.org
+License: BSD
+Description: UNKNOWN
+Platform: UNKNOWN

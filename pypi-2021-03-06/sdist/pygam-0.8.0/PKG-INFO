@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: pygam
+Version: 0.8.0
+Summary: GAM toolkit
+Home-page: https://github.com/dswah/pyGAM
+Author: Daniel Serven
+Author-email: dswahpypi@gmail.com

@@ -1,0 +1,68 @@
+Metadata-Version: 2.1
+Name: interpret-core
+Version: 0.2.4
+Summary: Fit interpretable machine learning models. Explain blackbox machine learning.
+Home-page: https://github.com/interpretml/interpret
+Author: InterpretML Team
+Author-email: interpret@microsoft.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Development Status :: 3 - Alpha
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Provides-Extra: dash
+Requires-Dist: dash (>=1.0.0) ; extra == 'dash'
+Requires-Dist: dash-cytoscape (>=0.1.1) ; extra == 'dash'
+Requires-Dist: dash-table (>=4.1.0) ; extra == 'dash'
+Requires-Dist: gevent (>=1.3.6) ; extra == 'dash'
+Requires-Dist: requests (>=2.19.0) ; extra == 'dash'
+Provides-Extra: debug
+Requires-Dist: psutil (>=5.6.2) ; extra == 'debug'
+Provides-Extra: decisiontree
+Requires-Dist: joblib (>=0.11) ; extra == 'decisiontree'
+Provides-Extra: ebm
+Requires-Dist: joblib (>=0.11) ; extra == 'ebm'
+Provides-Extra: lime
+Requires-Dist: lime (>=0.1.1.33) ; extra == 'lime'
+Provides-Extra: linear
+Provides-Extra: notebook
+Requires-Dist: ipykernel (>=5.1.0) ; extra == 'notebook'
+Requires-Dist: ipython (>=7.4.0) ; extra == 'notebook'
+Provides-Extra: plotly
+Requires-Dist: plotly (>=3.8.1) ; extra == 'plotly'
+Provides-Extra: required
+Requires-Dist: numpy (>=1.11.1) ; extra == 'required'
+Requires-Dist: scipy (>=0.18.1) ; extra == 'required'
+Requires-Dist: pandas (>=0.19.2) ; extra == 'required'
+Requires-Dist: scikit-learn (>=0.18.1) ; extra == 'required'
+Requires-Dist: joblib (>=0.11) ; extra == 'required'
+Provides-Extra: sensitivity
+Requires-Dist: SALib (>=1.3.3) ; extra == 'sensitivity'
+Provides-Extra: shap
+Requires-Dist: shap (>=0.28.5) ; extra == 'shap'
+Requires-Dist: dill (>=0.2.5) ; extra == 'shap'
+Provides-Extra: skoperules
+Requires-Dist: skope-rules (>=1.0.1) ; extra == 'skoperules'
+Provides-Extra: testing
+Requires-Dist: pytest (<=6.0.2,>=4.3.0) ; extra == 'testing'
+Requires-Dist: pytest-runner (>=4.4) ; extra == 'testing'
+Requires-Dist: pytest-xdist (>=1.29) ; extra == 'testing'
+Requires-Dist: nbconvert (>=5.4.1) ; extra == 'testing'
+Requires-Dist: selenium (>=3.141.0) ; extra == 'testing'
+Requires-Dist: pytest-cov (>=2.6.1) ; extra == 'testing'
+Requires-Dist: flake8 (>=3.7.7) ; extra == 'testing'
+Requires-Dist: jupyter (>=1.0.0) ; extra == 'testing'
+Requires-Dist: ipywidgets (>=7.4.2) ; extra == 'testing'
+Provides-Extra: treeinterpreter
+Requires-Dist: treeinterpreter (>=0.2.2) ; extra == 'treeinterpreter'
+
+
+Core system for **the** interpret package.
+
+https://github.com/interpretml/interpret
+
+

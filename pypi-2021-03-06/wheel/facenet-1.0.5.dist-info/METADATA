@@ -1,0 +1,22 @@
+Metadata-Version: 2.1
+Name: facenet
+Version: 1.0.5
+Summary: Face recognition using TensorFlow
+Home-page: https://github.com/jonaphin/facenet
+Maintainer: Jonathan Lancar
+Maintainer-email: jonaphin@gmail.com
+License: MIT
+Platform: UNKNOWN
+Requires-Dist: tensorflow
+Requires-Dist: scipy
+Requires-Dist: scikit-learn
+Requires-Dist: opencv-python
+Requires-Dist: h5py
+Requires-Dist: matplotlib
+Requires-Dist: Pillow
+Requires-Dist: requests
+Requires-Dist: psutil
+
+Face recognition with Google's FaceNet deep neural network & TensorFlow
+
+

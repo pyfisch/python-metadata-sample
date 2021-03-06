@@ -1,0 +1,35 @@
+Metadata-Version: 1.1
+Name: lftools
+Version: 0.35.1
+Summary: Linux Foundation Release Engineering Tools
+Home-page: https://docs.releng.linuxfoundation.org/projects/lftools
+Author: LF Releng
+Author-email: releng@linuxfoundation.org
+License: EPL-1.0
+Description: # LF Tools
+        
+        This project's documentation is available on ReadTheDocs (RTD)
+        
+        <https://lf-releng-tools.readthedocs.io>
+        
+        LF Tools is a collection of scripts and utilities that are useful to Linux
+        Foundation projects' CI and Releng related activities. We try to create
+        these tools to be as generic as possible such that they are reusable in other
+        CI environments.
+        
+        Ubuntu Dependencies:
+        
+        - build-essentials
+        - python-dev
+        
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: Eclipse Public License 1.0 (EPL-1.0)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7

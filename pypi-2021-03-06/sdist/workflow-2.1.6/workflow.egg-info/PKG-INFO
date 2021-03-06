@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: workflow
+Version: 2.1.6
+Summary: Simple workflows for Python
+Home-page: https://github.com/inveniosoftware/workflow
+Author: Invenio Collaboration
+Author-email: info@inveniosoftware.org
+License: UNKNOWN
+Description: UNKNOWN
+Keywords: workflows,finite state machine,task execution
+Platform: any
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Other Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Software Development :: Libraries :: Application Frameworks
+Classifier: Topic :: Utilities
+Provides-Extra: docs
+Provides-Extra: tests
+Provides-Extra: all

@@ -1,0 +1,59 @@
+Metadata-Version: 2.1
+Name: oslo.cache
+Version: 2.7.0
+Summary: Cache storage for OpenStack projects.
+Home-page: https://docs.openstack.org/oslo.cache/latest
+Author: OpenStack
+Author-email: openstack-discuss@lists.openstack.org
+License: UNKNOWN
+Description: ========================
+        Team and repository tags
+        ========================
+        
+        .. image:: https://governance.openstack.org/tc/badges/oslo.cache.svg
+            :target: https://governance.openstack.org/tc/reference/tags/index.html
+        
+        .. Change things from this point on
+        
+        ==========
+        oslo.cache
+        ==========
+        
+        .. image:: https://img.shields.io/pypi/v/oslo.cache.svg
+            :target: https://pypi.org/project/oslo.cache/
+            :alt: Latest Version
+        
+        .. image:: https://img.shields.io/pypi/dm/oslo.cache.svg
+            :target: https://pypi.org/project/oslo.cache/
+            :alt: Downloads
+        
+        `oslo.cache` aims to provide a generic caching mechanism for OpenStack projects
+        by wrapping the `dogpile.cache
+        <https://dogpilecache.readthedocs.org/en/latest/>`_ library. The dogpile.cache
+        library provides support memoization, key value storage and interfaces to common
+        caching backends such as `Memcached <https://www.memcached.org/>`_.
+        
+        
+        
+        * Free software: Apache license
+        * Documentation: https://docs.openstack.org/oslo.cache/latest/
+        * Source: https://opendev.org/openstack/oslo.cache/
+        * Bugs: https://bugs.launchpad.net/oslo.cache
+        * Release notes: https://docs.openstack.org/releasenotes/oslo.cache/
+        
+        
+Platform: UNKNOWN
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6
+Provides-Extra: dogpile
+Provides-Extra: etcd3gw
+Provides-Extra: mongo
+Provides-Extra: test

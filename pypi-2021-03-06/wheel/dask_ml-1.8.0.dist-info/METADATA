@@ -1,0 +1,76 @@
+Metadata-Version: 2.1
+Name: dask-ml
+Version: 1.8.0
+Summary: A library for distributed and parallel machine learning
+Home-page: https://github.com/dask/dask-ml
+Author: Tom Augspurger
+Author-email: taugspurger@anaconda.com
+License: BSD
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Database
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Requires-Dist: dask[array,dataframe] (>=2.4.0)
+Requires-Dist: distributed (>=2.4.0)
+Requires-Dist: numba
+Requires-Dist: numpy (>=1.17.3)
+Requires-Dist: pandas (>=0.24.2)
+Requires-Dist: scikit-learn (>=0.23)
+Requires-Dist: scipy
+Requires-Dist: dask-glm (>=0.2.0)
+Requires-Dist: multipledispatch (>=0.4.9)
+Requires-Dist: packaging
+Provides-Extra: complete
+Requires-Dist: dask-xgboost ; extra == 'complete'
+Requires-Dist: xgboost ; extra == 'complete'
+Provides-Extra: dev
+Requires-Dist: sphinx ; extra == 'dev'
+Requires-Dist: numpydoc ; extra == 'dev'
+Requires-Dist: sphinx-rtd-theme ; extra == 'dev'
+Requires-Dist: nbsphinx ; extra == 'dev'
+Requires-Dist: sphinx-gallery ; extra == 'dev'
+Requires-Dist: black ; extra == 'dev'
+Requires-Dist: coverage ; extra == 'dev'
+Requires-Dist: flake8 ; extra == 'dev'
+Requires-Dist: isort ; extra == 'dev'
+Requires-Dist: pytest ; extra == 'dev'
+Requires-Dist: pytest-cover ; extra == 'dev'
+Requires-Dist: pytest-mock ; extra == 'dev'
+Provides-Extra: docs
+Requires-Dist: sphinx ; extra == 'docs'
+Requires-Dist: numpydoc ; extra == 'docs'
+Requires-Dist: sphinx-rtd-theme ; extra == 'docs'
+Requires-Dist: nbsphinx ; extra == 'docs'
+Requires-Dist: sphinx-gallery ; extra == 'docs'
+Provides-Extra: test
+Requires-Dist: black ; extra == 'test'
+Requires-Dist: coverage ; extra == 'test'
+Requires-Dist: flake8 ; extra == 'test'
+Requires-Dist: isort ; extra == 'test'
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cover ; extra == 'test'
+Requires-Dist: pytest-mock ; extra == 'test'
+Provides-Extra: xgboost
+Requires-Dist: dask-xgboost ; extra == 'xgboost'
+Requires-Dist: xgboost ; extra == 'xgboost'
+
+dask-ml
+=======
+
+``dask-ml`` is a library for distributed and parallel machine learning using `dask`_.
+See the `documentation`_ for more.
+
+.. image:: https://dev.azure.com/dask-dev/dask/_apis/build/status/dask.dask-ml?branchName=master
+   :target: https://dev.azure.com/dask-dev/dask/_build/latest?definitionId=1&branchName=master
+   :alt: CI Status
+
+.. _dask: https://dask.org
+.. _documentation: http://ml.dask.org
+
+

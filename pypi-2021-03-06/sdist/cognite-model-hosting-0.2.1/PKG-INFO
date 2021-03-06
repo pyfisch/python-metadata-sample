@@ -1,0 +1,11 @@
+Metadata-Version: 1.2
+Name: cognite-model-hosting
+Version: 0.2.1
+Summary: Utilities Cognite's model hosting environment
+Home-page: UNKNOWN
+Author: Nils Barlaug
+Author-email: nils.barlaug@cognite.com
+License: UNKNOWN
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires-Python: >=3.5

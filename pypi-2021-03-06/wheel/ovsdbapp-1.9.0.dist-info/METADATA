@@ -1,0 +1,47 @@
+Metadata-Version: 2.1
+Name: ovsdbapp
+Version: 1.9.0
+Summary: A library for creating OVSDB applications
+Home-page: https://pypi.org/project/ovsdbapp/
+Author: OpenStack
+Author-email: openstack-discuss@lists.openstack.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Python: >=3.6
+Requires-Dist: fixtures (>=3.0.0)
+Requires-Dist: netaddr (>=0.7.18)
+Requires-Dist: ovs (>=2.10.0)
+Requires-Dist: pbr (!=2.1.0,>=2.0.0)
+
+========
+ovsdbapp
+========
+
+A library for creating OVSDB applications
+
+The ovdsbapp library is useful for creating applications that communicate
+via Open_vSwitch's OVSDB protocol (https://tools.ietf.org/html/rfc7047). It
+wraps the Python 'ovs' and adds an event loop and friendly transactions.
+
+* Free software: Apache license
+* Source: https://opendev.org/openstack/ovsdbapp/
+* Bugs: https://bugs.launchpad.net/ovsdbapp
+
+Features:
+
+* An thread-based event loop for using ovs.db.Idl
+* Transaction support
+* Native OVSDB communication
+
+
+

@@ -1,0 +1,20 @@
+Metadata-Version: 2.0
+Name: moznetwork
+Version: 1.1.0
+Summary: Library of network utilities for use in Mozilla testing
+Home-page: https://wiki.mozilla.org/Auto-tools/Projects/Mozbase
+Author: Mozilla Automation and Tools team
+Author-email: tools@lists.mozilla.org
+License: MPL
+Keywords: mozilla
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Dist: mozinfo
+Requires-Dist: mozlog (>=6.0)
+
+see https://firefox-source-docs.mozilla.org/mozbase/index.html
+
+

@@ -1,0 +1,41 @@
+Metadata-Version: 2.0
+Name: travis
+Version: 0.0.3
+Summary: Travis fake project
+Home-page: http://example.com
+Author: Koto
+Author-email: koto@google.com
+License: MIT
+Keywords: sample setuptools development
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: Software Development :: Build Tools
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+
+A sample Python project
+=======================
+
+This package is to investigate a possible security issue with pip changing
+the --user syntax for Travis projects.
+
+https://pip.pypa.io/en/stable/user_guide/#user-installs
+
+pip install --user $USER git+https://github.com/google/closure-linter.git
+
+results in
+
+```
+Could not find any downloads that satisfy the requirement travis
+```
+
+See e.g. https://github.com/travis-ci/travis-ci/issues/6905
+
+

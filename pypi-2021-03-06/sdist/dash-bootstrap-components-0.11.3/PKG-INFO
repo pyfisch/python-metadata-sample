@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: dash-bootstrap-components
+Version: 0.11.3
+Summary: Bootstrap themed components for use in Plotly Dash
+Home-page: https://dash-bootstrap-components.opensource.faculty.ai
+Author: Faculty
+Author-email: opensource@faculty.ai

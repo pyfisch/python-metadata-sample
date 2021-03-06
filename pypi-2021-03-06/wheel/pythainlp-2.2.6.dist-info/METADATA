@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: pythainlp
+Version: 2.2.6
+Summary: Thai Natural Language Processing library
+Home-page: https://github.com/PyThaiNLP/pythainlp
+Author: PyThaiNLP
+Author-email: wannaphong@kkumail.com
+License: Apache Software License 2.0
+Project-URL: Documentation, https://www.thainlp.org/pythainlp/docs/2.2/
+Project-URL: Tutorials, https://www.thainlp.org/pythainlp/tutorials/
+Project-URL: Source Code, https://github.com/PyThaiNLP/pythainlp
+Project-URL: Bug Tracker, https://github.com/PyThaiNLP/pythainlp/issues
+Keywords: pythainlp,NLP,natural language processing,text analytics,text processing,localization,computational linguistics,ThaiNLP,Thai NLP,Thai language
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 3
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: Thai
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Text Processing
+Classifier: Topic :: Text Processing :: General
+Classifier: Topic :: Text Processing :: Linguistic
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: python-crfsuite (>=0.9.6)
+Requires-Dist: requests (>=2.22.0)
+Requires-Dist: tinydb (>=3.0)
+Provides-Extra: attacut
+Requires-Dist: attacut (>=1.0.6) ; extra == 'attacut'
+Provides-Extra: benchmarks
+Requires-Dist: numpy (>=1.16.1) ; extra == 'benchmarks'
+Requires-Dist: pandas (>=0.24) ; extra == 'benchmarks'
+Requires-Dist: PyYAML (>=5.3.1) ; extra == 'benchmarks'
+Provides-Extra: full
+Requires-Dist: PyYAML (>=5.3.1) ; extra == 'full'
+Requires-Dist: attacut (>=1.0.4) ; extra == 'full'
+Requires-Dist: emoji (>=0.5.1) ; extra == 'full'
+Requires-Dist: epitran (>=1.1) ; extra == 'full'
+Requires-Dist: gensim (>=3.2.0) ; extra == 'full'
+Requires-Dist: nltk (>=3.3.*) ; extra == 'full'
+Requires-Dist: numpy (>=1.16.1) ; extra == 'full'
+Requires-Dist: pandas (>=0.24) ; extra == 'full'
+Requires-Dist: pyicu (>=2.3) ; extra == 'full'
+Requires-Dist: ssg (>=0.0.6) ; extra == 'full'
+Requires-Dist: torch (>=1.0.0) ; extra == 'full'
+Provides-Extra: icu
+Requires-Dist: pyicu (>=2.3) ; extra == 'icu'
+Provides-Extra: ipa
+Requires-Dist: epitran (>=1.1) ; extra == 'ipa'
+Provides-Extra: ml
+Requires-Dist: numpy (>=1.16) ; extra == 'ml'
+Requires-Dist: torch (>=1.0.0) ; extra == 'ml'
+Provides-Extra: ssg
+Requires-Dist: ssg (>=0.0.6) ; extra == 'ssg'
+Provides-Extra: thai2fit
+Requires-Dist: emoji (>=0.5.1) ; extra == 'thai2fit'
+Requires-Dist: gensim (>=3.2.0) ; extra == 'thai2fit'
+Requires-Dist: numpy (>=1.16.1) ; extra == 'thai2fit'
+Provides-Extra: thai2rom
+Requires-Dist: torch (>=1.0.0) ; extra == 'thai2rom'
+Requires-Dist: numpy (>=1.16.1) ; extra == 'thai2rom'
+Provides-Extra: wordnet
+Requires-Dist: nltk (>=3.3.*) ; extra == 'wordnet'
+
+
+![PyThaiNLP Logo](https://avatars0.githubusercontent.com/u/32934255?s=200&v=4)
+
+PyThaiNLP is a Python library for Thai natural language processing.
+The library provides functions like word tokenization, part-of-speech tagging,
+transliteration, soundex generation, and spell checking.
+
+# Install
+
+For stable version:
+
+```sh
+pip install pythainlp
+```
+
+For development version:
+
+```sh
+pip install --upgrade --pre pythainlp
+```
+
+Some functionalities, like named-entity recognition, required extra packages.
+See https://github.com/PyThaiNLP/pythainlp for installation options.
+
+
+Made with ❤️
+
+PyThaiNLP Team
+
+"We build Thai NLP"
+
+

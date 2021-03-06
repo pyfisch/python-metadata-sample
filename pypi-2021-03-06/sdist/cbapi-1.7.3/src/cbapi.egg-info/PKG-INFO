@@ -1,0 +1,15 @@
+Metadata-Version: 1.1
+Name: cbapi
+Version: 1.7.3
+Summary: Carbon Black REST API Python Bindings
+Home-page: https://github.com/carbonblack/cbapi-python
+Author: Carbon Black
+Author-email: dev-support@carbonblack.com
+License: MIT
+Description: UNKNOWN
+Platform: any
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: graphframes
+Version: 0.6
+Summary: GraphFrames: DataFrame-based Graphs
+Home-page: https://github.com/graphframes/graphframes
+Author: graphframes
+Author-email: modeldb@csail.mit.edu
+License: MIT
+Keywords: spark graphx  for dataframe
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Scientific/Engineering
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.5
+Requires-Dist: numpy
+Requires-Dist: nose
+
+This is a package for DataFrame-based graphs on top of Apache Spark. Users can write highly expressive queries by leveraging the DataFrame API, combined with a new API for motif finding. The user also benefits from DataFrame performance optimizations within the Spark SQL engine.
+
+

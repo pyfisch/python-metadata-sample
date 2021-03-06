@@ -1,0 +1,677 @@
+Metadata-Version: 1.1
+Name: django-watchman
+Version: 1.2.0
+Summary: django-watchman exposes a status endpoint for your backing services
+Home-page: https://github.com/mwarkentin/django-watchman
+Author: Michael Warkentin
+Author-email: mwarkentin@gmail.com
+License: BSD
+Description: =============================
+        django-watchman
+        =============================
+        
+        .. image:: http://img.shields.io/pypi/v/django-watchman.svg
+            :target: http://badge.fury.io/py/django-watchman
+        
+        .. image:: http://img.shields.io/travis/mwarkentin/django-watchman/master.svg
+            :target: https://travis-ci.org/mwarkentin/django-watchman
+        
+        .. image:: http://img.shields.io/coveralls/mwarkentin/django-watchman.svg
+            :target: https://coveralls.io/r/mwarkentin/django-watchman?branch=master
+        
+        django-watchman exposes a status endpoint for your backing services like
+        databases, caches, etc.
+        
+        .. image:: https://s3.amazonaws.com/snaps.michaelwarkentin.com/watchmenozy.jpg
+        
+        Documentation
+        -------------
+        
+        The full documentation is at http://django-watchman.rtfd.org.
+        
+        Testimonials
+        ------------
+        
+            We're in love with django-watchman. External monitoring is a vital part of our service offering. Using django-watchman we can introspect the infrastructure of an application via a secure URL. It's very well written and easy to extend. We've recommended it to many of our clients already.
+        
+        — Hany Fahim, CEO, `VM Farms <https://vmfarms.com/>`_.
+        
+        Quickstart
+        ----------
+        
+        1. Install ``django-watchman``::
+        
+            pip install django-watchman
+        
+        2. Add ``watchman`` to your ``INSTALLED_APPS`` setting like this::
+        
+            INSTALLED_APPS = (
+                ...
+                'watchman',
+            )
+        
+        3. Include the watchman URLconf in your project ``urls.py`` like this::
+        
+            re_path(r'^watchman/', include('watchman.urls')),
+        
+        4. Start the development server and visit ``http://127.0.0.1:8000/watchman/`` to
+           get a JSON response of your backing service statuses::
+        
+            {
+                "databases": [
+                    {
+                        "default": {
+                            "ok": true
+                        }
+                    }
+                ],
+                "caches": [
+                    {
+                        "default": {
+                            "ok": true
+                        }
+                    }
+                ],
+                "storage": {"ok": true}
+            }
+        
+        Pycon Canada Presentation (10 minutes)
+        --------------------------------------
+        
+        .. image:: http://snaps.michaelwarkentin.com.s3.amazonaws.com/Full-stack_Django_application_monitoring_with_django-watchman_Michael_Warkentin_-_YouTube_2015-11-27_17-56-52.jpg
+           :target: https://www.youtube.com/watch?v=iEgOCY7_zGI
+        
+        Features
+        --------
+        
+        Human-friendly dashboard
+        ************************
+        
+        Visit ``http://127.0.0.1:8000/watchman/dashboard/`` to get a human-friendly HTML
+        representation of all of your watchman checks.
+        
+        Token based authentication
+        **************************
+        
+        If you want to protect the status endpoint, you can use the ``WATCHMAN_TOKENS`` setting.
+        This is a comma-separated list of tokens.
+        When this setting is added, you must pass one of the tokens in as the ``watchman-token`` **GET** parameter::
+        
+            GET http://127.0.0.1:8000/watchman/?watchman-token=:token
+        
+        Or by setting the ``Authorization: WATCHMAN-TOKEN`` header on the request::
+        
+            curl -X GET -H "Authorization: WATCHMAN-TOKEN Token=\":token\"" http://127.0.0.1:8000/watchman/
+        
+        If you want to change the token name, you can set the ``WATCHMAN_TOKEN_NAME``.
+        The value of this setting will be the **GET** parameter that you must pass in::
+        
+            WATCHMAN_TOKEN_NAME = 'custom-token-name'
+        
+            GET http://127.0.0.1:8000/watchman/?custom-token-name=:token
+        
+        **DEPRECATION WARNING**: ``WATCHMAN_TOKEN`` was replaced by the ``WATCHMAN_TOKENS`` setting to support multiple authentication tokens in django-watchman ``0.11``.
+        It will continue to work until it's removed in django-watchman ``1.0``.
+        
+        Custom authentication/authorization
+        ***********************************
+        
+        If you want to protect the status endpoint with a customized
+        authentication/authorization decorator, you can add ``WATCHMAN_AUTH_DECORATOR``
+        to your settings. This needs to be a dotted-path to a decorator, and defaults
+        to ``watchman.decorators.token_required``::
+        
+            WATCHMAN_AUTH_DECORATOR = 'django.contrib.admin.views.decorators.staff_member_required'
+        
+        Note that the ``token_required`` decorator does not protect a view unless
+        ``WATCHMAN_TOKENS`` is set in settings.
+        
+        Custom checks
+        *************
+        
+        django-watchman allows you to customize the checks which are run by modifying
+        the ``WATCHMAN_CHECKS`` setting. In ``settings.py``::
+        
+            WATCHMAN_CHECKS = (
+                'module.path.to.callable',
+                'another.module.path.to.callable',
+            )
+        
+        You can also import the watchman.constants to include the DEFAULT_CHECKS and PAID_CHECKS in your ``settings.py``::
+        
+           from watchman import constants as watchman_constants
+        
+           WATCHMAN_CHECKS = watchman_constants.DEFAULT_CHECKS + ('module.path.to.callable', )
+        
+        
+        Checks take no arguments, and must return a ``dict`` whose keys are applied to the JSON response. Use the ``watchman.decorators.check`` decorator to capture exceptions::
+        
+            from watchman.decorators import check
+        
+            @check
+            def my_check():
+                return {'x': 1}
+        
+        In the absence of any checks, a 404 is thrown, which is then handled by the
+        ``json_view`` decorator.
+        
+        Run a subset of available checks
+        ********************************
+        
+        A subset of checks may be run, by passing ``?check=module.path.to.callable&check=...``
+        in the request URL. Only the callables given in the querystring which are also
+        in ``WATCHMAN_CHECKS`` should be run, eg::
+        
+            curl -XGET http://127.0.0.1:8080/watchman/?check=watchman.checks.caches
+        
+        Skip specific checks
+        ********************
+        
+        You can skip any number of checks, by passing ``?skip=module.path.to.callable&skip=...``
+        in the request URL. Only the checks in ``WATCHMAN_CHECKS`` which are not in the
+        querystring should be run, eg::
+        
+            curl -XGET http://127.0.0.1:8080/watchman/?skip=watchman.checks.email
+        
+        Check a subset of databases or caches
+        *************************************
+        
+        If your application has a large number of databases or caches configured,
+        watchman may open too many connections as it checks each database or cache.
+        
+        You can set the ``WATCHMAN_DATABASES`` or ``WATCHMAN_CACHES`` settings in order
+        to override the default set of databases and caches to be monitored.
+        
+        Ping
+        ****
+        
+        If you want to simply check that your application is running and able to handle
+        requests, you can call ping:
+        
+            GET http://127.0.0.1:8000/watchman/ping/
+        
+        It will return the text ``pong`` with a 200 status code. Calling this doesn't
+        run any of the checks.
+        
+        Bare status view
+        ****************
+        
+        If you would like a "bare" status view (one that doesn't report any details,
+        just ``HTTP 200`` if checks pass, and ``HTTP 500`` if any checks fail), you
+        can use the ``bare_status`` view by putting the following into ``urls.py``::
+        
+            import watchman.views
+            # ...
+            re_path(r'^status/?$', watchman.views.bare_status),
+        
+        Django management command
+        *************************
+        
+        You can also run your checks without starting the webserver and making requests.
+        This can be useful for testing your configuration before enabling a server,
+        checking configuration on worker servers, etc. Run the management command like so::
+        
+            python manage.py watchman
+        
+        By default, successful checks will not print any output. If all checks pass
+        successfully, the exit code will be ``0``. If a check fails, the exit code will
+        be ``1``, and the error message including stack trace will be printed to ``stderr``.
+        
+        If you'd like to see output for successful checks as well, set verbosity to
+        ``2`` or higher::
+        
+            python manage.py watchman -v 2
+            {"storage": {"ok": true}}
+            {"caches": [{"default": {"ok": true}}]}
+            {"databases": [{"default": {"ok": true}}]}
+        
+        If you'd like to run a subset of checks, use ``-c`` and a comma-separated list
+        of python module paths::
+        
+            python manage.py watchman -c watchman.checks.caches,watchman.checks.databases -v 2
+            {"caches": [{"default": {"ok": true}}]}
+            {"databases": [{"default": {"ok": true}}]}
+        
+        If you'd like to skip certain checks, use ``-s`` and a comma-separated list of
+        python module paths::
+        
+            python manage.py watchman -s watchman.checks.caches,watchman.checks.databases -v 2
+            {"storage": {"ok": true}}
+        
+        Use ``-h`` to see a full list of options::
+        
+            python manage.py watchman -h
+        
+        X-Watchman-Version response header
+        **********************************
+        
+        Watchman can return the version of watchman which is running to help you keep
+        track of whether or not your sites are using an up-to-date version. This is
+        disabled by default to prevent any unintended information leakage for websites
+        without authentication. To enable, update the ``EXPOSE_WATCHMAN_VERSION``
+        setting::
+        
+            EXPOSE_WATCHMAN_VERSION = True
+        
+        Custom response code
+        ********************
+        
+        By default, watchman will return a ``500`` HTTP response code, even if there's a
+        failing check. You can specify a different response code for failing checks
+        using the ``WATCHMAN_ERROR_CODE`` setting::
+        
+            WATCHMAN_ERROR_CODE = 200
+        
+        Logging
+        *******
+        
+        watchman includes log messages using a logger called ``watchman``.
+        You can configure this by configuring the ``LOGGING`` section of your Django
+        settings file.
+        
+        Here is a simple example that would log to the console::
+        
+            LOGGING = {
+                'version': 1,
+                'disable_existing_loggers': False,
+                'handlers': {
+                    'console': {
+                        'class': 'logging.StreamHandler',
+                    },
+                },
+                'loggers': {
+                    'watchman': {
+                        'handlers': ['console'],
+                        'level': 'DEBUG',
+                    },
+                },
+            }
+        
+        More information is available in the `Django documentation
+        <https://docs.djangoproject.com/en/2.0/topics/logging/#configuring-logging]>`_.
+        
+        APM (Datadog, New Relic)
+        ************************
+        
+        If you're using APM and watchman is being often hit for health checks (such as an ELB on
+        AWS), you will find some stats based on averages will be affected (average transaction
+        time, apdex, etc):
+        
+        You can disable APM instrumentation for watchman by using the ``WATCHMAN_DISABLE_APM``
+        setting::
+        
+            WATCHMAN_DISABLE_APM = True
+        
+        This currently supports the following agents:
+        
+        * Datadog
+        * New Relic
+        
+        Please open an issue if there's another APM you use which is being affected.
+        
+        
+        Available checks
+        ----------------
+        
+        caches
+        ******
+        
+        For each cache in ``django.conf.settings.CACHES``:
+        
+        * Set a test cache item
+        * Get test item
+        * Delete test item
+        
+        databases
+        *********
+        
+        For each database in ``django.conf.settings.DATABASES``:
+        
+        * Verify connection by calling ``connections[database].introspection.table_names()``
+        
+        email
+        *****
+        
+        Send a test email to ``to@example.com`` using ``django.core.mail.send_mail``.
+        
+        If you're using a 3rd party mail provider, this check could end up costing you
+        money, depending how aggressive you are with your monitoring. For this reason,
+        this check is **not enabled** by default.
+        
+        For reference, if you were using Mandrill, and hitting your watchman endpoint
+        once per minute, this would cost you ~$5.60/month.
+        
+        **Custom Settings**
+        
+        * ``WATCHMAN_EMAIL_SENDER`` (default: ``watchman@example.com``): Specify an email to be the sender of the test email
+        * ``WATCHMAN_EMAIL_RECIPIENTS`` (default: ``[to@example.com]``): Specify a list of email addresses to send the test email
+        * ``WATCHMAN_EMAIL_HEADERS`` (default: ``{}``): Specify a dict of custom headers to be added to the test email
+        
+        storage
+        *******
+        
+        Using ``django.core.files.storage.default_storage``:
+        
+        * Write a test file
+        * Check the test file's size
+        * Read the test file's contents
+        * Delete the test file
+        
+        By default the test file gets written on the root of the django ``MEDIA_ROOT``. If for whatever reasons this path is not writable by the user that runs the application you can override it by setting ``WATCHMAN_STORAGE_PATH`` to a specific path.
+        Remember that this must be within the ``MEDIA_ROOT``, which by default is your project root. In ``settings.py``::
+        
+          WATCHMAN_STORAGE_PATH = "/path_to_your_app/foo/bar/"
+        
+        If the ``MEDIA_ROOT`` is already defined::
+        
+          from os.path import join as joinpath
+          WATCHMAN_STORAGE_PATH = joinpath(MEDIA_ROOT, "foo/bar")
+        
+        Default checks
+        **************
+        
+        By default, django-watchman will run checks against your databases
+        (``watchman.checks.databases``), caches (``watchman.checks.caches``), and
+        storage (``watchman.checks.storage``).
+        
+        Paid checks
+        ***********
+        
+        Currently there is only one "paid" check - ``watchman.checks.email``. You can
+        enable it by setting the ``WATCHMAN_ENABLE_PAID_CHECKS`` to ``True``, or by
+        overriding the ``WATCHMAN_CHECKS`` setting.
+        
+        Trying it out with Docker
+        --------------------------
+        
+        A sample project is available along with a Dockerfile to make it easy to try
+        out django-watchman.
+        
+        Requirements
+        ************
+        
+        * `Docker <https://www.docker.com/get-docker>`
+        
+        Instructions
+        ************
+        
+        1. Build and run the Docker image with the current local code: ``make run``
+        2. Visit watchman json endpoint in your browser: http://127.0.0.1:8000/watchman/
+        3. Visit watchman dashboard in your browser: http://127.0.0.1:8000/watchman/dashboard/
+        4. Visit watchman ping in your browser: http://127.0.0.1:8000/watchman/ping/
+        5. Visit watchman bare status in your browser: http://127.0.0.1:8000/watchman/bare/
+        
+        
+        
+        
+        =======
+        History
+        =======
+        
+        1.2.0 (2020-09-20)
+        ------------------
+        
+        * [`#163 <https://github.com/mwarkentin/django-watchman/pull/163>`_] Replaced deprecated url() calls with re_path() (@dominik-bln)
+        
+        1.1.1 (2020-05-04)
+        ------------------
+        
+        * [`#159 <https://github.com/mwarkentin/django-watchman/pull/159>`_] Fixed invalid escape sequence in decorators by changing to a raw string
+        
+        1.1.0 (2020-03-16)
+        ------------------
+        
+        * [`#154 <https://github.com/mwarkentin/django-watchman/pull/155>`_] Added custom path support for storage check
+        
+        1.0.1 (YYYY-MM-DD)
+        ------------------
+        
+        * Fix modal popups on dashboards when Type or Name fields contains spaces (@maikeps)
+        
+        1.0.0 (2019-12-18)
+        -------------------
+        
+        * Official django-watchman 1.0 release! Releases will (try to) follow semantic versioning from now on.
+        * Drop support for python 2 and Django<2 (@JBKahn)
+        * Drop usage of ``django-jsonview`` in favor of the Django's built in JsonResponse (@JBKahn)
+        
+        0.18.0 (2019-08-19)
+        -------------------
+        
+        * [`#142 <https://github.com/mwarkentin/django-watchman/pull/142>`_] Skip traces in Datadog if ``WATCHMAN_DISABLE_APM`` is enabled (@robatwave)
+        
+        0.17.0 (2019-06-14)
+        -------------------
+        
+        * [`#141 <https://github.com/mwarkentin/django-watchman/pull/141>`_] Disable APM monitoring on ``ping`` endpoint if ``settings.WATCHMAN_DISABLE_APM`` is configured (@JBKahn)
+        
+        0.16.0 (2019-03-19)
+        -------------------
+        
+        * [`#131 <https://github.com/mwarkentin/django-watchman/pull/131>`_] Make watchman constants importable (@jonespm)
+        * [`#134 <https://github.com/mwarkentin/django-watchman/pull/134>`_] Update Django/Python versions & clean up sample site Docker (@JayH5)
+        
+        0.15.0 (2018-02-27)
+        -------------------
+        
+        * [`#114 <https://github.com/mwarkentin/django-watchman/pull/114>`_] Add "bare" status view (@jamesmallen)
+        * [`#115 <https://github.com/mwarkentin/django-watchman/pull/115>`_] Adds ``WATCHMAN_DISABLE_APM`` option (@xfxf)
+        * [`#63 <https://github.com/mwarkentin/django-watchman/pull/63>`_] Disable watchman version output by default, add ``EXPOSE_WATCHMAN_VERSION`` setting (@mwarkentin)
+        
+        0.14.0 (2018-01-09)
+        -------------------
+        
+        * [`#110 <https://github.com/mwarkentin/django-watchman/pull/110>`_] Replace vagrant + ansible with Dockerfile (@ryanwilsonperkin)
+        * [`#111 <https://github.com/mwarkentin/django-watchman/pull/111>`_] Configure Django logging for checks (@dhoffman34)
+        * [`#112 <https://github.com/mwarkentin/django-watchman/pull/112>`_] Add simple HTTP ping endpoint (@dhoffman34)
+        
+        0.13.1 (2017-05-27)
+        -------------------
+        
+        * [`#101 <https://github.com/mwarkentin/django-watchman/pull/101>`_] Write ``bytes`` to dummy file on storage check to fix an issue in Python 3 (thanks @saily!)
+        
+        0.13.0 (2017-05-23)
+        -------------------
+        
+        * [`#105 <https://github.com/mwarkentin/django-watchman/pull/105>`_] Add ``WATCHMAN_CACHES`` and ``WATCHMAN_DATABASES`` settings to override the Django defaults
+        
+          * When using watchman with a large number of databases, the default checks can cause an excess of connections to the database / cache
+          * New settings allow you to check only a subset of databases / caches
+          * Watchman will still default to checking all databases / caches, so no changes necessary for most apps
+        
+        0.12.0 (2017-02-22)
+        -------------------
+        
+        * [`#100 <https://github.com/mwarkentin/django-watchman/pull/100>`_] Add ``WATCHMAN_EMAIL_SENDER`` setting to customize email check "from" address
+        
+        0.11.1 (2017-02-14)
+        -------------------
+        
+        * [`#99 <https://github.com/mwarkentin/django-watchman/pull/99>`_] Fix verbose output in management command on Django 1.8+
+        
+        0.11.0 (2016-08-02)
+        -------------------
+        
+        * Update tests to run on Django 1.7 - 1.10
+        * [`#87 <https://github.com/mwarkentin/django-watchman/pull/87>`_] Fix 500 errors with ATOMIC_REQUESTS enabled
+        
+          * Disables atomic transactions on the watchman views to prevent generic 500 errors
+        
+        * [`#88 <https://github.com/mwarkentin/django-watchman/pull/88>`_] Restructure dashboard and switch icon libraries
+        
+          * Make check types singular on dashboard
+          * Switch to FontAwesome instead of Glyphicon to track Bootstrap updates
+          * Improve traceback display width
+        
+        * [`#92 <https://github.com/mwarkentin/django-watchman/pull/92>`_] Support multiple auth tokens
+        
+          * Fixes [`#86 <https://github.com/mwarkentin/django-watchman/pull/86>`_]
+          * Deprecates ``settings.WATCHMAN_TOKEN`` and adds ``settings.WATCHMAN_TOKENS``
+        
+        0.10.1 (2016-05-03)
+        -------------------
+        
+        * [`#81 <https://github.com/mwarkentin/django-watchman/pull/81>`_] Fix header-based authentication for tokens w/ dashes (`-`)
+        
+          * Regex was overly specific for header values (`\w`)
+          * Added TODO to follow up with a full regex for valid characters according to the spec
+        
+        0.10.0 (2016-05-02)
+        -------------------
+        
+        * [`#75 <https://github.com/mwarkentin/django-watchman/pull/75>`_] Enable header-based authentication
+        
+          * Set a header instead of passing the token via GET param: ``"Authorization: WATCHMAN-TOKEN Token=\":token\""``
+          * Improves security by keeping tokens out of logs
+        
+        * [`#79 <https://github.com/mwarkentin/django-watchman/pull/79>`_] Enable customization of email check
+        
+          * Add ``WATCHMAN_EMAIL_RECIPIENTS`` setting - pass a list of recipients the email should be sent to
+          * Add ``WATCHMAN_EMAIL_HEADERS`` setting - pass a dict of custom headers to be set on the email
+        
+        
+        0.9.0 (2015-12-16)
+        ------------------
+        
+        * [`#51 <https://github.com/mwarkentin/django-watchman/pull/51>`_] Update TravisCI Python / Django versions
+        * [`#52 <https://github.com/mwarkentin/django-watchman/pull/52>`_] Fix deprecated ``url_patterns``
+        * [`#53 <https://github.com/mwarkentin/django-watchman/pull/54>`_] Change default error response code to ``500``
+        * [`#56 <https://github.com/mwarkentin/django-watchman/pull/56>`_] Add ``@check`` decorator and refactor existing checks to use it (thanks @benwebber!)
+        * [`#57 <https://github.com/mwarkentin/django-watchman/pull/57>`_] Sort ``caches`` / ``databases`` in response for more consistent responses
+        * [`#59 <https://github.com/mwarkentin/django-watchman/pull/59>`_] Add ``.editorconfig`` for improved consistency in contributions
+        * [`#61 <https://github.com/mwarkentin/django-watchman/pull/61>`_] Add ``Vagrantfile`` and docs for how to run and develop on Vagrant instance
+        * [`#65 <https://github.com/mwarkentin/django-watchman/pull/65>`_] Include assets in source tarball for Debian packaging (thanks @fladi)
+        * [`#71 <https://github.com/mwarkentin/django-watchman/pull/71>`_] Unpin `django-jsonview` in setup.py
+        * [`#72 <https://github.com/mwarkentin/django-watchman/pull/72>`_] Fix stacktrace on dashboard modal and increase width for better readability
+        
+        0.8.0 (2015-10-03)
+        ------------------
+        
+        * [`#46 <https://github.com/mwarkentin/django-watchman/pull/46>`_] Allow custom response codes with the ``WATCHMAN_ERROR_CODE`` setting
+        
+        0.7.1 (2015-08-14)
+        ------------------
+        
+        * Update headers in ``HISTORY.rst`` to attempt to fix localshop parsing issues
+        
+        0.7.0 (2015-08-14)
+        ------------------
+        
+        * [`#40 <https://github.com/mwarkentin/django-watchman/pull/40>`_] Bump ``django-jsonview`` for improved Django 1.8 compatibility
+        
+          * Also brought travis Django test versions in line with currently supported Django versions (1.4.x, 1.7.x, 1.8.x)
+        
+        0.6.0 (2015-07-02)
+        ------------------
+        
+        * [`#30 <https://github.com/mwarkentin/django-watchman/pull/30>`_] Allow users to specify a custom authentication/authorization decorator
+        
+          * Override the ``@auth`` decorator by setting ``WATCHMAN_AUTH_DECORATOR`` to a dot-separated path to your own decorator
+          * eg. ``WATCHMAN_AUTH_DECORATOR = 'django.contrib.admin.views.decorators.staff_member_required'``
+          * Token-based authentication remains the default
+        
+        * [`#31 <https://github.com/mwarkentin/django-watchman/pull/31>`_], [`#34 <https://github.com/mwarkentin/django-watchman/pull/34>`_] Add a human-friendly status dashboard
+        
+          * Available at ``<watchman url>/dashboard/``
+          * ``?check`` & ``?skip`` GET params work on the dashboard as well
+        
+        * [`#35 <https://github.com/mwarkentin/django-watchman/pull/35>`_] Add ``X-Watchman-Version`` header to responses
+        
+        0.5.0 (2015-01-25)
+        ------------------
+        
+        * Add ``watchman`` management command
+        
+          * Exit code of ``0`` if all checks pass, ``1`` otherwise
+          * Print json stacktrace to ``stderr`` if check fails
+          * Handles ``--verbosity`` option to print all status checks
+          * ``-c``, ``--checks``, ``-s``, ``--skips`` options take comma-separated list of python paths to run / skip
+        
+        * Improve identifiability of emails sent from a django-watchman endpoint
+        
+          * From: watchman@example.com
+          * Subject: django-watchman email check
+          * Body: This is an automated test of the email system.
+          * Add ``X-DJANGO-WATCHMAN: True`` custom header
+        
+        * Add new default check: ``storage`` check
+        
+          * Checks that files can be both written and read with the current Django storage engine
+          * Add ``WATCHMAN_ENABLE_PAID_CHECKS`` setting to enable all paid checks without modifying ``WATCHMAN_CHECKS``
+        
+        * Remove ``email_status`` from default checks
+        * Refactor ``utils.get_checks`` to allow reuse in management command
+        
+          * ``get_checks`` now performs the optional check inclusion / skipping
+          * ``status`` refactored to pull ``check_list`` / ``skip_list`` from GET params and pass them to ``get_checks``
+        
+        * Namespace cache keys
+        * Update documentation
+        
+        0.4.0 (2014-09-08)
+        ------------------
+        
+        * Add the ability to skip certain checks by passing one or more
+          ``skip=path.to.callable`` GET params when hitting the watchman URL
+        
+        0.3.0 (2014-09-05)
+        ------------------
+        
+        * New check - email (``watchman.checks.email_status``)! django-watchman will now
+          check that your email settings are working too!
+        * Fix a few small issues in the readme
+        * Rearrange some of the code in checks.py
+        
+        0.2.2 (2014-09-05)
+        ------------------
+        
+        * Fix and run tests on Python 2.7 and 3.4
+        * Bump django-jsonview dependency to latest
+        * Update tox envlist and travis config to test 2.7 / 3.4
+        
+        0.2.1 (2014-09-04)
+        ------------------
+        
+        * Initialize django during tests to prevent app loading issue for Django >= 1.7
+        * Suppress ``MIDDLEWARE_CLASSES`` warning for Django >= 1.7
+        * Reorganize test imports
+        * Fix ``make test``, ``make coverage``, ``make release`` commands
+        * Add htmlcov/ directory to .gitignore
+        * Test django 1.4, 1.6, 1.7
+        
+        0.2.0 (2014-09-04)
+        ------------------
+        
+        * Custom checks can now be written and run using the ``WATCHMAN_CHECKS`` setting
+        * A subset of the available checks can be run by passing the ``check`` GET param
+          when hitting the watchman url
+        
+        0.1.2 (2014-02-21)
+        ------------------
+        
+        * Move package requirements out of requirements.txt and into setup.py
+        
+        0.1.1 (2014-02-09)
+        ------------------
+        
+        * Remove ``django>=1.5.5`` version specification
+        * Remove ``wheel`` requirement
+        
+        
+        0.1.0 (2014-02-08)
+        ------------------
+        
+        * First release on PyPI.
+        
+Keywords: django-watchman
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8

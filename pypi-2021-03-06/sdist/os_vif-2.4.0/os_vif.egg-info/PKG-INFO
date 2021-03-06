@@ -1,0 +1,51 @@
+Metadata-Version: 1.2
+Name: os-vif
+Version: 2.4.0
+Summary: A library for plugging and unplugging virtual interfaces in OpenStack.
+Home-page: https://docs.openstack.org/os-vif/latest/
+Author: OpenStack
+Author-email: openstack-discuss@lists.openstack.org
+License: UNKNOWN
+Description: ========================
+        Team and repository tags
+        ========================
+        
+        .. image:: https://governance.openstack.org/tc/badges/os-vif.svg
+            :target: https://governance.openstack.org/tc/reference/tags/index.html
+        
+        .. Change things from this point on
+        
+        ======
+        os-vif
+        ======
+        
+        .. image:: https://img.shields.io/pypi/v/os-vif.svg
+            :target: https://pypi.org/project/os-vif/
+            :alt: Latest Version
+        
+        .. image:: https://img.shields.io/pypi/dm/os-vif.svg
+            :target: https://pypi.org/project/os-vif/
+            :alt: Downloads
+        
+        A library for plugging and unplugging virtual interfaces in OpenStack.
+        
+        * License: Apache License, Version 2.0
+        * Documentation: https://docs.openstack.org/os-vif/latest/
+        * Source: https://opendev.org/openstack/os-vif
+        * Bugs: https://bugs.launchpad.net/os-vif
+        * Release Notes: https://docs.openstack.org/releasenotes/os-vif
+        
+        
+Platform: UNKNOWN
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.6

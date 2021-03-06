@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: parameters-validation
+Version: 1.2.0
+Summary: Easy & clean function parameters validation
+Home-page: https://github.com/allrod5/parameters-validation
+Author: Rodrigo Martins de Oliveira
+Author-email: allrod5@hotmail.com
+License: MIT
+Keywords: validation parameter parameters param params validate check argument arguments arg args type hint
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3 :: Only
+Provides-Extra: test
+Requires-Dist: pytest ; extra == 'test'
+Requires-Dist: pytest-cov ; extra == 'test'
+Requires-Dist: coveralls ; extra == 'test'
+
+UNKNOWN
+
+

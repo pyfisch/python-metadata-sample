@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: azureml-designer-serving
+Version: 0.0.10
+Summary: UNKNOWN
+Home-page: UNKNOWN
+Author: Microsoft Crop
+License: UNKNOWN
+Platform: any
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: Other/Proprietary License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Requires-Dist: azureml-defaults
+Requires-Dist: azureml-designer-core[image,model] (>=0.0.32)
+Requires-Dist: azureml-contrib-services
+
+UNKNOWN
+
+

@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: Keras
+Version: 2.4.3
+Summary: Deep Learning for humans
+Home-page: https://github.com/keras-team/keras
+Author: Francois Chollet
+Author-email: francois.chollet@gmail.com
+License: MIT
+Download-URL: https://github.com/keras-team/keras/tarball/2.4.3
+Description: 
+        Keras is a high-level neural networks API for Python.
+        
+        Read the documentation at: https://keras.io/
+        
+        Keras is compatible with Python 3.6+
+        and is distributed under the MIT license.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules

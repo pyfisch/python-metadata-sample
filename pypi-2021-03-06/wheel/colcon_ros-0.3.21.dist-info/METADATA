@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: colcon-ros
+Version: 0.3.21
+Summary: Extension for colcon to support ROS packages.
+Home-page: https://colcon.readthedocs.io
+Author: Dirk Thomas
+Author-email: web@dirk-thomas.net
+Maintainer: Dirk Thomas
+Maintainer-email: web@dirk-thomas.net
+License: Apache License, Version 2.0
+Project-URL: Changelog, https://github.com/colcon/colcon-ros/milestones?direction=desc&sort=due_date&state=closed
+Project-URL: GitHub, https://github.com/colcon/colcon-ros/
+Keywords: colcon
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Environment :: Plugins
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Build Tools
+Requires-Dist: catkin-pkg (>=0.4.14)
+Requires-Dist: colcon-cmake (>=0.2.6)
+Requires-Dist: colcon-core (>=0.5.3)
+Requires-Dist: colcon-pkg-config
+Requires-Dist: colcon-python-setup-py (>=0.2.4)
+Requires-Dist: colcon-recursive-crawl
+
+colcon-ros
+==========
+
+An extension for `colcon-core <https://github.com/colcon/colcon-core>`_ to support `ROS packages <http://www.ros.org>`_.
+
+

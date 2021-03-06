@@ -1,0 +1,56 @@
+Metadata-Version: 2.1
+Name: djangorestframework-simplejwt
+Version: 4.6.0
+Summary: A minimal JSON Web Token authentication plugin for Django REST Framework
+Home-page: https://github.com/SimpleJWT/django-rest-framework-simplejwt
+Author: David Sanders
+Author-email: davesque@gmail.com
+License: MIT
+Description: Simple JWT
+        ==========
+        
+        .. image:: https://circleci.com/gh/SimpleJWT/django-rest-framework-simplejwt.svg?style=shield
+          :target: https://circleci.com/gh/SimpleJWT/django-rest-framework-simplejwt
+        .. image:: https://codecov.io/gh/SimpleJWT/django-rest-framework-simplejwt/branch/master/graph/badge.svg
+          :target: https://codecov.io/gh/SimpleJWT/django-rest-framework-simplejwt
+        .. image:: https://img.shields.io/pypi/v/djangorestframework-simplejwt.svg
+          :target: https://pypi.python.org/pypi/djangorestframework-simplejwt
+        .. image:: https://img.shields.io/pypi/pyversions/djangorestframework-simplejwt.svg
+          :target: https://pypi.python.org/pypi/djangorestframework-simplejwt
+        .. image:: https://readthedocs.org/projects/django-rest-framework-simplejwt/badge/?version=latest
+          :target: https://django-rest-framework-simplejwt.readthedocs.io/en/latest/
+        
+        Abstract
+        --------
+        
+        Simple JWT is a JSON Web Token authentication plugin for the `Django REST
+        Framework <http://www.django-rest-framework.org/>`__.
+        
+        For full documentation, visit `django-rest-framework-simplejwt.readthedocs.io
+        <https://django-rest-framework-simplejwt.readthedocs.io/en/latest/>`__.
+        
+        Looking for Maintainers
+        -----------------------
+        
+        For more information, see `here
+        <https://github.com/SimpleJWT/django-rest-framework-simplejwt/issues/207>`__.
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Web Environment
+Classifier: Framework :: Django
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Topic :: Internet :: WWW/HTTP
+Requires-Python: >=3.7
+Provides-Extra: test
+Provides-Extra: lint
+Provides-Extra: doc
+Provides-Extra: dev
+Provides-Extra: python-jose

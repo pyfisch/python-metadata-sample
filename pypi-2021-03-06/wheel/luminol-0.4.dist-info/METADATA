@@ -1,0 +1,16 @@
+Metadata-Version: 2.0
+Name: luminol
+Version: 0.4
+Summary: luminol is an anomaly detection and correlation library for timeseries data.
+Home-page: https://github.com/linkedin/luminol
+Author: Naarad Developers
+Author-email: naarad-dev@googlegroups.com
+License: Apache 2.0
+Platform: UNKNOWN
+Requires-Dist: numpy
+Requires-Dist: scipy
+Requires-Dist: future (==0.16.0)
+
+UNKNOWN
+
+

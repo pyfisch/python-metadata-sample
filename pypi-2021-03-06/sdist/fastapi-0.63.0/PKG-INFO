@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: fastapi
+Version: 0.63.0
+Summary: FastAPI framework, high performance, easy to learn, fast to code, ready for production
+Home-page: https://github.com/tiangolo/fastapi
+Author: Sebastián Ramírez
+Author-email: tiangolo@gmail.com

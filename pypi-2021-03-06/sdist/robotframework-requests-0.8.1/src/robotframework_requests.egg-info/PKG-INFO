@@ -1,0 +1,19 @@
+Metadata-Version: 2.1
+Name: robotframework-requests
+Version: 0.8.1
+Summary: Robot Framework keyword library wrapper around requests
+Home-page: https://github.com/MarketSquare/robotframework-requests
+Author: Bulkan Savun Evcimen
+Author-email: bulkan@gmail.com
+Maintainer: Luca Giovenzana
+Maintainer-email: luca@giovenzana.org
+License: MIT
+Description: Robot Framework keyword library wrapper around the HTTP client library requests.
+Keywords: robotframework testing test automation http client requests rest api
+Platform: any
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Software Development :: Testing
+Provides-Extra: test

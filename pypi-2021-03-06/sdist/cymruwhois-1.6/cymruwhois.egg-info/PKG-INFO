@@ -1,0 +1,31 @@
+Metadata-Version: 1.1
+Name: cymruwhois
+Version: 1.6
+Summary: Client for the whois.cymru.com service
+Home-page: http://packages.python.org/cymruwhois/
+Author: Justin Azoff
+Author-email: justin@bouncybouncy.net
+License: MIT
+Download-URL: http://github.com/JustinAzoff/python-cymruwhois/tree/master
+Description: 
+        Perform lookups by ip address and return ASN, Country Code, and Netblock Owner::
+        
+            >>> import socket
+            >>> ip = socket.gethostbyname("www.google.com")
+            >>> from cymruwhois import Client
+            >>> c=Client()
+            >>> r=c.lookup(ip)
+            >>> print r.asn
+            15169
+            >>> print r.owner
+            GOOGLE - Google Inc.
+        
+            
+Keywords: ASN
+Platform: UNKNOWN
+Classifier: Topic :: System :: Networking
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python
+Classifier: Development Status :: 5 - Production/Stable

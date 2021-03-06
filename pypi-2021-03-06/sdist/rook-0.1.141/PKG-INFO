@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: rook
+Version: 0.1.141
+Summary: Rook is a Python package for on the fly debugging and data extraction for application in production
+Home-page: http://rookout.com/
+Author: Rookout
+Author-email: liran@rookout.com
+License: https://get.rookout.com/SDK_LICENSE.pdf
+Description: Python Rook
+        ==================
+        
+        `Rook <http://www.rookout.com>`_ is a Python package that supports
+        on the fly debugging and data extraction from python applications
+        in production.
+        
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Provides-Extra: ssl_backport

@@ -1,0 +1,48 @@
+Metadata-Version: 1.2
+Name: tempest
+Version: 26.0.0
+Summary: OpenStack Integration Testing
+Home-page: https://docs.openstack.org/tempest/latest/
+Author: OpenStack
+Author-email: openstack-discuss@lists.openstack.org
+License: UNKNOWN
+Description: ========================
+        Team and repository tags
+        ========================
+        
+        .. image:: https://governance.openstack.org/tc/badges/tempest.svg
+            :target: https://governance.openstack.org/tc/reference/tags/index.html
+        
+        .. Change things from this point on
+        
+        Tempest - The OpenStack Integration Test Suite
+        ==============================================
+        
+        This is a set of integration tests to be run against a live OpenStack
+        cluster. Tempest has batteries of tests for OpenStack API validation,
+        scenarios, and other specific tests useful in validating an OpenStack
+        deployment.
+        
+          * Documentation: https://docs.openstack.org/tempest/latest/
+          * Features: https://specs.openstack.org/openstack/qa-specs/#tempest
+          * Bugs: https://bugs.launchpad.net/tempest/
+          * Release Notes: https://docs.openstack.org/releasenotes/tempest
+        
+        Get in touch via `email <mailto:openstack-discuss@lists.openstack.org>`_. Use
+        [tempest] in your subject.
+        
+        
+Platform: UNKNOWN
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.6

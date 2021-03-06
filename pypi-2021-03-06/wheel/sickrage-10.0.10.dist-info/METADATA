@@ -1,0 +1,121 @@
+Metadata-Version: 2.1
+Name: sickrage
+Version: 10.0.10
+Summary: Automatic Video Library Manager for TV Shows
+Home-page: https://git.sickrage.ca
+Author: echel0n
+Author-email: echel0n@sickrage.ca
+License: GPLv3
+Keywords: sickrage,sickragetv,tv,torrent,nzb,video,echel0n
+Platform: any
+Requires-Python: >=3
+Requires-Dist: aenum (==2.2.4)
+Requires-Dist: alembic (==1.4.2)
+Requires-Dist: apispec (==4.0.0)
+Requires-Dist: apispec-webframeworks (==0.5.2)
+Requires-Dist: appdirs (==1.4.4)
+Requires-Dist: APScheduler (==3.6.3)
+Requires-Dist: arrow (==0.15.8)
+Requires-Dist: asn1crypto (==1.4.0)
+Requires-Dist: attrdict (==2.0.1)
+Requires-Dist: attrs (==19.3.0)
+Requires-Dist: babelfish (==0.5.5)
+Requires-Dist: beautifulsoup4 (==4.9.1)
+Requires-Dist: bencode3 (==0.1.0)
+Requires-Dist: CacheControl (==0.12.6)
+Requires-Dist: certifi (==2020.6.20)
+Requires-Dist: cffi (==1.14.1)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: click (==7.1.2)
+Requires-Dist: cloudscraper (==1.2.46)
+Requires-Dist: configobj (==5.0.6)
+Requires-Dist: cryptography (==3.2.1)
+Requires-Dist: decorator (==4.4.2)
+Requires-Dist: deluge-client (==1.9.0)
+Requires-Dist: dirsync (==2.2.5)
+Requires-Dist: dogpile.cache (==1.0.2)
+Requires-Dist: ecdsa (==0.14.1)
+Requires-Dist: enzyme (==0.4.1)
+Requires-Dist: fake-useragent (==0.1.11)
+Requires-Dist: feedparser (==6.0.2)
+Requires-Dist: future (==0.18.2)
+Requires-Dist: gntp (==1.0.3)
+Requires-Dist: guessit (==3.1.1)
+Requires-Dist: hachoir (==3.1.1)
+Requires-Dist: html5lib (==1.1)
+Requires-Dist: httplib2 (==0.18.1)
+Requires-Dist: idna (==2.10)
+Requires-Dist: importlib-metadata (==1.7.0)
+Requires-Dist: ipaddress (==1.0.23)
+Requires-Dist: knowit (==0.2.4)
+Requires-Dist: lockfile (==0.12.2)
+Requires-Dist: lxml (==4.6.1)
+Requires-Dist: Mako (==1.1.3)
+Requires-Dist: markdown2 (==2.3.9)
+Requires-Dist: MarkupSafe (==1.1.1)
+Requires-Dist: marshmallow (==3.8.0)
+Requires-Dist: marshmallow-sqlalchemy (==0.23.1)
+Requires-Dist: marshmallow-enum (==1.5.1)
+Requires-Dist: msgpack (==1.0.0)
+Requires-Dist: MultipartPostHandler (==0.1.0)
+Requires-Dist: mutagen (==1.45.1)
+Requires-Dist: oauth2 (==1.9.0.post1)
+Requires-Dist: oauthlib (==3.1.0)
+Requires-Dist: packaging (==20.4)
+Requires-Dist: pbr (==5.4.5)
+Requires-Dist: Pint (==0.14)
+Requires-Dist: profilehooks (==1.11.2)
+Requires-Dist: pyasn1 (==0.4.8)
+Requires-Dist: pyasn1-modules (==0.2.8)
+Requires-Dist: pycparser (==2.20)
+Requires-Dist: PyJWT (==1.7.1)
+Requires-Dist: pymediainfo (==4.2.1)
+Requires-Dist: PyMySQL (==0.10.0)
+Requires-Dist: pynzb (==0.1.0)
+Requires-Dist: pyparsing (==2.4.7)
+Requires-Dist: pysrt (==1.1.2)
+Requires-Dist: python-dateutil (==2.7.5)
+Requires-Dist: python-editor (==1.0.4)
+Requires-Dist: python-jose (==3.2.0)
+Requires-Dist: python-keycloak-client (==0.2.3)
+Requires-Dist: python-twitter (==3.5)
+Requires-Dist: pytz (==2020.1)
+Requires-Dist: pyxdg (==0.26)
+Requires-Dist: PyYAML (==5.3.1)
+Requires-Dist: rarfile (==3.1)
+Requires-Dist: rebulk (==2.0.1)
+Requires-Dist: requests (==2.24.0)
+Requires-Dist: requests-oauthlib (==1.3.0)
+Requires-Dist: requests-toolbelt (==0.9.1)
+Requires-Dist: rsa (==4.6)
+Requires-Dist: Send2Trash (==1.5.0)
+Requires-Dist: sentry-sdk (==0.19.5)
+Requires-Dist: service-identity (==18.1.0)
+Requires-Dist: sgmllib3k (==1.0.0)
+Requires-Dist: simplejson (==3.17.2)
+Requires-Dist: six (==1.15.0)
+Requires-Dist: soupsieve (==2.0.1)
+Requires-Dist: SQLAlchemy (==1.3.18)
+Requires-Dist: SQLAlchemy-Utils (==0.36.8)
+Requires-Dist: stevedore (==3.2.0)
+Requires-Dist: subliminal (==2.1.0)
+Requires-Dist: tornado (==6.0.4)
+Requires-Dist: twilio (==6.44.2)
+Requires-Dist: tzlocal (==2.1)
+Requires-Dist: Unidecode (==1.1.1)
+Requires-Dist: urllib3 (==1.25.10)
+Requires-Dist: webencodings (==0.5.1)
+Requires-Dist: xmltodict (==0.12.0)
+Requires-Dist: zipp (==3.1.0)
+Provides-Extra: dev
+Requires-Dist: twine ; extra == 'dev'
+Requires-Dist: crowdin-cli-py ; extra == 'dev'
+Requires-Dist: babel ; extra == 'dev'
+Requires-Dist: wheel ; extra == 'dev'
+Requires-Dist: tox ; extra == 'dev'
+Requires-Dist: vcrpy-unittest ; extra == 'dev'
+Requires-Dist: Mako ; extra == 'dev'
+
+UNKNOWN
+
+

@@ -1,0 +1,7 @@
+Metadata-Version: 1.1
+Name: fissix
+Version: 20.8.0
+Summary: Monkeypatches to override default behavior of lib2to3.
+Home-page: https://github.com/jreese/fissix
+Author: John Reese
+Author-email: john@noswap.com

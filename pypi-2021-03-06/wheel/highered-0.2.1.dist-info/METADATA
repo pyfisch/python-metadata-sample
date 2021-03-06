@@ -1,0 +1,27 @@
+Metadata-Version: 2.0
+Name: highered
+Version: 0.2.1
+Summary: Learnable Edit Distance Using PyHacrf
+Home-page: https://github.com/datamade/highered
+Author: Forest Gregg
+Author-email: fgregg@gmail.com
+License: The MIT License: http://www.opensource.org/licenses/mit-license.php
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Cython
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Requires-Dist: numpy
+Requires-Dist: pyhacrf-datamade (>=0.2.0)
+
+UNKNOWN
+
+

@@ -1,0 +1,46 @@
+Metadata-Version: 1.2
+Name: neutron-lib
+Version: 2.9.1
+Summary: Neutron shared routines and utilities
+Home-page: https://docs.openstack.org/neutron-lib/latest/
+Author: OpenStack
+Author-email: openstack-discuss@lists.openstack.org
+License: UNKNOWN
+Description: ========================
+        Team and repository tags
+        ========================
+        
+        .. image:: https://governance.openstack.org/tc/badges/neutron-lib.svg
+            :target: https://governance.openstack.org/tc/reference/tags/index.html
+        
+        .. Change things from this point on
+        
+        ===============================
+        neutron-lib
+        ===============================
+        
+        Neutron shared routines and utilities
+        
+        * Free software: Apache license
+        * Documentation: https://docs.openstack.org/neutron-lib/latest/
+        * Source: https://opendev.org/openstack/neutron-lib
+        * Bugs: https://bugs.launchpad.net/neutron
+        * Release notes: https://docs.openstack.org/releasenotes/neutron-lib/
+        
+        Features
+        --------
+        
+        * TODO
+        
+        
+Platform: UNKNOWN
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Python: >=3.6

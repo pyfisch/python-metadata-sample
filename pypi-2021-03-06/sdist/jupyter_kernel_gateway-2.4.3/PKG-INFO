@@ -1,0 +1,34 @@
+Metadata-Version: 1.1
+Name: jupyter_kernel_gateway
+Version: 2.4.3
+Summary: A web server for spawning and communicating with Jupyter kernels
+Home-page: http://github.com/jupyter-incubator/kernel_gateway
+Author: Jupyter Development Team
+Author-email: jupyter@googlegroups.com
+License: BSD
+Description: Jupyter Kernel Gateway is a web server that supports different mechanisms for
+        spawning and communicating with Jupyter kernels, such as:
+        
+        * A Jupyter Notebook server-compatible HTTP API used for requesting kernels
+          and talking the `Jupyter kernel protocol <https://jupyter-client.readthedocs.io/en/latest/messaging.html>`_
+          with the kernels over Websockets
+        * A HTTP API defined by annotated notebook cells that maps HTTP verbs and
+          resources to code to execute on a kernel
+        
+        The server launches kernels in its local process/filesystem space. It can be
+        containerized and scaled out using common technologies like
+        `tmpnb <https://github.com/jupyter/tmpnb>`_,
+        `Cloud Foundry <https://github.com/cloudfoundry>`_, and
+        `Kubernetes <http://kubernetes.io/>`_.
+        
+Keywords: Interactive,Interpreter,Kernel,Web,Cloud
+Platform: Linux
+Platform: Mac OS X
+Platform: Windows
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: System Administrators
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3

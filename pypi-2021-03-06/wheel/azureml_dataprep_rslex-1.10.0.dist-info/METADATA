@@ -1,0 +1,42 @@
+Metadata-Version: 2.1
+Name: azureml-dataprep-rslex
+Version: 1.10.0
+Summary: Azure ML Data Preparation RustLex
+Home-page: http://aka.ms/data-prep-sdk
+Author: Microsoft Corporation
+Author-email: dataprepms@microsoft.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
+
+# Azure Machine Learning Data Prep RsLex
+
+Azure Machine Learning Data Prep RsLex is a Rust implementation of Data Prep's capabilities to load, transform, and write data for machine learning workflows.
+You can interact with RsLex via the Data Prep SDK, `azureml-dataprep`, by calling `use_rust_execution(True)` before using the SDK.
+
+## Install the SDK
+
+To install Azure Machine Learning Data Prep RsLex, use the following command:
+
+```bash
+pip install --upgrade azureml-dataprep-rslex
+```
+
+NOTE: This package is not intended for direct installation or usage. `azureml-dataprep` depends on this package.
+
+

@@ -1,0 +1,10 @@
+Metadata-Version: 1.0
+Name: PDPbox
+Version: 0.2.0
+Summary: python partial dependence plot toolbox
+Home-page: https://github.com/SauceCat/PDPbox
+Author: SauceCat
+Author-email: jiangchun.lee@gmail.com
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN

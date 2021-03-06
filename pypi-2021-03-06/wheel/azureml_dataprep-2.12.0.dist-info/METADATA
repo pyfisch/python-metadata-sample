@@ -1,0 +1,49 @@
+Metadata-Version: 2.1
+Name: azureml-dataprep
+Version: 2.12.0
+Summary: Azure ML Data Preparation SDK
+Home-page: http://aka.ms/data-prep-sdk
+Author: Microsoft Corporation
+Author-email: dataprepms@microsoft.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Topic :: Scientific/Engineering
+Description-Content-Type: text/markdown
+Requires-Dist: dotnetcore2 (<3.0.0,>=2.1.14)
+Requires-Dist: azureml-dataprep-native (<32.0.0,>=31.0.0)
+Requires-Dist: azureml-dataprep-rslex (<1.11.0a,>=1.10.0dev0)
+Requires-Dist: cloudpickle (<2.0.0,>=1.1.0)
+Requires-Dist: azure-identity (<1.5.0,>=1.2.0)
+Provides-Extra: fuse
+Requires-Dist: fusepy (<4.0.0,>=3.0.1) ; extra == 'fuse'
+Provides-Extra: pandas
+Requires-Dist: numpy (<2.0.0,>=1.14.0) ; extra == 'pandas'
+Requires-Dist: pandas (<2.0.0,>=0.23.4) ; extra == 'pandas'
+Requires-Dist: pyarrow (<2.0.0,>=0.17.0) ; extra == 'pandas'
+Provides-Extra: parquet
+Requires-Dist: pyarrow (<2.0.0,>=0.17.0) ; extra == 'parquet'
+Provides-Extra: pyspark
+Requires-Dist: pyspark (==2.3.0) ; extra == 'pyspark'
+Provides-Extra: scipy
+Requires-Dist: scipy (<2.0.0,>=1.1.0) ; extra == 'scipy'
+
+# Azure Machine Learning Data Prep SDK for Python
+
+The Azure Machine Learning Data Prep SDK is used to load, transform, and write data for machine learning workflows.
+
+This package is internal, and is not intended to be used directly.
+
+

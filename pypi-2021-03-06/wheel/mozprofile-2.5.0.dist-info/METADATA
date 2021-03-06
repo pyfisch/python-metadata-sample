@@ -1,0 +1,28 @@
+Metadata-Version: 2.0
+Name: mozprofile
+Version: 2.5.0
+Summary: Library to create and modify Mozilla application profiles
+Home-page: https://wiki.mozilla.org/Auto-tools/Projects/Mozbase
+Author: Mozilla Automation and Tools team
+Author-email: tools@lists.mozilla.org
+License: MPL 2.0
+Keywords: mozilla
+Platform: UNKNOWN
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Mozilla Public License 2.0 (MPL 2.0)
+Classifier: Natural Language :: English
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Provides-Extra: manifest
+Requires-Dist: mozfile (>=1.2)
+Requires-Dist: mozlog (>=6.0)
+Requires-Dist: six (<2,>=1.10.0)
+Provides-Extra: manifest
+Requires-Dist: manifestparser (>=0.6); extra == 'manifest'
+
+see https://firefox-source-docs.mozilla.org/mozbase/index.html
+
+

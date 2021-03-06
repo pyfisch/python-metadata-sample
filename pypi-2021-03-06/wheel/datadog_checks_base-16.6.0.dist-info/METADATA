@@ -1,0 +1,97 @@
+Metadata-Version: 2.1
+Name: datadog-checks-base
+Version: 16.6.0
+Summary: The Datadog Check Toolkit
+Home-page: https://github.com/DataDog/integrations-core
+Author: Datadog
+Author-email: packages@datadoghq.com
+License: BSD
+Keywords: datadog agent checks
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Topic :: System :: Monitoring
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.8
+Description-Content-Type: text/markdown
+Provides-Extra: db
+Requires-Dist: mmh3 (==2.5.1) ; extra == 'db'
+Provides-Extra: deps
+Requires-Dist: aws-requests-auth (==0.4.2) ; extra == 'deps'
+Requires-Dist: binary (==1.0.0) ; extra == 'deps'
+Requires-Dist: botocore (==1.13.42) ; extra == 'deps'
+Requires-Dist: ddtrace (==0.32.2) ; extra == 'deps'
+Requires-Dist: prometheus-client (==0.9.0) ; extra == 'deps'
+Requires-Dist: protobuf (==3.7.0) ; extra == 'deps'
+Requires-Dist: python-dateutil (==2.8.0) ; extra == 'deps'
+Requires-Dist: pyyaml (==5.4.1) ; extra == 'deps'
+Requires-Dist: requests (==2.22.0) ; extra == 'deps'
+Requires-Dist: requests-toolbelt (==0.9.1) ; extra == 'deps'
+Requires-Dist: requests-unixsocket (==0.2.0) ; extra == 'deps'
+Requires-Dist: simplejson (==3.6.5) ; extra == 'deps'
+Requires-Dist: six (==1.14.0) ; extra == 'deps'
+Requires-Dist: uptime (==3.0.1) ; extra == 'deps'
+Requires-Dist: contextlib2 (==0.6.0) ; (python_version < "3.0") and extra == 'deps'
+Requires-Dist: enum34 (==1.1.6) ; (python_version < "3.0") and extra == 'deps'
+Requires-Dist: ipaddress (==1.0.22) ; (python_version < "3.0") and extra == 'deps'
+Requires-Dist: typing (==3.7.4.1) ; (python_version < "3.0") and extra == 'deps'
+Requires-Dist: pywin32 (==228) ; (sys_platform == "win32") and extra == 'deps'
+Provides-Extra: http
+Requires-Dist: cryptography (==3.3.2) ; extra == 'http'
+Requires-Dist: pysocks (==1.7.0) ; extra == 'http'
+Requires-Dist: requests-kerberos (==0.12.0) ; extra == 'http'
+Requires-Dist: requests-ntlm (==1.1.0) ; extra == 'http'
+Requires-Dist: requests-unixsocket (==0.2.0) ; extra == 'http'
+Requires-Dist: pyjwt (==1.7.1) ; (python_version < "3.0") and extra == 'http'
+Requires-Dist: pyjwt (==2.0.1) ; (python_version > "3.0") and extra == 'http'
+Requires-Dist: win-inet-pton (==1.1.0) ; (sys_platform == "win32" and python_version < "3.0") and extra == 'http'
+Provides-Extra: json
+Requires-Dist: orjson (==2.6.1) ; (python_version > "3.0") and extra == 'json'
+Provides-Extra: kube
+Requires-Dist: kubernetes (==12.0.1) ; extra == 'kube'
+
+# Datadog Checks Base
+
+[![Latest PyPI version][1]][7]
+[![Supported Python versions][2]][7]
+
+## Overview
+
+This package provides the Python bits needed by the [Datadog Agent][4]
+to run Agent-based Integrations (also known as _Checks_).
+
+This package is used in two scenarios:
+
+1. When used from within the Python interpreter embedded in the Agent, it
+provides all the base classes and utilities needed by any Check.
+
+2. When installed in a local environment with a regular Python interpreter, it
+mocks the presence of a running Agent so checks can work in standalone mode,
+mostly useful for testing and development.
+
+Please refer to the [docs][5] for details.
+
+## Installation
+
+Checks from [integrations-core][6] already
+use the toolkit in a transparent way when you run the tests but you can
+install the toolkit locally and play with it:
+
+```shell
+pip install datadog-checks-base
+```
+
+## Troubleshooting
+
+Need help? Contact [Datadog support][8].
+
+[1]: https://img.shields.io/pypi/v/datadog-checks-base.svg
+[2]: https://img.shields.io/pypi/pyversions/datadog-checks-base.svg
+[4]: https://github.com/DataDog/datadog-agent
+[5]: https://datadoghq.dev/integrations-core/base/about/
+[6]: https://github.com/DataDog/integrations-core
+[7]: https://pypi.org/project/datadog-checks-base/
+[8]: https://docs.datadoghq.com/help/
+
+

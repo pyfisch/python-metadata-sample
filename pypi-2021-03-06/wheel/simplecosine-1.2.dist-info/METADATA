@@ -1,0 +1,26 @@
+Metadata-Version: 2.0
+Name: simplecosine
+Version: 1.2
+Summary: Simple cosine distance
+Home-page: https://github.com/datamade/simplecosine
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: The MIT License: http://www.opensource.org/licenses/mit-license.php
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Programming Language :: Cython
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Requires-Dist: numpy
+
+UNKNOWN
+
+

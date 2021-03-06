@@ -1,0 +1,83 @@
+Metadata-Version: 2.1
+Name: sms-toolkit
+Version: 1.0.7
+Summary: A collection of tools to work with SMS messages.
+Home-page: https://github.com/chrisconlon-klaviyo/sms-toolkit
+Author: Klaviyo
+Author-email: community@klaviyo.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Operating System :: OS Independent
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4
+
+sms-toolkit
+===========
+
+A collection of tools used to send SMS messages.
+
+.. image:: https://github.com/chrisconlon-klaviyo/sms-toolkit/workflows/Tests/badge.svg
+   :target: https://github.com/chrisconlon-klaviyo/sms-toolkit/actions?query=workflow%3ATests+event%3Apush+branch%3Amaster
+   :alt: Test Status
+
+Tools
+-----
+
+Message Profiling
+~~~~~~~~~~~~~~~~~
+
+Accepts a raw SMS message string and determines its most efficient
+encoding, then determines how many segments would be used to send it.
+
+Largely based on `this tool`_ (code found `here`_).
+
+Example:
+
+::
+
+   from sms_toolkit.messages.profiling import profile_message
+   import json
+
+   profile = profile_message("Sup chonus")
+   print(json.dumps(profile, indent=4))
+
+   {
+       "num_segments": 1, 
+       "segments": [
+           {
+               "message": "Sup chonus", 
+               "total_segment_length": 10, 
+               "unicode_character_list": [
+                   "S", "u", "p", " ", "c", "h", "o", "n", "u", "s"
+               ], 
+               "byte_groups": [
+                   [83], [117], [112], [32], [99], [104], [111], [110], [117], [115]
+               ]
+           }
+       ], 
+       "message_length": 10
+   }
+
+Testing
+-------
+This library needs is tested against python 2 and 3. Both interpreters need to be available to tox
+
+::
+
+  pyenv versions  # shows all versions available
+  pyenv local 2.7.* 3.7.*
+
+
+Run tests:
+
+``tox .``
+
+.. _this tool: http://chadselph.github.io/smssplit/
+.. _here: https://github.com/chadselph/smssplit/blob/master/js/smssplit.js
+

@@ -1,0 +1,24 @@
+Metadata-Version: 2.1
+Name: PartyBotPackage
+Version: 1.1.0
+Summary: PartyBot in a PyPi package form to easily be ran on repl.
+Home-page: https://github.com/xMistt/fortnitepy-bot
+Author: xMistt
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: crayons
+Requires-Dist: fortnitepy
+Requires-Dist: BenBotAsync
+Requires-Dist: FortniteAPIAsync
+Requires-Dist: uvloop
+Requires-Dist: sanic
+Requires-Dist: aiohttp
+
+# PartyBotPackage
+
+If you need any help with the package, join the discord: discord.gg/fnpy.
+

@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: graphql-ws
+Version: 0.3.1
+Summary: Websocket server for GraphQL subscriptions
+Home-page: https://github.com/graphql-python/graphql-ws
+Author: Syrus Akbary
+Author-email: me@syrusakbary.com
+License: MIT license
+Keywords: graphql,subscriptions,graphene,websockets
+Platform: UNKNOWN
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Requires-Dist: graphql-core (<3,>=2.0)
+
+
+=======
+History
+=======
+
+0.1.0 (2017-10-15)
+------------------
+
+* First release on PyPI.
+
+

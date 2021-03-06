@@ -1,0 +1,23 @@
+Metadata-Version: 2.1
+Name: lightstep
+Version: 4.4.8
+Summary: LightStep Python OpenTracing Implementation
+Home-page: UNKNOWN
+Author: LightStep
+Author-email: UNKNOWN
+License: UNKNOWN
+Keywords: opentracing,lightstep,traceguide,tracing,microservices,distributed
+Platform: UNKNOWN
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 2
+Requires-Dist: thrift (>=0.13.0)
+Requires-Dist: jsonpickle
+Requires-Dist: six
+Requires-Dist: basictracer (<4,>=3.0)
+Requires-Dist: googleapis-common-protos (<2.0,>=1.5.3)
+Requires-Dist: requests (<3.0,>=2.19)
+Requires-Dist: protobuf (<4.0,>=3.6.0)
+
+UNKNOWN
+
+

@@ -1,0 +1,27 @@
+Metadata-Version: 2.1
+Name: rlr
+Version: 2.4.5
+Summary: Case weighted L2 regularized logistic regression
+Home-page: https://github.com/dedupeio/rlr
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: Apache 2.0 License: https://www.apache.org/licenses/LICENSE-2.0
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Natural Language :: English
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: POSIX
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Information Analysis
+Requires-Dist: numpy (>=1.13.1)
+Requires-Dist: pylbfgs
+Requires-Dist: future (>=0.14)
+
+UNKNOWN
+
+

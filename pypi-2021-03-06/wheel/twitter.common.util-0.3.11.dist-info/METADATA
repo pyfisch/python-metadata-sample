@@ -1,0 +1,18 @@
+Metadata-Version: 2.0
+Name: twitter.common.util
+Version: 0.3.11
+Summary: twitter.common commands wrapper.
+Home-page: https://github.com/twitter/commons
+Author: UNKNOWN
+Author-email: UNKNOWN
+License: Apache License, Version 2.0
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Requires-Dist: twitter.common.contextutil (==0.3.11)
+
+UNKNOWN
+
+

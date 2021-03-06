@@ -1,0 +1,14 @@
+Metadata-Version: 2.1
+Name: zthreading
+Version: 0.1.17
+Summary: A collection of wrapper classes for event broadcast and task management for python (Python Threads or Asyncio).
+Home-page: https://github.com/LamaAni/zthreading.py
+Author: Zav Shotan
+Author-email: 
+License: LICENSE
+Platform: any
+Requires-Python: >=3.6
+
+Please see the github repo and help @ https://github.com/LamaAni/zthreading.py
+
+

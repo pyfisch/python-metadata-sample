@@ -1,0 +1,37 @@
+Metadata-Version: 2.1
+Name: htcondor
+Version: 8.9.11
+Summary: HTCondor Python bindings
+Home-page: http://htcondor.org/
+Author: The HTCondor Project
+Author-email: htcondor-admin@cs.wisc.edu
+Maintainer: Brian Bockelman, Jason Patton, Tim Theisen
+License: ASL 2.0
+Keywords: htcondor classad htc dhtc condor
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: C++
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development
+Classifier: Topic :: System :: Distributed Computing
+
+The HTCondor Python Bindings
+============================
+
+The HTCondor python modules aim to expose a high-quality, Pythonic interface to the HTCondor client libraries.
+They utilize the same C++ libraries as HTCondor itself, meaning they have nearly the same behavior as the command line tools.
+
+See https://htcondor.readthedocs.io
+
+

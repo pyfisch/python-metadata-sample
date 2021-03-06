@@ -1,0 +1,208 @@
+Metadata-Version: 2.1
+Name: hvplot
+Version: 0.7.1
+Summary: A high-level plotting API for the PyData ecosystem built on HoloViews.
+Home-page: https://hvplot.pyviz.org
+Author: Philipp Rudiger
+Author-email: developers@pyviz.org
+Maintainer: HoloViz developers
+Maintainer-email: developers@pyviz.org
+License: BSD
+Platform: Windows
+Platform: Mac OS X
+Platform: Linux
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Intended Audience :: Developers
+Classifier: Natural Language :: English
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Software Development :: Libraries
+Requires-Python: >=2.7
+Description-Content-Type: text/markdown
+Requires-Dist: bokeh (>=1.0.0)
+Requires-Dist: colorcet (>=2)
+Requires-Dist: holoviews (>=1.11.0)
+Requires-Dist: pandas
+Requires-Dist: numpy (>=1.15)
+Provides-Extra: all
+Requires-Dist: coveralls ; extra == 'all'
+Requires-Dist: dask ; extra == 'all'
+Requires-Dist: datashader (>=0.6.5) ; extra == 'all'
+Requires-Dist: flake8 ; extra == 'all'
+Requires-Dist: geopandas ; extra == 'all'
+Requires-Dist: geoviews (>=1.6.0) ; extra == 'all'
+Requires-Dist: intake ; extra == 'all'
+Requires-Dist: intake-parquet ; extra == 'all'
+Requires-Dist: intake-xarray ; extra == 'all'
+Requires-Dist: nbsite (>=0.5.1) ; extra == 'all'
+Requires-Dist: nbsmoke (>=0.2.0) ; extra == 'all'
+Requires-Dist: networkx ; extra == 'all'
+Requires-Dist: nose ; extra == 'all'
+Requires-Dist: notebook (>=5.4) ; extra == 'all'
+Requires-Dist: panel ; extra == 'all'
+Requires-Dist: param (>=1.6.1) ; extra == 'all'
+Requires-Dist: parameterized ; extra == 'all'
+Requires-Dist: pillow ; extra == 'all'
+Requires-Dist: pyct (>=0.4.4) ; extra == 'all'
+Requires-Dist: pyepsg ; extra == 'all'
+Requires-Dist: pygraphviz ; extra == 'all'
+Requires-Dist: pytest ; extra == 'all'
+Requires-Dist: python-snappy ; extra == 'all'
+Requires-Dist: rasterio ; extra == 'all'
+Requires-Dist: s3fs ; extra == 'all'
+Requires-Dist: scikit-image ; extra == 'all'
+Requires-Dist: scipy ; extra == 'all'
+Requires-Dist: selenium ; extra == 'all'
+Requires-Dist: setuptools ; extra == 'all'
+Requires-Dist: spatialpandas ; extra == 'all'
+Requires-Dist: sphinx-holoviz-theme ; extra == 'all'
+Requires-Dist: streamz (>=0.3.0) ; extra == 'all'
+Requires-Dist: tornado (<6.0) ; extra == 'all'
+Requires-Dist: xarray (<0.17.0) ; extra == 'all'
+Provides-Extra: build
+Requires-Dist: param (>=1.6.1) ; extra == 'build'
+Requires-Dist: pyct (>=0.4.4) ; extra == 'build'
+Requires-Dist: setuptools ; extra == 'build'
+Provides-Extra: doc
+Requires-Dist: geoviews (>=1.6.0) ; extra == 'doc'
+Requires-Dist: panel ; extra == 'doc'
+Requires-Dist: geopandas ; extra == 'doc'
+Requires-Dist: xarray (<0.17.0) ; extra == 'doc'
+Requires-Dist: networkx ; extra == 'doc'
+Requires-Dist: streamz (>=0.3.0) ; extra == 'doc'
+Requires-Dist: intake ; extra == 'doc'
+Requires-Dist: intake-parquet ; extra == 'doc'
+Requires-Dist: intake-xarray ; extra == 'doc'
+Requires-Dist: dask ; extra == 'doc'
+Requires-Dist: datashader (>=0.6.5) ; extra == 'doc'
+Requires-Dist: notebook (>=5.4) ; extra == 'doc'
+Requires-Dist: rasterio ; extra == 'doc'
+Requires-Dist: s3fs ; extra == 'doc'
+Requires-Dist: scipy ; extra == 'doc'
+Requires-Dist: pillow ; extra == 'doc'
+Requires-Dist: selenium ; extra == 'doc'
+Requires-Dist: spatialpandas ; extra == 'doc'
+Requires-Dist: scikit-image ; extra == 'doc'
+Requires-Dist: python-snappy ; extra == 'doc'
+Requires-Dist: pyepsg ; extra == 'doc'
+Requires-Dist: pygraphviz ; extra == 'doc'
+Requires-Dist: nbsite (>=0.5.1) ; extra == 'doc'
+Requires-Dist: sphinx-holoviz-theme ; extra == 'doc'
+Requires-Dist: tornado (<6.0) ; extra == 'doc'
+Provides-Extra: examples
+Requires-Dist: geoviews (>=1.6.0) ; extra == 'examples'
+Requires-Dist: panel ; extra == 'examples'
+Requires-Dist: geopandas ; extra == 'examples'
+Requires-Dist: xarray (<0.17.0) ; extra == 'examples'
+Requires-Dist: networkx ; extra == 'examples'
+Requires-Dist: streamz (>=0.3.0) ; extra == 'examples'
+Requires-Dist: intake ; extra == 'examples'
+Requires-Dist: intake-parquet ; extra == 'examples'
+Requires-Dist: intake-xarray ; extra == 'examples'
+Requires-Dist: dask ; extra == 'examples'
+Requires-Dist: datashader (>=0.6.5) ; extra == 'examples'
+Requires-Dist: notebook (>=5.4) ; extra == 'examples'
+Requires-Dist: rasterio ; extra == 'examples'
+Requires-Dist: s3fs ; extra == 'examples'
+Requires-Dist: scipy ; extra == 'examples'
+Requires-Dist: pillow ; extra == 'examples'
+Requires-Dist: selenium ; extra == 'examples'
+Requires-Dist: spatialpandas ; extra == 'examples'
+Requires-Dist: scikit-image ; extra == 'examples'
+Requires-Dist: python-snappy ; extra == 'examples'
+Requires-Dist: pyepsg ; extra == 'examples'
+Provides-Extra: examples_extra
+Requires-Dist: geoviews (>=1.6.0) ; extra == 'examples_extra'
+Requires-Dist: panel ; extra == 'examples_extra'
+Requires-Dist: geopandas ; extra == 'examples_extra'
+Requires-Dist: xarray (<0.17.0) ; extra == 'examples_extra'
+Requires-Dist: networkx ; extra == 'examples_extra'
+Requires-Dist: streamz (>=0.3.0) ; extra == 'examples_extra'
+Requires-Dist: intake ; extra == 'examples_extra'
+Requires-Dist: intake-parquet ; extra == 'examples_extra'
+Requires-Dist: intake-xarray ; extra == 'examples_extra'
+Requires-Dist: dask ; extra == 'examples_extra'
+Requires-Dist: datashader (>=0.6.5) ; extra == 'examples_extra'
+Requires-Dist: notebook (>=5.4) ; extra == 'examples_extra'
+Requires-Dist: rasterio ; extra == 'examples_extra'
+Requires-Dist: s3fs ; extra == 'examples_extra'
+Requires-Dist: scipy ; extra == 'examples_extra'
+Requires-Dist: pillow ; extra == 'examples_extra'
+Requires-Dist: selenium ; extra == 'examples_extra'
+Requires-Dist: spatialpandas ; extra == 'examples_extra'
+Requires-Dist: scikit-image ; extra == 'examples_extra'
+Requires-Dist: python-snappy ; extra == 'examples_extra'
+Requires-Dist: pyepsg ; extra == 'examples_extra'
+Requires-Dist: pygraphviz ; extra == 'examples_extra'
+Provides-Extra: tests
+Requires-Dist: coveralls ; extra == 'tests'
+Requires-Dist: nose ; extra == 'tests'
+Requires-Dist: flake8 ; extra == 'tests'
+Requires-Dist: parameterized ; extra == 'tests'
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: nbsmoke (>=0.2.0) ; extra == 'tests'
+
+<h1>
+hvPlot <img src="/doc/_static/logo.png" width="50" height="50">
+</h1>
+
+**A high-level plotting API for the PyData ecosystem built on HoloViews.**
+
+|    |    |
+| --- | --- |
+| Build Status | [![Build Status](https://github.com/holoviz/hvplot/workflows/tests/badge.svg)](https://github.com/holoviz/hvplot/actions?query=workflow%3Atests) |
+| Coverage | [![Coverage Status](https://coveralls.io/repos/github/holoviz/hvplot/badge.svg?branch=master)](https://coveralls.io/github/holoviz/hvplot?branch=master) |
+| Latest dev release | [![Github tag](https://img.shields.io/github/tag/holoviz/hvplot.svg?label=tag&colorB=11ccbb)](https://github.com/holoviz/hvplot/tags) |
+| Latest release | [![Github release](https://img.shields.io/github/release/holoviz/hvplot.svg?label=tag&colorB=11ccbb)](https://github.com/holoviz/hvplot/releases) [![PyPI version](https://img.shields.io/pypi/v/hvplot.svg?colorB=cc77dd)](https://pypi.python.org/pypi/hvplot) [![hvplot version](https://img.shields.io/conda/v/pyviz/hvplot.svg?colorB=4488ff&style=flat)](https://anaconda.org/pyviz/hvplot) [![conda-forge version](https://img.shields.io/conda/v/conda-forge/hvplot.svg?label=conda%7Cconda-forge&colorB=4488ff)](https://anaconda.org/conda-forge/hvplot) [![defaults version](https://img.shields.io/conda/v/anaconda/hvplot.svg?label=conda%7Cdefaults&style=flat&colorB=4488ff)](https://anaconda.org/anaconda/hvplot) |
+| Docs | [![gh-pages](https://img.shields.io/github/last-commit/holoviz/hvplot/gh-pages.svg)](https://github.com/holoviz/hvplot/tree/gh-pages) [![site](https://img.shields.io/website-up-down-green-red/http/hvplot.holoviz.org.svg)](http://hvplot.holoviz.org) |
+
+
+
+## What is it?
+
+The PyData ecosystem has a number of core Python data containers that allow users to work with a wide array of datatypes, including:
+
+* [Pandas](http://pandas.pydata.org): DataFrame, Series (columnar/tabular data)
+* [XArray](http://xarray.pydata.org): Dataset, DataArray (multidimensional arrays)
+* [Dask](http://dask.pydata.org): DataFrame, Series, Array (distributed/out of core arrays and columnar data)
+* [Streamz](http://streamz.readthedocs.io): DataFrame(s), Series(s) (streaming columnar data)
+* [Intake](http://github.com/ContinuumIO/intake): DataSource (data catalogues)
+* [GeoPandas](http://geopandas.org): GeoDataFrame (geometry data)
+* [NetworkX](https://networkx.github.io/documentation/stable/): Graph (network graphs)
+
+Several of these libraries have the concept of a high-level plotting API that lets a user generate common plot types very easily. The native plotting APIs are generally built on [Matplotlib](http://matplotlib.org), which provides a solid foundation, but means that users miss out the benefits of modern, interactive plotting libraries for the web like [Bokeh](http://bokeh.org) and [HoloViews](http://holoviews.org).
+
+hvPlot provides a high-level plotting API built on HoloViews that provides a general and consistent API for plotting data in all the abovementioned formats. hvPlot can integrate neatly with the individual libraries if an extension mechanism for the native plot APIs is offered, or it can be used as a standalone component.
+
+To start using hvplot have a look at the [Getting Started Guide](https://hvplot.holoviz.org/getting_started/index.html) and check out the current functionality in the [User Guide.](https://hvplot.holoviz.org/user_guide/index.html)
+
+<img src="http://blog.holoviz.org/images/hvplot_collage.png">
+
+## Installation
+
+hvPlot supports Python 2.7, 3.5, 3.6 and 3.7 on Linux, Windows, or Mac and can be installed with ``conda``:
+
+```
+conda install -c pyviz hvplot
+```
+
+or with ``pip``:
+
+```
+pip install hvplot
+```
+
+In the classic Jupyter notebook environment and JupyterLab objects returned by hvPlot will then render themselves if they are the last item in a notebook cell. For versions of `jupyterlab>=3.0` the necessary extension is automatically bundled in the `pyviz_comms` package, which must be >=2.0. However note that for version of `jupyterlab<3.0` you must also manually install the JupyterLab extension with:
+
+```bash
+jupyter labextension install @pyviz/jupyterlab_pyviz
+```
+
+
+

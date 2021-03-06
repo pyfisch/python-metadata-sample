@@ -1,0 +1,89 @@
+Metadata-Version: 2.1
+Name: lftools
+Version: 0.35.1
+Summary: Linux Foundation Release Engineering Tools
+Home-page: https://docs.releng.linuxfoundation.org/projects/lftools
+Author: LF Releng
+Author-email: releng@linuxfoundation.org
+License: EPL-1.0
+Platform: UNKNOWN
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Information Technology
+Classifier: License :: OSI Approved :: Eclipse Public License 1.0 (EPL-1.0)
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Requires-Dist: appdirs (==1.4.3)
+Requires-Dist: aspy.yaml (==1.3.0)
+Requires-Dist: attrs (==19.3.0)
+Requires-Dist: beautifulsoup4 (==4.8.2)
+Requires-Dist: boto3 (==1.11.6)
+Requires-Dist: botocore (==1.14.6)
+Requires-Dist: bs4 (==0.0.1)
+Requires-Dist: certifi (==2019.11.28)
+Requires-Dist: cfgv (==2.0.1)
+Requires-Dist: chardet (==3.0.4)
+Requires-Dist: click (==7.1)
+Requires-Dist: defusedxml (==0.6.0)
+Requires-Dist: Deprecated (==1.2.7)
+Requires-Dist: dnspython (==1.16.0)
+Requires-Dist: docker (==4.2.0)
+Requires-Dist: email-validator (==1.0.5)
+Requires-Dist: filelock (==3.0.12)
+Requires-Dist: httplib2 (==0.17.0)
+Requires-Dist: identify (==1.4.11)
+Requires-Dist: idna (==2.9)
+Requires-Dist: jsonschema (==3.2.0)
+Requires-Dist: lxml (==4.5.0)
+Requires-Dist: multi-key-dict (==2.0.3)
+Requires-Dist: nodeenv (==1.3.5)
+Requires-Dist: oauth2client (==4.1.3)
+Requires-Dist: pbr (==5.4.4)
+Requires-Dist: pyasn1 (==0.4.8)
+Requires-Dist: pyasn1-modules (==0.2.8)
+Requires-Dist: pygerrit2 (==2.0.10)
+Requires-Dist: PyGithub (==1.46)
+Requires-Dist: PyJWT (==1.7.1)
+Requires-Dist: pyrsistent (==0.15.7)
+Requires-Dist: python-jenkins (==1.7.0)
+Requires-Dist: PyYAML (==5.3)
+Requires-Dist: requests (==2.23.0)
+Requires-Dist: rsa (==4.0)
+Requires-Dist: ruamel.yaml (==0.16.10)
+Requires-Dist: ruamel.yaml.clib (==0.2.0)
+Requires-Dist: six (==1.14.0)
+Requires-Dist: soupsieve (==2.0)
+Requires-Dist: tabulate (==0.8.6)
+Requires-Dist: toml (==0.10.0)
+Requires-Dist: tqdm (==4.43.0)
+Requires-Dist: urllib3 (==1.25.8)
+Requires-Dist: websocket-client (==0.57.0)
+Requires-Dist: wrapt (==1.12.1)
+Requires-Dist: xdg (==3.0.2)
+Provides-Extra: ldap
+Requires-Dist: python-ldap (~=3.1.0) ; extra == 'ldap'
+Provides-Extra: openstack
+Requires-Dist: osc-lib (~=2.2.0) ; extra == 'openstack'
+Requires-Dist: shade (~=1.27.1) ; extra == 'openstack'
+
+# LF Tools
+
+This project's documentation is available on ReadTheDocs (RTD)
+
+<https://lf-releng-tools.readthedocs.io>
+
+LF Tools is a collection of scripts and utilities that are useful to Linux
+Foundation projects' CI and Releng related activities. We try to create
+these tools to be as generic as possible such that they are reusable in other
+CI environments.
+
+Ubuntu Dependencies:
+
+- build-essentials
+- python-dev
+
+
+

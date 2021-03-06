@@ -1,0 +1,179 @@
+Metadata-Version: 2.1
+Name: tfx
+Version: 0.27.0
+Summary: TensorFlow Extended (TFX) is a TensorFlow-based general-purpose machine learning platform implemented at Google.
+Home-page: https://www.tensorflow.org/tfx
+Author: Google LLC
+Author-email: tensorflow-extended-dev@googlegroups.com
+License: Apache 2.0
+Download-URL: https://github.com/tensorflow/tfx/tags
+Keywords: tensorflow tfx
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Topic :: Scientific/Engineering :: Mathematics
+Classifier: Topic :: Software Development
+Classifier: Topic :: Software Development :: Libraries
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
+Requires-Python: >=3.6,<3.9
+Description-Content-Type: text/markdown
+Requires-Dist: ml-pipelines-sdk (==0.27.0)
+Requires-Dist: absl-py (<0.11,>=0.9)
+Requires-Dist: ml-metadata (<0.28,>=0.27)
+Requires-Dist: protobuf (<4,>=3.12.2)
+Requires-Dist: six (<2,>=1.10)
+Requires-Dist: docker (<5,>=4.1)
+Requires-Dist: jinja2 (<3,>=2.7.3)
+Requires-Dist: apache-beam[gcp] (<3,>=2.27)
+Requires-Dist: attrs (<21,>=19.3.0)
+Requires-Dist: click (<8,>=7)
+Requires-Dist: google-api-python-client (<2,>=1.7.8)
+Requires-Dist: grpcio (<2,>=1.28.1)
+Requires-Dist: keras-tuner (<1.0.2,>=1)
+Requires-Dist: kubernetes (<12,>=10.0.1)
+Requires-Dist: numpy (<1.20,>=1.16)
+Requires-Dist: pyarrow (<3,>=1)
+Requires-Dist: pyyaml (<6,>=3.12)
+Requires-Dist: tensorflow (!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,<3,>=1.15.2)
+Requires-Dist: tensorflow-hub (<0.10,>=0.9.0)
+Requires-Dist: tensorflow-cloud (<0.2,>=0.1)
+Requires-Dist: tensorflow-data-validation (<0.28,>=0.27)
+Requires-Dist: tensorflow-model-analysis (<0.28,>=0.27)
+Requires-Dist: tensorflow-serving-api (!=2.0.*,!=2.1.*,!=2.2.*,!=2.3.*,<3,>=1.15)
+Requires-Dist: tensorflow-transform (<0.28,>=0.27)
+Requires-Dist: tfx-bsl (<0.28,>=0.27)
+Provides-Extra: all
+Requires-Dist: cattrs (==1.0.0) ; extra == 'all'
+Requires-Dist: kfp (<2,>=1.1.0) ; extra == 'all'
+Requires-Dist: kfp-pipeline-spec (<0.2,>=0.1.5) ; extra == 'all'
+Requires-Dist: pytest (<6,>=5) ; extra == 'all'
+Requires-Dist: werkzeug (==0.16.1) ; extra == 'all'
+Requires-Dist: tensorflowjs (<3,>=2.0.1.post1) ; extra == 'all'
+Requires-Dist: presto-python-client (<0.8,>=0.7) ; extra == 'all'
+Requires-Dist: slackclient (<3,>=2.8.2) ; extra == 'all'
+Requires-Dist: websocket-client (<1,>=0.57) ; extra == 'all'
+Requires-Dist: tensorflow-text (<3,>=1.15.1) ; extra == 'all'
+Requires-Dist: flatbuffers (<2,>=1.12) ; extra == 'all'
+Requires-Dist: tflite-support (<0.1.1,>=0.1.0a1) ; extra == 'all'
+Requires-Dist: apache-airflow[mysql] (<2,>=1.10.10) ; (python_version != "3.7" or platform_system != "Darwin") and extra == 'all'
+Requires-Dist: apache-airflow[mysql] (<1.10.14,>=1.10.10) ; (python_version == "3.7" and platform_system == "Darwin") and extra == 'all'
+Provides-Extra: docker-image
+Requires-Dist: kfp-pipeline-spec (<0.2,>=0.1.5) ; extra == 'docker-image'
+Requires-Dist: mmh (<3,>=2.2) ; extra == 'docker-image'
+Requires-Dist: python-snappy (<0.6,>=0.5) ; extra == 'docker-image'
+Provides-Extra: examples
+Requires-Dist: presto-python-client (<0.8,>=0.7) ; extra == 'examples'
+Requires-Dist: slackclient (<3,>=2.8.2) ; extra == 'examples'
+Requires-Dist: websocket-client (<1,>=0.57) ; extra == 'examples'
+Requires-Dist: tensorflow-text (<3,>=1.15.1) ; extra == 'examples'
+Requires-Dist: flatbuffers (<2,>=1.12) ; extra == 'examples'
+Requires-Dist: tflite-support (<0.1.1,>=0.1.0a1) ; extra == 'examples'
+Provides-Extra: test
+Requires-Dist: cattrs (==1.0.0) ; extra == 'test'
+Requires-Dist: kfp (<2,>=1.1.0) ; extra == 'test'
+Requires-Dist: kfp-pipeline-spec (<0.2,>=0.1.5) ; extra == 'test'
+Requires-Dist: pytest (<6,>=5) ; extra == 'test'
+Requires-Dist: werkzeug (==0.16.1) ; extra == 'test'
+Requires-Dist: apache-airflow[mysql] (<2,>=1.10.10) ; (python_version != "3.7" or platform_system != "Darwin") and extra == 'test'
+Requires-Dist: apache-airflow[mysql] (<1.10.14,>=1.10.10) ; (python_version == "3.7" and platform_system == "Darwin") and extra == 'test'
+Provides-Extra: tfjs
+Requires-Dist: tensorflowjs (<3,>=2.0.1.post1) ; extra == 'tfjs'
+
+<!-- See: www.tensorflow.org/tfx/ -->
+
+# TFX
+
+[![Python](https://img.shields.io/pypi/pyversions/tfx.svg?style=plastic)](https://github.com/tensorflow/tfx)
+[![PyPI](https://badge.fury.io/py/tfx.svg)](https://badge.fury.io/py/tfx)
+
+[TensorFlow Extended (TFX)](https://tensorflow.org/tfx) is a
+Google-production-scale machine learning platform based on TensorFlow. It
+provides a configuration framework to express ML pipelines consisting of TFX
+components. TFX pipelines can be orchestrated using
+[Apache Airflow](https://airflow.apache.org/) and
+[Kubeflow Pipelines](https://www.kubeflow.org/). Both the components themselves
+as well as the integrations with orchestration systems can be extended.
+
+TFX components interact with a
+[ML Metadata](https://github.com/google/ml-metadata) backend that keeps a record
+of component runs, input and output artifacts, and runtime configuration. This
+metadata backend enables advanced functionality like experiment tracking or
+warmstarting/resuming ML models from previous runs.
+
+![TFX Components](https://raw.githubusercontent.com/tensorflow/tfx/master/docs/guide/images/prog_fin.png)
+
+## Documentation
+
+### User Documentation
+
+Please see the
+[TFX User Guide](https://github.com/tensorflow/tfx/blob/master/docs/guide/index.md).
+
+### Development References
+
+#### Roadmap
+
+The TFX [Roadmap](https://github.com/tensorflow/tfx/blob/master/ROADMAP.md),
+which is updated quarterly.
+
+#### Release Details
+
+For detailed previous and upcoming changes, please
+[check here](https://github.com/tensorflow/tfx/blob/master/RELEASE.md)
+
+#### Requests For Comment
+
+TFX is an open-source project and we strongly encourage active participation
+by the ML community in helping to shape TFX to meet or exceed their needs. An
+important component of that effort is the RFC process.  Please see the listing
+of [current and past TFX RFCs](RFCs.md). Please see the
+[TensorFlow Request for Comments (TF-RFC)](https://github.com/tensorflow/community/blob/master/governance/TF-RFCs.md)
+process page for information on how community members can contribute.
+
+## Examples
+
+*   [Chicago Taxi Example](https://github.com/tensorflow/tfx/tree/master/tfx/examples/chicago_taxi_pipeline)
+
+## Compatible versions
+
+The following table describes how the `tfx` package versions are compatible with
+its major dependency PyPI packages. This is determined by our testing framework,
+but other *untested* combinations may also work.
+
+tfx                                                                       | apache-beam[gcp] | ml-metadata | pyarrow | tensorflow        | tensorflow-data-validation | tensorflow-metadata | tensorflow-model-analysis | tensorflow-transform | tfx-bsl
+------------------------------------------------------------------------- | ---------------- | ----------- | ------- | ----------------- | -------------------------- | ------------------- | ------------------------- | -------------------- | -------
+[GitHub master](https://github.com/tensorflow/tfx/blob/master/RELEASE.md) | 2.27.0           | 0.27.0      | 2.0.0   | nightly (1.x/2.x) | 0.27.0                     | 0.27.0              | 0.27.0                    | 0.27.0               | 0.27.0
+0.27.0                                                                    | 2.27.0           | 0.27.0      | 2.0.0   | 1.15.0 / 2.4.0    | 0.27.0                     | 0.27.0              | 0.27.0                    | 0.27.0               | 0.27.0
+0.26.0                                                                    | 2.25.0           | 0.26.0      | 0.17.0  | 1.15.0 / 2.3.0    | 0.26.0                     | 0.26.0              | 0.26.0                    | 0.26.0               | 0.26.0
+0.25.0                                                                    | 2.25.0           | 0.24.0      | 0.17.0  | 1.15.0 / 2.3.0    | 0.25.0                     | 0.25.0              | 0.25.0                    | 0.25.0               | 0.25.0
+0.24.1                                                                    | 2.24.0           | 0.24.0      | 0.17.0  | 1.15.0 / 2.3.0    | 0.24.1                     | 0.24.0              | 0.24.3                    | 0.24.1               | 0.24.1
+0.24.0                                                                    | 2.24.0           | 0.24.0      | 0.17.0  | 1.15.0 / 2.3.0    | 0.24.1                     | 0.24.0              | 0.24.3                    | 0.24.1               | 0.24.1
+0.23.1                                                                    | 2.24.0           | 0.23.0      | 0.17.0  | 1.15.0 / 2.3.0    | 0.23.1                     | 0.23.0              | 0.23.0                    | 0.23.0               | 0.23.0
+0.23.0                                                                    | 2.23.0           | 0.23.0      | 0.17.0  | 1.15.0 / 2.3.0    | 0.23.0                     | 0.23.0              | 0.23.0                    | 0.23.0               | 0.23.0
+0.22.2                                                                    | 2.21.0           | 0.22.1      | 0.16.0  | 1.15.0 / 2.2.0    | 0.22.2                     | 0.22.2              | 0.22.2                    | 0.22.0               | 0.22.1
+0.22.1                                                                    | 2.21.0           | 0.22.1      | 0.16.0  | 1.15.0 / 2.2.0    | 0.22.2                     | 0.22.2              | 0.22.2                    | 0.22.0               | 0.22.1
+0.22.0                                                                    | 2.21.0           | 0.22.0      | 0.16.0  | 1.15.0 / 2.2.0    | 0.22.0                     | 0.22.0              | 0.22.1                    | 0.22.0               | 0.22.0
+0.21.5                                                                    | 2.17.0           | 0.21.2      | 0.15.0  | 1.15.0 / 2.1.0    | 0.21.5                     | 0.21.1              | 0.21.5                    | 0.21.2               | 0.21.4
+0.21.4                                                                    | 2.17.0           | 0.21.2      | 0.15.0  | 1.15.0 / 2.1.0    | 0.21.5                     | 0.21.1              | 0.21.5                    | 0.21.2               | 0.21.4
+0.21.3                                                                    | 2.17.0           | 0.21.2      | 0.15.0  | 1.15.0 / 2.1.0    | 0.21.5                     | 0.21.1              | 0.21.5                    | 0.21.2               | 0.21.4
+0.21.2                                                                    | 2.17.0           | 0.21.2      | 0.15.0  | 1.15.0 / 2.1.0    | 0.21.5                     | 0.21.1              | 0.21.5                    | 0.21.2               | 0.21.4
+0.21.1                                                                    | 2.17.0           | 0.21.2      | 0.15.0  | 1.15.0 / 2.1.0    | 0.21.4                     | 0.21.1              | 0.21.4                    | 0.21.2               | 0.21.3
+0.21.0                                                                    | 2.17.0           | 0.21.0      | 0.15.0  | 1.15.0 / 2.1.0    | 0.21.0                     | 0.21.0              | 0.21.1                    | 0.21.0               | 0.21.0
+0.15.0                                                                    | 2.16.0           | 0.15.0      | 0.15.0  | 1.15.0            | 0.15.0                     | 0.15.0              | 0.15.2                    | 0.15.0               | 0.15.1
+0.14.0                                                                    | 2.14.0           | 0.14.0      | 0.14.0  | 1.14.0            | 0.14.1                     | 0.14.0              | 0.14.0                    | 0.14.0               | n/a
+0.13.0                                                                    | 2.12.0           | 0.13.2      | n/a     | 1.13.1            | 0.13.1                     | 0.13.0              | 0.13.2                    | 0.13.0               | n/a
+0.12.0                                                                    | 2.10.0           | 0.13.2      | n/a     | 1.12.0            | 0.12.0                     | 0.12.1              | 0.12.1                    | 0.12.0               | n/a
+
+

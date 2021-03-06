@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: integrationhelper
+Version: 0.2.2
+Summary: A set of helpers for integrations.
+Home-page: https://github.com/ludeeus/integrationhelper
+Author: Joakim Sorensen
+Author-email: ludeeus@gmail.com
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: aiohttp
+Requires-Dist: async-timeout
+Requires-Dist: backoff
+
+# integrationhelper
+
+_A set of helpers for integrations._
+
+## Install integrationhelper
+
+```bash
+python3 -m pip install -U integrationhelper
+```
+
+

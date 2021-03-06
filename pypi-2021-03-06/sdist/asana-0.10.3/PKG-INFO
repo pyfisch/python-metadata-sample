@@ -1,0 +1,21 @@
+Metadata-Version: 1.1
+Name: asana
+Version: 0.10.3
+Summary: Asana API client
+Home-page: http://github.com/asana/python-asana
+Author: Asana, Inc
+Author-email: UNKNOWN
+License: MIT
+Description: UNKNOWN
+Keywords: asana
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6

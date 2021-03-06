@@ -1,0 +1,70 @@
+Metadata-Version: 2.1
+Name: colorcet
+Version: 2.0.6
+Summary: Collection of perceptually uniform colormaps
+Home-page: https://colorcet.holoviz.org
+Author: James A. Bednar
+Author-email: jbednar@anaconda.com
+Maintainer: James A. Bednar
+Maintainer-email: jbednar@anaconda.com
+License: CC-BY License
+Project-URL: Bug Tracker, http://github.com/holoviz/colorcet/issues
+Project-URL: Documentation, https://colorcet.holoviz.org
+Project-URL: Source Code, http://github.com/holoviz/colorcet
+Platform: UNKNOWN
+Classifier: License :: OSI Approved
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Development Status :: 5 - Production/Stable
+Requires-Python: >=2.7
+Requires-Dist: param (>=1.7.0)
+Requires-Dist: pyct (>=0.4.4)
+Provides-Extra: all
+Requires-Dist: bokeh ; extra == 'all'
+Requires-Dist: flake8 ; extra == 'all'
+Requires-Dist: holoviews ; extra == 'all'
+Requires-Dist: matplotlib ; extra == 'all'
+Requires-Dist: nbsite (>=0.6.1) ; extra == 'all'
+Requires-Dist: nbsmoke (>=0.2.6) ; extra == 'all'
+Requires-Dist: numpy ; extra == 'all'
+Requires-Dist: param (>=1.7.0) ; extra == 'all'
+Requires-Dist: pyct (>=0.4.4) ; extra == 'all'
+Requires-Dist: pytest (>=2.8.5) ; extra == 'all'
+Requires-Dist: pytest-mpl ; extra == 'all'
+Requires-Dist: setuptools (>=30.3.0) ; extra == 'all'
+Requires-Dist: sphinx-holoviz-theme ; extra == 'all'
+Requires-Dist: wheel ; extra == 'all'
+Provides-Extra: build
+Requires-Dist: param (>=1.7.0) ; extra == 'build'
+Requires-Dist: pyct (>=0.4.4) ; extra == 'build'
+Requires-Dist: setuptools (>=30.3.0) ; extra == 'build'
+Requires-Dist: wheel ; extra == 'build'
+Provides-Extra: doc
+Requires-Dist: numpy ; extra == 'doc'
+Requires-Dist: holoviews ; extra == 'doc'
+Requires-Dist: matplotlib ; extra == 'doc'
+Requires-Dist: bokeh ; extra == 'doc'
+Requires-Dist: nbsite (>=0.6.1) ; extra == 'doc'
+Requires-Dist: sphinx-holoviz-theme ; extra == 'doc'
+Provides-Extra: examples
+Requires-Dist: numpy ; extra == 'examples'
+Requires-Dist: holoviews ; extra == 'examples'
+Requires-Dist: matplotlib ; extra == 'examples'
+Requires-Dist: bokeh ; extra == 'examples'
+Provides-Extra: tests
+Requires-Dist: flake8 ; extra == 'tests'
+Requires-Dist: nbsmoke (>=0.2.6) ; extra == 'tests'
+Requires-Dist: pytest (>=2.8.5) ; extra == 'tests'
+Provides-Extra: tests_extra
+Requires-Dist: flake8 ; extra == 'tests_extra'
+Requires-Dist: nbsmoke (>=0.2.6) ; extra == 'tests_extra'
+Requires-Dist: pytest (>=2.8.5) ; extra == 'tests_extra'
+Requires-Dist: pytest-mpl ; extra == 'tests_extra'
+
+README.md
+
+

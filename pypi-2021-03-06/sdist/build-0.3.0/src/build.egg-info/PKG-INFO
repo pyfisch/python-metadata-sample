@@ -1,0 +1,65 @@
+Metadata-Version: 2.1
+Name: build
+Version: 0.3.0
+Summary: A simple, correct PEP517 package builder
+Home-page: UNKNOWN
+Author: Filipe Laíns
+Author-email: lains@riseup.net
+License: MIT
+Project-URL: homepage, https://github.com/pypa/build
+Project-URL: changelog, https://pypa-build.readthedocs.io/en/stable/changelog.html
+Description: # build
+        
+        [![CI](https://github.com/pypa/build/workflows/check/badge.svg)](https://github.com/pypa/build/actions)
+        [![codecov](https://codecov.io/gh/pypa/build/branch/main/graph/badge.svg)](https://codecov.io/gh/pypa/build)
+        [![Documentation Status](https://readthedocs.org/projects/pypa-build/badge/?version=latest)](https://pypa-build.readthedocs.io/en/latest/?badge=latest)
+        [![PyPI version](https://badge.fury.io/py/build.svg)](https://pypi.org/project/build/)
+        [![Discord](https://img.shields.io/discord/803025117553754132?label=Discord%20chat%20%23build&style=flat-square)](https://discord.gg/pypa)
+        
+        A simple, correct PEP517 package builder.
+        
+        See the [documentation](https://pypa-build.readthedocs.io/en/latest/) for more information.
+        
+        ### Installation
+        
+        `build` can be installed via `pip` or an equivalent via:
+        
+        ```
+        $ pip install build
+        ```
+        
+        ### Usage
+        
+        ```bash
+        python -m build --sdist --wheel .
+        ```
+        
+        This will build the package in an isolated environment, generating a
+        source-distribution and wheel in the directory `dist/`.
+        See the [documentation](https://pypa-build.readthedocs.io/en/latest/) for full information.
+        
+        ### Code of Conduct
+        
+        Everyone interacting in the build's codebase, issue trackers, chat rooms, and mailing lists is expected to follow
+        the [PSF Code of Conduct].
+        
+        [psf code of conduct]: https://github.com/pypa/.github/blob/main/CODE_OF_CONDUCT.md
+        
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Requires-Python: !=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7
+Description-Content-Type: text/markdown
+Provides-Extra: docs
+Provides-Extra: test
+Provides-Extra: typing
+Provides-Extra: virtualenv

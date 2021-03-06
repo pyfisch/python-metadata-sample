@@ -1,0 +1,36 @@
+Metadata-Version: 2.0
+Name: azureml-explain-model
+Version: 1.23.0
+Summary: Machine Learning explain model package is used to interpret ML models
+Home-page: https://docs.microsoft.com/python/api/overview/azure/ml/?view=azure-ml-py
+Author: Microsoft Corp
+License: https://aka.ms/azureml-sdk-license
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: Other/Proprietary License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS
+Classifier: Operating System :: POSIX :: Linux
+Description-Content-Type: text/x-rst
+Provides-Extra: mimic
+Provides-Extra: deep
+Provides-Extra: sample
+Requires-Dist: azureml-interpret (~=1.23.0)
+Provides-Extra: deep
+Requires-Dist: azureml-interpret[deep]; extra == 'deep'
+Provides-Extra: mimic
+Requires-Dist: azureml-interpret[mimic]; extra == 'mimic'
+Provides-Extra: sample
+Requires-Dist: azureml-interpret[sample]; extra == 'sample'
+
+The azureml-explain-model package has been deprecated and might not receive future updates (or be removed from the distribution altogether). Please use the azureml-interpret and interpret-community packages instead.
+
+
+

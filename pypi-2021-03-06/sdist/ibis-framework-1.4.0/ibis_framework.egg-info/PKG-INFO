@@ -1,0 +1,36 @@
+Metadata-Version: 2.1
+Name: ibis-framework
+Version: 1.4.0
+Summary: Productivity-centric Python Big Data Framework
+Home-page: https://github.com/ibis-project/ibis
+Maintainer: Phillip Cloud
+Maintainer-email: phillip.cloud@twosigma.com
+License: Apache License, Version 2.0
+Description: 
+        Ibis is a productivity-centric Python big data framework.
+        
+        See http://ibis-project.org
+        
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: Science/Research
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: Scientific/Engineering
+Requires-Python: >=3.7
+Provides-Extra: all
+Provides-Extra: develop
+Provides-Extra: impala
+Provides-Extra: kerberos
+Provides-Extra: postgres
+Provides-Extra: omniscidb
+Provides-Extra: mysql
+Provides-Extra: sqlite
+Provides-Extra: visualization
+Provides-Extra: clickhouse
+Provides-Extra: bigquery
+Provides-Extra: hdf5
+Provides-Extra: parquet
+Provides-Extra: spark
+Provides-Extra: geospatial

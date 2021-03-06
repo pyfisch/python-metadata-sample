@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: onnx
+Version: 1.8.1
+Summary: Open Neural Network Exchange
+Home-page: https://github.com/onnx/onnx
+Author: ONNX
+Author-email: onnx-technical-discuss@lists.lfai.foundation
+License: MIT
+Description: UNKNOWN
+Platform: UNKNOWN
+Provides-Extra: mypy

@@ -1,0 +1,36 @@
+Metadata-Version: 1.2
+Name: jinjasql
+Version: 0.1.8
+Summary: Generate SQL Queries and Corresponding Bind Parameters using a Jinja2 Template
+Home-page: https://github.com/hashedin/jinjasql
+Author: Sripathi Krishnan
+Author-email: Sripathi@hashedin.com
+Maintainer: Sripathi Krishnan
+Maintainer-email: Sripathi@hashedin.com
+License: MIT
+Download-URL: http://cloud.github.com/downloads/hashedin/jinjasql/jinjasql-0.1.8.tar.gz
+Description: 
+        Generate SQL Queries using a Jinja Template, without worrying about SQL Injection
+        
+        JinjaSQL automatically binds parameters that are inserted into the template.
+        After JinjaSQL evaluates the template, you get 1) Query with placeholders
+        for parameters, and 2) List of values that need to be bound to the query. 
+        
+        JinjaSQL doesn't actually execute the query - it only prepares the 
+        query and the bind parameters. You can execute the query using any 
+        database engine / driver you are working with.
+        
+        
+Keywords: Jinja2,SQL,Python,Template
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5

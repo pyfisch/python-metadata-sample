@@ -1,0 +1,62 @@
+Metadata-Version: 2.1
+Name: line-profiler
+Version: 3.1.0
+Summary: Line-by-line profiler.
+Home-page: https://github.com/pyutils/line_profiler
+Author: Robert Kern
+Author-email: robert.kern@enthought.com
+License: BSD
+Keywords: timing,timer,profiling,profiler,line_profiler
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: C
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 2
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.2
+Classifier: Programming Language :: Python :: 3.3
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Classifier: Topic :: Software Development
+Description-Content-Type: text/x-rst
+Requires-Dist: IPython
+Provides-Extra: all
+Requires-Dist: IPython ; extra == 'all'
+Requires-Dist: Cython ; extra == 'all'
+Requires-Dist: scikit-build ; extra == 'all'
+Requires-Dist: cmake ; extra == 'all'
+Requires-Dist: ninja ; extra == 'all'
+Requires-Dist: pytest ; extra == 'all'
+Requires-Dist: pytest-cov ; extra == 'all'
+Requires-Dist: coverage ; extra == 'all'
+Requires-Dist: codecov ; extra == 'all'
+Requires-Dist: ubelt ; extra == 'all'
+Provides-Extra: build
+Requires-Dist: Cython ; extra == 'build'
+Requires-Dist: scikit-build ; extra == 'build'
+Requires-Dist: cmake ; extra == 'build'
+Requires-Dist: ninja ; extra == 'build'
+Provides-Extra: tests
+Requires-Dist: pytest ; extra == 'tests'
+Requires-Dist: pytest-cov ; extra == 'tests'
+Requires-Dist: coverage ; extra == 'tests'
+Requires-Dist: codecov ; extra == 'tests'
+Requires-Dist: ubelt ; extra == 'tests'
+
+line_profiler will profile the time individual lines of code take to execute.
+The profiler is implemented in C via Cython in order to reduce the overhead of
+profiling.
+
+Also included is the script kernprof.py which can be used to conveniently
+profile Python applications and scripts either with line_profiler or with the
+function-level profiling tools in the Python standard library.
+
+

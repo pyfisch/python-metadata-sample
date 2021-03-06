@@ -1,0 +1,10 @@
+Metadata-Version: 1.2
+Name: facenet
+Version: 1.0.5
+Summary: Face recognition using TensorFlow
+Home-page: https://github.com/jonaphin/facenet
+Maintainer: Jonathan Lancar
+Maintainer-email: jonaphin@gmail.com
+License: MIT
+Description: Face recognition with Google's FaceNet deep neural network & TensorFlow
+Platform: UNKNOWN

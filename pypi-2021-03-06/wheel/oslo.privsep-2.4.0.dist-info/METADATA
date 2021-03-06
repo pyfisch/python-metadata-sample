@@ -1,0 +1,69 @@
+Metadata-Version: 2.0
+Name: oslo.privsep
+Version: 2.4.0
+Summary: OpenStack library for privilege separation
+Home-page: https://docs.openstack.org/oslo.privsep/latest/
+Author: OpenStack
+Author-email: openstack-discuss@lists.openstack.org
+License: UNKNOWN
+Platform: UNKNOWN
+Classifier: Environment :: OpenStack
+Classifier: Intended Audience :: Information Technology
+Classifier: Intended Audience :: System Administrators
+Classifier: License :: OSI Approved :: Apache Software License
+Classifier: Operating System :: POSIX :: Linux
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3 :: Only
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Requires-Python: >=3.6
+Requires-Dist: cffi (>=1.14.0)
+Requires-Dist: eventlet (>=0.21.0)
+Requires-Dist: greenlet (>=0.4.14)
+Requires-Dist: msgpack (>=0.6.0)
+Requires-Dist: oslo.config (>=5.2.0)
+Requires-Dist: oslo.i18n (>=3.15.3)
+Requires-Dist: oslo.log (>=3.36.0)
+Requires-Dist: oslo.utils (>=3.33.0)
+
+========================
+Team and repository tags
+========================
+
+.. image:: https://governance.openstack.org/tc/badges/oslo.privsep.svg
+    :target: https://governance.openstack.org/tc/reference/tags/index.html
+
+.. Change things from this point on
+
+============
+oslo.privsep
+============
+
+.. image:: https://img.shields.io/pypi/v/oslo.privsep.svg
+    :target: https://pypi.org/project/oslo.privsep/
+    :alt: Latest Version
+
+OpenStack library for privilege separation
+
+This library helps applications perform actions which require more or
+less privileges than they were started with in a safe, easy to code
+and easy to use manner. For more information on why this is generally
+a good idea please read over the `principle of least privilege`_ and
+the `specification`_ which created this library.
+
+* Free software: Apache license
+* Documentation: https://docs.openstack.org/oslo.privsep/latest/
+* Source: https://opendev.org/openstack/oslo.privsep
+* Bugs: https://bugs.launchpad.net/oslo.privsep
+* Release Notes: https://docs.openstack.org/releasenotes/oslo.privsep
+
+.. _principle of least privilege: https://en.wikipedia.org/wiki/\
+                                  Principle_of_least_privilege
+.. _specification: https://specs.openstack.org/openstack/\
+                   oslo-specs/specs/liberty/privsep.html
+
+
+
